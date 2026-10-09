@@ -1,0 +1,41 @@
+{
+  "viewer_readme_present": false,
+  "viewer_links": [
+    {
+      "label": "기본 합성 Depth와 3점",
+      "target": "../outputs/ade95_final_synthetic/preview.png",
+      "local_exists": true,
+      "zip_exists": true
+    },
+    {
+      "label": "자동 GUI 이벤트 후 2번째 프레임",
+      "target": "../outputs/ade95_final_gui_cli/tk_canvas.png",
+      "local_exists": true,
+      "zip_exists": true
+    },
+    {
+      "label": "사용자가 직접 실행하여 저장한 세 번째 프레임",
+      "target": "../outputs/ade95_final_user_saves/frame_000003_1791460557654228600/preview.png",
+      "local_exists": true,
+      "zip_exists": true
+    }
+  ],
+  "ade66_document_missing_log_names": [
+    "final_preservation.json",
+    "1791364711363884400_baseline_tests.json",
+    "1791364713525193600_baseline_example.json",
+    "1791364714113016200_installed_packages.json",
+    "1791364812642280400_replay_red.json",
+    "1791364812985283600_preprocessing_boundaries.json",
+    "1791364905228668800_replay_green.json",
+    "1791364945665668600_final_tests.json",
+    "1791364948072227200_replay_100.json",
+    "1791365008651846000_failure_cli_cases.json",
+    "1791365010714202200_preservation.json",
+    "1791365185262843900_artifact_review.json",
+    "1791365313171471900_v1_0_0_compliance.json",
+    "final_preservation.json",
+    "replay_1791364947856535500.json",
+    "v1_0_0_compliance_1791365313123131000.json"
+  ]
+}

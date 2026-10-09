@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0.0",
+  "frame_id": "synthetic_000001",
+  "status": "success",
+  "stage": "point_cloud",
+  "point_cloud": {
+    "file": "point_cloud.npz",
+    "key": "points_m",
+    "sha256": "30fcc0a2f30f52cae5c02fca8173a3f4efbbcc83d1b1d3f9f3465d36427e8b7e",
+    "unit": "m",
+    "frame": "camera",
+    "point_count": 3
+  },
+  "volume_m3": null,
+  "volume_method": null,
+  "assumptions": [],
+  "valid_depth_ratio": 0.75,
+  "provenance_kind": "synthetic",
+  "config_version": "1.0.0",
+  "errors": [],
+  "warnings": [
+    "No volume computed: target mask and support plane absent."
+  ]
+}

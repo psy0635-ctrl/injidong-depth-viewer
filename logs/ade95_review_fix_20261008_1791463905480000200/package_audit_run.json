@@ -1,0 +1,21 @@
+{
+  "source": "이번 수정 작업에서 실제 실행",
+  "started_at": "2026-10-08T22:05:04.926499+09:00",
+  "finished_at": "2026-10-08T22:05:05.853899+09:00",
+  "timezone": "Asia/Seoul",
+  "os": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "executable": "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+  "numpy": "2.3.5",
+  "matplotlib": "3.10.8",
+  "command": [
+    "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "C:\\Users\\user\\AppData\\Local\\Temp\\injidong_ade95_fix_bf494e643b38430fb0560d063be2676b\\audit_new_zip.py"
+  ],
+  "cwd": "C:\\study\\injidong_contract_v1",
+  "exit_code": 0,
+  "stdout": "{\n  \"source\": \"이번 새 ZIP 생성 후 최종 검증\",\n  \"zip\": \"C:\\\\study\\\\injidong_contract_v1\\\\submissions\\\\인지동_ADE-95_독립뷰어_검토보완_20261008.zip\",\n  \"sha256\": \"b262c3cce60c177a8d4a40a498d2ce6720ce16a495596396ef160584d6b05657\",\n  \"crc_verified\": true,\n  \"file_count\": 159,\n  \"checksum_entries\": 158,\n  \"all_content_hashes_matched\": true,\n  \"required_file_count\": 81,\n  \"original_distribution_preserved\": 22,\n  \"historical_logs_included\": 16,\n  \"previous_review_json_copies\": 10,\n  \"user_result_files_identical\": 8,\n  \"excluded_venv_cache_oldzip_temporary\": true,\n  \"package_local_differences\": [],\n  \"extracted_runs\": [\n    {\n      \"label\": \"extracted_basic\",\n      \"exit_code\": 0\n    },\n    {\n      \"label\": \"extracted_third\",\n      \"exit_code\": 0\n    },\n    {\n      \"label\": \"extracted_no_input\",\n      \"exit_code\": 0\n    },\n    {\n      \"label\": \"extracted_wrong_cloud\",\n      \"exit_code\": 1\n    }\n  ],\n  \"wrong_cloud_integrity_passed_but_coordinates_rejected\": true,\n  \"changed_existing_files\": [\n    \"docs/ADE-95-독립뷰어-사용검증.md\",\n    \"scripts/package_ade95.py\",\n    \"scripts/verify_viewer_outputs.py\"\n  ],\n  \"protected_mismatches\": [],\n  \"full_suite_not_repeated_in_extracted_copy\": true,\n  \"gui_not_rerun\": true,\n  \"replay_100_not_rerun\": true,\n  \"postpackage_log_policy\": \"패키징 후 실행 로그는 이 새 검토 폴더에 별도 보존한다. 완성 ZIP을 다시 쓰지 않는다.\"\n}\n",
+  "stderr": ""
+}

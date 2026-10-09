@@ -1,0 +1,14 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.env
+.env.*
+!.env.example
+*.zip
+*.zip.sha256
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store

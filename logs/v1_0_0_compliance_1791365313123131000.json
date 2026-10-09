@@ -1,0 +1,53 @@
+{
+  "protected_distribution_files_unchanged": {
+    "src/contract.py": true,
+    "SHA256SUMS.txt": true,
+    "schemas/features.schema.json": true,
+    "schemas/frame.schema.json": true,
+    "schemas/label.schema.json": true,
+    "schemas/prediction.schema.json": true,
+    "schemas/processing.schema.json": true
+  },
+  "initial_distribution_matches": 21,
+  "initial_distribution_mismatches": [],
+  "function_signatures": {
+    "load_frame": "(metadata_path)",
+    "iter_frames": "(session_dir)",
+    "normalize_depth": "(raw, scale_to_m, semantics='optical_axis_z', invalid_values=(0,))",
+    "validate_frame": "(frame, *, require_world_pose=False)"
+  },
+  "FramePacket_fields": [
+    "metadata",
+    "depth_m",
+    "valid_mask",
+    "target_mask"
+  ],
+  "replay_timestamps_checked": 100,
+  "replay_clock": {
+    "clock_domain": "pc_unix_utc",
+    "source": "time.time_ns() / 재생 PC 시스템 벽시계",
+    "epoch": "1970-01-01T00:00:00Z / Unix epoch",
+    "origin": "replay_host",
+    "implementation": "GetSystemTimeAsFileTime()",
+    "monotonic": false,
+    "adjustable": true,
+    "reported_resolution_seconds": 0.015625
+  },
+  "generated_replay_time_used_in_identity_comparison": false,
+  "original_metadata_untouched": true,
+  "normalize_all_invalid_returns_zero_false": true,
+  "validate_all_invalid_error": "NO_VALID_DEPTH",
+  "sample_hashes_current": {
+    "frames.jsonl": "5b136436864860b3fa660ef3c71b93fa418c90d41913639f74bc40ace7376afa",
+    "frame_000001/arrays.npz": "fd1e1a0d2db6be06efaae3986fc3db18039f3daeb861ff7bfab1a8fd78c412fd",
+    "frame_000001/metadata.json": "806e0df67e2489612be6aabe9af80b3dc84ad08ff62b6804ec59d2ead0ee0bf7"
+  },
+  "sample_hashes_match_original": true,
+  "new_code_sha256": {
+    "src/replay.py": "583c77ec8ec146a320e1314e1e4a40a41e5825a6d3017c751e2d8cbffdc5ca23",
+    "scripts/record_run.py": "0d11418a011afdc606954cc62c3b52088f55ab3094f6d9fe2bce9897c637e037",
+    "tests/test_replay.py": "a89201d490ff38107e2ad584843ee2744b33b8f841495e91db815ff728214986",
+    "tests/test_preprocessing_boundaries.py": "b7982efdc9cf4fee5530f7f60ae125a30b1a46ccbeff5f7b56acb4ceebe16a66"
+  },
+  "scope": "추가 규격 준수 점검; 기존 42개 전체 테스트와 100회 세션 재생을 반복 실행하지 않음"
+}

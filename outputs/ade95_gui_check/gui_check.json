@@ -1,0 +1,33 @@
+{
+  "method": "real Tk window; programmatic Matplotlib canvas events",
+  "manual_user_interaction_verified": false,
+  "status": "success",
+  "checks": {
+    "window_viewable": true,
+    "next_button_joint_refresh": true,
+    "rotation_changed": {
+      "before": [
+        30,
+        -60
+      ],
+      "after": [
+        6.627829227151637,
+        -94.69151559475458
+      ]
+    },
+    "zoom_changed": {
+      "before": [
+        -0.12000000022351742,
+        0.1399999997764826
+      ],
+      "after": [
+        -0.1260947025207514,
+        0.14609470207371655
+      ]
+    },
+    "save_button_bundle": "C:\\study\\injidong_contract_v1\\outputs\\ade95_gui_check\\exports\\frame_000002_1791459654268916200",
+    "keys_previous_last_boundary": true,
+    "normal_close_exit_code": 0
+  },
+  "finished_ns": "1791459654924915700"
+}

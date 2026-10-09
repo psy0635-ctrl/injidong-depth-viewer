@@ -1,0 +1,24 @@
+{
+  "source": "이번 수정 작업에서 실제 실행",
+  "started_at": "2026-10-08T22:00:08.522443+09:00",
+  "finished_at": "2026-10-08T22:00:08.711444+09:00",
+  "timezone": "Asia/Seoul",
+  "os": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "executable": "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+  "numpy": "2.3.5",
+  "matplotlib": "3.10.8",
+  "command": [
+    "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "scripts/verify_viewer_outputs.py",
+    "outputs/demo_gui/frame_000003_1791460742554215400",
+    "--session",
+    "examples/viewer_multiframe"
+  ],
+  "cwd": "C:\\study\\injidong_contract_v1",
+  "exit_code": 0,
+  "stdout": "{\n  \"status\": \"success\",\n  \"bundle\": \"C:\\\\study\\\\injidong_contract_v1\\\\outputs\\\\demo_gui\\\\frame_000003_1791460742554215400\",\n  \"artifact_validation\": {\n    \"status\": \"passed\",\n    \"schema_checked\": true,\n    \"output_hashes_matched\": true,\n    \"dtype\": \"float32\",\n    \"shape\": [\n      3,\n      3\n    ],\n    \"point_count\": 3\n  },\n  \"input_coordinate_validation\": {\n    \"status\": \"matched\",\n    \"session\": \"C:\\\\study\\\\injidong_contract_v1\\\\examples\\\\viewer_multiframe\",\n    \"frame_id\": \"ade95_synthetic_000003\",\n    \"metadata_matched\": true,\n    \"dtype\": \"float32\",\n    \"shape\": [\n      3,\n      3\n    ],\n    \"point_count\": 3,\n    \"row_order_matched\": true,\n    \"comparison\": \"numpy.array_equal\",\n    \"atol_m\": 0,\n    \"rtol\": 0,\n    \"reason\": \"동일한 float32 기준 함수로 저장·재계산하므로 허용 오차 없이 전체 배열을 비교합니다.\"\n  },\n  \"coordinates_verified\": true,\n  \"errors\": [],\n  \"output_hashes_matched\": true,\n  \"deployment_hashes_preserved\": 21,\n  \"initial_files_preserved\": null,\n  \"local_summary_schemas_match\": {\n    \"features.schema.json\": true,\n    \"frame.schema.json\": true,\n    \"label.schema.json\": true,\n    \"prediction.schema.json\": true,\n    \"processing.schema.json\": true\n  },\n  \"summary\": \"파일 무결성과 명시한 입력의 전체 좌표·metadata 대조에 성공했습니다.\"\n}\n",
+  "stderr": ""
+}

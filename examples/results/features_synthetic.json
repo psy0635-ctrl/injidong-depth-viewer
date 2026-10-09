@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0.0",
+  "frame_id": "synthetic_000001",
+  "specimen_id": null,
+  "volume_m3": 0.0001,
+  "volume_method": "synthetic_fixture",
+  "material": null,
+  "provenance_kind": "synthetic",
+  "pose_features": null,
+  "feature_version": "volume_only_v1"
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0.0",
+  "frame_id": "synthetic_000001",
+  "status": "not_ready",
+  "predicted_weight_g": null,
+  "model_id": null,
+  "feature_version": "volume_only_v1",
+  "provenance_kind": "synthetic",
+  "quality": "unknown",
+  "quality_policy_id": null,
+  "errors": [
+    {
+      "code": "MODEL_NOT_READY",
+      "message": "No trained model has been registered."
+    }
+  ],
+  "warnings": []
+}

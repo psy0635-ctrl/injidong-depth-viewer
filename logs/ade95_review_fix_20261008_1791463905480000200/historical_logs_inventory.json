@@ -1,0 +1,88 @@
+{
+  "source": "이번 파일 존재·해시 확인. 로그 내용 자체는 과거 실행 기록",
+  "referenced_count": 16,
+  "files": [
+    {
+      "path": "logs/1791364711363884400_baseline_tests.json",
+      "exists": true,
+      "sha256": "b3ac40a0b9bfff487c10dbf4e2afb63800c8c9fac230cf3d177b05521c485c00"
+    },
+    {
+      "path": "logs/1791364713525193600_baseline_example.json",
+      "exists": true,
+      "sha256": "0d880ae8af2be3d3381c2ad65e48a704d9f09719c3cd7e1937ad34b6f7d59fa9"
+    },
+    {
+      "path": "logs/1791364714113016200_installed_packages.json",
+      "exists": true,
+      "sha256": "89958f99cda081f280c7e90e3383cb74829c95d7352b3b34f7320fd9f142962c"
+    },
+    {
+      "path": "logs/1791364812642280400_replay_red.json",
+      "exists": true,
+      "sha256": "5053be9f5c200f8afd7558532aa83aa715104db5a452eb154f7d31af1c893ea4"
+    },
+    {
+      "path": "logs/1791364812985283600_preprocessing_boundaries.json",
+      "exists": true,
+      "sha256": "4a28860313f9e3dd3b3e02cbdab40504527810e5ee493368c76982ad8ec984cc"
+    },
+    {
+      "path": "logs/1791364905228668800_replay_green.json",
+      "exists": true,
+      "sha256": "7f531e7e359d22b2b4aca109538278d0bd6e24d08af366f67ff71efcfa490827"
+    },
+    {
+      "path": "logs/1791364945665668600_final_tests.json",
+      "exists": true,
+      "sha256": "74b9000b0931d85f10f8dd39d4eb9aab676c2a593b18bbbbeb9b64eaf03a79e8"
+    },
+    {
+      "path": "logs/1791364948072227200_replay_100.json",
+      "exists": true,
+      "sha256": "18afd0088e313f885f81e5630e9efc530d953f5e0b5f510812b327b5e6a50604"
+    },
+    {
+      "path": "logs/1791365008651846000_failure_cli_cases.json",
+      "exists": true,
+      "sha256": "ac0d997ef1460567efb20f9609ebed99e34456b9778daf8aa52b9281d89a7838"
+    },
+    {
+      "path": "logs/1791365010714202200_preservation.json",
+      "exists": true,
+      "sha256": "3d12acc2dd43a1426b0c569053bf72337da414e621d23a5c72a60b43980ce462"
+    },
+    {
+      "path": "logs/1791365185262843900_artifact_review.json",
+      "exists": true,
+      "sha256": "66d43215c6e0d757017add355c094799892c8e06a3909166ab8ee12ddc971155"
+    },
+    {
+      "path": "logs/1791365313171471900_v1_0_0_compliance.json",
+      "exists": true,
+      "sha256": "1434d75b8da28f32a5ab88139bc590a5a2e9f6d5acad8778167bbac21d56ee2b"
+    },
+    {
+      "path": "logs/final_preservation.json",
+      "exists": true,
+      "sha256": "b51025a4d8d27a42c2aa750d41bb9aedf9efd64b16ed00b4562841049574be45"
+    },
+    {
+      "path": "logs/original_inventory.json",
+      "exists": true,
+      "sha256": "54bb8065c25f726afd2e348adb1090f7168cfaf77503b7e6728ca14635561e9b"
+    },
+    {
+      "path": "logs/replay_1791364947856535500.json",
+      "exists": true,
+      "sha256": "2d5534abbbe36908b365f43a3bc753ffd59bee33d804dac5c57402607c6bd320"
+    },
+    {
+      "path": "logs/v1_0_0_compliance_1791365313123131000.json",
+      "exists": true,
+      "sha256": "7ff538cfcce62844ba1f8168d62a333bf5f062b740e829167348a04df0f380ab"
+    }
+  ],
+  "missing": [],
+  "missing_policy": "없으면 이전 첨부 확인 또는 확인 불가로 기록하며 새 실행으로 대체하지 않는다."
+}

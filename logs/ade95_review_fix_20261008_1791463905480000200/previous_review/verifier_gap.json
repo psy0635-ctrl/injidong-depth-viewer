@@ -1,0 +1,41 @@
+{
+  "source": "C:\\study\\injidong_contract_v1\\outputs\\demo_gui\\frame_000003_1791460557654228600",
+  "disposable_copy": "C:\\Users\\user\\AppData\\Local\\Temp\\injidong_final_review_2fd505ce683d4c9d986f0a1200545062\\verifier_wrong_cloud",
+  "wrong_points": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "expected_points": [
+    [
+      0.0,
+      0.0,
+      2.0
+    ],
+    [
+      0.009999999776482582,
+      0.0,
+      1.0
+    ],
+    [
+      0.0,
+      0.029999999329447746,
+      3.0
+    ]
+  ],
+  "matches": false,
+  "validator_exit_code": 0,
+  "root_cause": "scripts/verify_viewer_outputs.py compares actual cloud and input_metadata only when frame_id equals the bundled original synthetic_000001"
+}

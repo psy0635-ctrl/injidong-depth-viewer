@@ -1,0 +1,57 @@
+{
+  "source": "이전 최종 검토 근거를 보존한 복사본이며 이번 수정 후 검증 결과가 아님",
+  "old_temp": "C:\\Users\\user\\AppData\\Local\\Temp\\injidong_final_review_2fd505ce683d4c9d986f0a1200545062",
+  "copied": [
+    {
+      "name": "verifier_gap.json",
+      "sha256": "63b840f79cc28278a5c7b991e8bb8548690a67050fbf05c588641efda147706d",
+      "copy_sha256": "63b840f79cc28278a5c7b991e8bb8548690a67050fbf05c588641efda147706d"
+    },
+    {
+      "name": "verifier_wrong_cloud_run.json",
+      "sha256": "a56d5c63376054343fa6dee9ac145341dc5fd0d9c579940e1e2036d0a31e667d",
+      "copy_sha256": "a56d5c63376054343fa6dee9ac145341dc5fd0d9c579940e1e2036d0a31e667d"
+    },
+    {
+      "name": "zip_audit.json",
+      "sha256": "a4fd4bf1c5e19a33b1ea0d4dd9a269db322ea7aec384df36c5194ae60cb005e8",
+      "copy_sha256": "a4fd4bf1c5e19a33b1ea0d4dd9a269db322ea7aec384df36c5194ae60cb005e8"
+    },
+    {
+      "name": "preservation.json",
+      "sha256": "802ca99658564afa1f1b4128efd021e93b592eb432b3a0eb39ff8939b21bc34d",
+      "copy_sha256": "802ca99658564afa1f1b4128efd021e93b592eb432b3a0eb39ff8939b21bc34d"
+    },
+    {
+      "name": "user_saved_results.json",
+      "sha256": "5c75a5bca0f8ec3acf5745a1f6e509ae346a308b85e0545dc88ca1b3c848f701",
+      "copy_sha256": "5c75a5bca0f8ec3acf5745a1f6e509ae346a308b85e0545dc88ca1b3c848f701"
+    },
+    {
+      "name": "unittest.json",
+      "sha256": "287a5d3579c0bb1e1815a2392055325cdfd897843c84ad62801460b0865b182f",
+      "copy_sha256": "287a5d3579c0bb1e1815a2392055325cdfd897843c84ad62801460b0865b182f"
+    },
+    {
+      "name": "environment.json",
+      "sha256": "b94b9c4f094554ebd7b57a152a2336093268ec77e0e8fc17e0d4a544651120b4",
+      "copy_sha256": "b94b9c4f094554ebd7b57a152a2336093268ec77e0e8fc17e0d4a544651120b4"
+    },
+    {
+      "name": "document_checks.json",
+      "sha256": "0ab365a43d45e9ad21a515aa348ea775706437c2d94d992d5ac61af7e2066af1",
+      "copy_sha256": "0ab365a43d45e9ad21a515aa348ea775706437c2d94d992d5ac61af7e2066af1"
+    },
+    {
+      "name": "historical_replay_review.json",
+      "sha256": "42f1bb7eb1842ff652ae2a049a88dd381bbff907e6e160134d824d87740a0095",
+      "copy_sha256": "42f1bb7eb1842ff652ae2a049a88dd381bbff907e6e160134d824d87740a0095"
+    },
+    {
+      "name": "final_review_evidence.json",
+      "sha256": "eaf098c5f61b1f4249e201db8f43056436f2efba4402c6994fcea8415bc64331",
+      "copy_sha256": "eaf098c5f61b1f4249e201db8f43056436f2efba4402c6994fcea8415bc64331"
+    }
+  ],
+  "missing": []
+}

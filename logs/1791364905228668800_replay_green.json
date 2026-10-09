@@ -1,0 +1,33 @@
+{
+  "source": "이번 에이전트 실행 / 사용자 전달 결과와 별개",
+  "started_at": "2026-10-07T18:21:43.473800+09:00",
+  "finished_at": "2026-10-07T18:21:45.197668+09:00",
+  "timezone": "Asia/Seoul",
+  "os": "Windows-10-10.0.26200-SP0",
+  "windows_version": [
+    "10",
+    "10.0.26200",
+    "SP0",
+    "Multiprocessor Free"
+  ],
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "executable": "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+  "numpy": "2.3.5",
+  "cwd": "C:\\study\\injidong_contract_v1",
+  "command": [
+    "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_replay.py",
+    "-v"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_cli_propagates_contract_codes_for_bad_inputs (test_replay.ReplayTests.test_cli_propagates_contract_codes_for_bad_inputs) ... ok\ntest_cli_reopens_session_and_records_original_metadata (test_replay.ReplayTests.test_cli_reopens_session_and_records_original_metadata) ... ok\ntest_detects_file_change_even_when_frame_values_are_identical (test_replay.ReplayTests.test_detects_file_change_even_when_frame_values_are_identical) ... ok\ntest_detects_loaded_value_metadata_point_and_order_differences (test_replay.ReplayTests.test_detects_loaded_value_metadata_point_and_order_differences) ... ok\ntest_expected_points_mismatch_is_failure (test_replay.ReplayTests.test_expected_points_mismatch_is_failure) ... ok\ntest_invalid_repeat_is_usage_failure (test_replay.ReplayTests.test_invalid_repeat_is_usage_failure) ... ok\ntest_report_cannot_overwrite_input_or_existing_record (test_replay.ReplayTests.test_report_cannot_overwrite_input_or_existing_record) ... ok\ntest_target_mask_and_multiple_frame_order (test_replay.ReplayTests.test_target_mask_and_multiple_frame_order) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 1.546s\n\nOK\n"
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0.0",
+  "frame_id": "synthetic_000001",
+  "status": "success",
+  "stage": "point_cloud",
+  "point_cloud": {
+    "file": "points.npz",
+    "key": "points_m",
+    "sha256": "1229cdd22f2a0c7afc7ee904aa522437ec3729b0d6209e621c43c226874b7f6c",
+    "unit": "m",
+    "frame": "camera",
+    "point_count": 3
+  },
+  "volume_m3": null,
+  "volume_method": null,
+  "assumptions": [],
+  "valid_depth_ratio": 0.75,
+  "provenance_kind": "synthetic",
+  "config_version": "ade95-viewer-v1",
+  "errors": [],
+  "warnings": [
+    "Volume and weight have not been computed."
+  ]
+}

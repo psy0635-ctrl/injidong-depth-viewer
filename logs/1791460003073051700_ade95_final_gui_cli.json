@@ -1,0 +1,28 @@
+{
+  "source": "이번 에이전트 실행 / 사용자 전달 결과와 별개",
+  "started_at": "2026-10-08T20:46:40.493052+09:00",
+  "finished_at": "2026-10-08T20:46:43.040051+09:00",
+  "timezone": "Asia/Seoul",
+  "os": "Windows-10-10.0.26200-SP0",
+  "windows_version": [
+    "10",
+    "10.0.26200",
+    "SP0",
+    "Multiprocessor Free"
+  ],
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "executable": "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+  "numpy": "2.3.5",
+  "cwd": "C:\\study\\injidong_contract_v1",
+  "command": [
+    "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "scripts/check_viewer_gui.py",
+    "--output",
+    "outputs/ade95_final_gui_cli"
+  ],
+  "exit_code": 0,
+  "stdout": "Saved: C:\\study\\injidong_contract_v1\\outputs\\ade95_final_gui_cli\\exports\\frame_000002_1791460001739051500\nframe_id: ade95_synthetic_000001   size: 2 x 2   valid: 75.00%\npoints: 3 full / 3 displayed   capture_source: synthetic   provenance_kind: synthetic\nSYNTHETIC DATA - excluded from real-device accuracy\nCamera coordinates, meters. Volume/weight: not computed.\nP0=(0, 0, 1) m   P1=(0.01, 0, 1) m   P2=(0, 0.01, 1) m\n{\"method\": \"real Tk window; programmatic Matplotlib canvas events\", \"manual_user_interaction_verified\": false, \"status\": \"success\", \"checks\": {\"window_viewable\": true, \"next_button_joint_refresh\": true, \"rotation_changed\": {\"before\": [30, -60], \"after\": [6.627829227151637, -94.69151559475458]}, \"zoom_changed\": {\"before\": [-0.38000000022351743, 0.3999999997764826], \"after\": [-0.39828410711521933, 0.4182841066681845]}, \"save_button_bundle\": \"C:\\\\study\\\\injidong_contract_v1\\\\outputs\\\\ade95_final_gui_cli\\\\exports\\\\frame_000002_1791460001739051500\", \"keys_previous_last_boundary\": true, \"normal_close_exit_code\": 0, \"gui_cli_main_normal_close_exit_code\": 0}, \"finished_ns\": \"1791460002980052300\"}\n",
+  "stderr": ""
+}

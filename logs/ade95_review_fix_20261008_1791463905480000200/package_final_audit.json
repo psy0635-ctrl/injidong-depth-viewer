@@ -1,0 +1,205 @@
+{
+  "source": "이번 새 ZIP 생성 후 최종 검증",
+  "zip": "C:\\study\\injidong_contract_v1\\submissions\\인지동_ADE-95_독립뷰어_검토보완_20261008.zip",
+  "sha256": "b262c3cce60c177a8d4a40a498d2ce6720ce16a495596396ef160584d6b05657",
+  "crc_verified": true,
+  "file_count": 159,
+  "checksum_entries": 158,
+  "all_content_hashes_matched": true,
+  "required_file_count": 81,
+  "required_files": [
+    "ADE95_PACKAGE_INFO.json",
+    "ADE95_SHA256SUMS.txt",
+    "README-viewer.md",
+    "README.md",
+    "SHA256SUMS.txt",
+    "VALIDATION.md",
+    "docs/ADE-66-67-Windows-작업기록.md",
+    "docs/ADE-95-독립뷰어-사용검증.md",
+    "examples/synthetic/frames.jsonl",
+    "examples/viewer_multiframe/frame_000001/arrays.npz",
+    "examples/viewer_multiframe/frame_000001/metadata.json",
+    "examples/viewer_multiframe/frame_000002/arrays.npz",
+    "examples/viewer_multiframe/frame_000002/metadata.json",
+    "examples/viewer_multiframe/frame_000003/arrays.npz",
+    "examples/viewer_multiframe/frame_000003/metadata.json",
+    "examples/viewer_multiframe/frames.jsonl",
+    "logs/1791364711363884400_baseline_tests.json",
+    "logs/1791364713525193600_baseline_example.json",
+    "logs/1791364714113016200_installed_packages.json",
+    "logs/1791364812642280400_replay_red.json",
+    "logs/1791364812985283600_preprocessing_boundaries.json",
+    "logs/1791364905228668800_replay_green.json",
+    "logs/1791364945665668600_final_tests.json",
+    "logs/1791364948072227200_replay_100.json",
+    "logs/1791365008651846000_failure_cli_cases.json",
+    "logs/1791365010714202200_preservation.json",
+    "logs/1791365185262843900_artifact_review.json",
+    "logs/1791365313171471900_v1_0_0_compliance.json",
+    "logs/ade95_review_fix_20261008_1791463905480000200/basic_input.json",
+    "logs/ade95_review_fix_20261008_1791463905480000200/before_inventory.json",
+    "logs/ade95_review_fix_20261008_1791463905480000200/fixed_wrong_cloud.json",
+    "logs/ade95_review_fix_20261008_1791463905480000200/full_tests.json",
+    "logs/ade95_review_fix_20261008_1791463905480000200/historical_logs_inventory.json",
+    "logs/ade95_review_fix_20261008_1791463905480000200/old_wrong_cloud_false_success.json",
+    "logs/ade95_review_fix_20261008_1791463905480000200/pip_check.json",
+    "logs/ade95_review_fix_20261008_1791463905480000200/prepackage_preservation.json",
+    "logs/ade95_review_fix_20261008_1791463905480000200/previous_evidence_copy.json",
+    "logs/ade95_review_fix_20261008_1791463905480000200/previous_review/document_checks.json",
+    "logs/ade95_review_fix_20261008_1791463905480000200/previous_review/environment.json",
+    "logs/ade95_review_fix_20261008_1791463905480000200/previous_review/final_review_evidence.json",
+    "logs/ade95_review_fix_20261008_1791463905480000200/previous_review/historical_replay_review.json",
+    "logs/ade95_review_fix_20261008_1791463905480000200/previous_review/preservation.json",
+    "logs/ade95_review_fix_20261008_1791463905480000200/previous_review/unittest.json",
+    "logs/ade95_review_fix_20261008_1791463905480000200/previous_review/user_saved_results.json",
+    "logs/ade95_review_fix_20261008_1791463905480000200/previous_review/verifier_gap.json",
+    "logs/ade95_review_fix_20261008_1791463905480000200/previous_review/verifier_wrong_cloud_run.json",
+    "logs/ade95_review_fix_20261008_1791463905480000200/previous_review/zip_audit.json",
+    "logs/ade95_review_fix_20261008_1791463905480000200/regression_green.json",
+    "logs/ade95_review_fix_20261008_1791463905480000200/regression_red.json",
+    "logs/ade95_review_fix_20261008_1791463905480000200/scope_and_test_summary.json",
+    "logs/ade95_review_fix_20261008_1791463905480000200/user_save1.json",
+    "logs/ade95_review_fix_20261008_1791463905480000200/user_save2.json",
+    "logs/final_preservation.json",
+    "logs/original_inventory.json",
+    "logs/replay_1791364947856535500.json",
+    "logs/v1_0_0_compliance_1791365313123131000.json",
+    "outputs/ade95_final_user_saves/frame_000003_1791460557654228600/points.npz",
+    "outputs/ade95_final_user_saves/frame_000003_1791460557654228600/preview.png",
+    "outputs/ade95_final_user_saves/frame_000003_1791460557654228600/processing.json",
+    "outputs/ade95_final_user_saves/frame_000003_1791460557654228600/viewer_export.json",
+    "outputs/ade95_final_user_saves/frame_000003_1791460742554215400/points.npz",
+    "outputs/ade95_final_user_saves/frame_000003_1791460742554215400/preview.png",
+    "outputs/ade95_final_user_saves/frame_000003_1791460742554215400/processing.json",
+    "outputs/ade95_final_user_saves/frame_000003_1791460742554215400/viewer_export.json",
+    "requirements-viewer.lock.txt",
+    "requirements-viewer.txt",
+    "requirements.txt",
+    "schemas/features.schema.json",
+    "schemas/frame.schema.json",
+    "schemas/label.schema.json",
+    "schemas/prediction.schema.json",
+    "schemas/processing.schema.json",
+    "scripts/package_ade95.py",
+    "scripts/verify_viewer_outputs.py",
+    "src/contract.py",
+    "src/replay.py",
+    "src/viewer.py",
+    "src/viewer_data.py",
+    "src/viewer_render.py",
+    "tests/test_verify_viewer_outputs.py",
+    "인지동_최신기준_규격v1.0.0_20261008.md"
+  ],
+  "original_distribution_preserved": 22,
+  "historical_logs_included": 16,
+  "previous_review_json_copies": 10,
+  "user_result_files_identical": 8,
+  "excluded_venv_cache_oldzip_temporary": true,
+  "package_local_differences": [],
+  "extracted_relative_links": [
+    {
+      "document": "README-viewer.md",
+      "target": "outputs/ade95_final_user_saves/frame_000003_1791460557654228600/preview.png",
+      "exists": true
+    },
+    {
+      "document": "README-viewer.md",
+      "target": "docs/ADE-95-독립뷰어-사용검증.md",
+      "exists": true
+    },
+    {
+      "document": "docs/ADE-95-독립뷰어-사용검증.md",
+      "target": "../README-viewer.md",
+      "exists": true
+    },
+    {
+      "document": "docs/ADE-95-독립뷰어-사용검증.md",
+      "target": "../logs/ade95_review_fix_20261008_1791463905480000200",
+      "exists": true
+    },
+    {
+      "document": "docs/ADE-95-독립뷰어-사용검증.md",
+      "target": "../logs/ade95_review_fix_20261008_1791463905480000200/old_wrong_cloud_false_success.json",
+      "exists": true
+    },
+    {
+      "document": "docs/ADE-95-독립뷰어-사용검증.md",
+      "target": "../logs/ade95_review_fix_20261008_1791463905480000200/regression_green.json",
+      "exists": true
+    },
+    {
+      "document": "docs/ADE-95-독립뷰어-사용검증.md",
+      "target": "../logs/ade95_review_fix_20261008_1791463905480000200/full_tests.json",
+      "exists": true
+    },
+    {
+      "document": "docs/ADE-95-독립뷰어-사용검증.md",
+      "target": "../logs/ade95_review_fix_20261008_1791463905480000200/fixed_wrong_cloud.json",
+      "exists": true
+    },
+    {
+      "document": "docs/ADE-95-독립뷰어-사용검증.md",
+      "target": "../logs/ade95_review_fix_20261008_1791463905480000200/user_save1.json",
+      "exists": true
+    },
+    {
+      "document": "docs/ADE-95-독립뷰어-사용검증.md",
+      "target": "../logs/ade95_review_fix_20261008_1791463905480000200/user_save2.json",
+      "exists": true
+    },
+    {
+      "document": "docs/ADE-95-독립뷰어-사용검증.md",
+      "target": "../logs/ade95_review_fix_20261008_1791463905480000200/pip_check.json",
+      "exists": true
+    },
+    {
+      "document": "docs/ADE-95-독립뷰어-사용검증.md",
+      "target": "../logs/ade95_review_fix_20261008_1791463905480000200/historical_logs_inventory.json",
+      "exists": true
+    },
+    {
+      "document": "docs/ADE-95-독립뷰어-사용검증.md",
+      "target": "../outputs/ade95_final_synthetic/preview.png",
+      "exists": true
+    },
+    {
+      "document": "docs/ADE-95-독립뷰어-사용검증.md",
+      "target": "../outputs/ade95_final_gui_cli/tk_canvas.png",
+      "exists": true
+    },
+    {
+      "document": "docs/ADE-95-독립뷰어-사용검증.md",
+      "target": "../outputs/ade95_final_user_saves/frame_000003_1791460557654228600/preview.png",
+      "exists": true
+    }
+  ],
+  "extracted_runs": [
+    {
+      "label": "extracted_basic",
+      "exit_code": 0
+    },
+    {
+      "label": "extracted_third",
+      "exit_code": 0
+    },
+    {
+      "label": "extracted_no_input",
+      "exit_code": 0
+    },
+    {
+      "label": "extracted_wrong_cloud",
+      "exit_code": 1
+    }
+  ],
+  "wrong_cloud_integrity_passed_but_coordinates_rejected": true,
+  "changed_existing_files": [
+    "docs/ADE-95-독립뷰어-사용검증.md",
+    "scripts/package_ade95.py",
+    "scripts/verify_viewer_outputs.py"
+  ],
+  "protected_mismatches": [],
+  "full_suite_not_repeated_in_extracted_copy": true,
+  "gui_not_rerun": true,
+  "replay_100_not_rerun": true,
+  "postpackage_log_policy": "패키징 후 실행 로그는 이 새 검토 폴더에 별도 보존한다. 완성 ZIP을 다시 쓰지 않는다."
+}

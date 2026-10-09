@@ -1,0 +1,27 @@
+{
+  "source": "이번 에이전트 실행 / 사용자 전달 결과와 별개",
+  "started_at": "2026-10-07T18:18:33.365443+09:00",
+  "finished_at": "2026-10-07T18:18:33.494192+09:00",
+  "timezone": "Asia/Seoul",
+  "os": "Windows-10-10.0.26200-SP0",
+  "windows_version": [
+    "10",
+    "10.0.26200",
+    "SP0",
+    "Multiprocessor Free"
+  ],
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "executable": "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+  "numpy": "2.3.5",
+  "cwd": "C:\\study\\injidong_contract_v1",
+  "command": [
+    "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "src/contract.py",
+    "examples/synthetic"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"frame_id\": \"synthetic_000001\", \"provenance_kind\": \"synthetic\", \"point_count\": 3, \"points_m\": [[0.0, 0.0, 1.0], [0.009999999776482582, 0.0, 1.0], [0.0, 0.009999999776482582, 1.0]]}\n",
+  "stderr": ""
+}

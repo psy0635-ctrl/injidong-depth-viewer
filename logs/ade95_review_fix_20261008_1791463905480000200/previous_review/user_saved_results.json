@@ -1,0 +1,136 @@
+[
+  {
+    "bundle": "C:\\study\\injidong_contract_v1\\outputs\\demo_gui\\frame_000003_1791460557654228600",
+    "files": [
+      "points.npz",
+      "preview.png",
+      "processing.json",
+      "viewer_export.json"
+    ],
+    "frame_id": "ade95_synthetic_000003",
+    "dtype": "float32",
+    "shape": [
+      3,
+      3
+    ],
+    "keys": [
+      "points_m"
+    ],
+    "points_m": [
+      [
+        0.0,
+        0.0,
+        2.0
+      ],
+      [
+        0.009999999776482582,
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        0.029999999329447746,
+        3.0
+      ]
+    ],
+    "expected_from_third_input_m": [
+      [
+        0.0,
+        0.0,
+        2.0
+      ],
+      [
+        0.009999999776482582,
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        0.029999999329447746,
+        3.0
+      ]
+    ],
+    "array_equal_input": true,
+    "metadata_equal_input": true,
+    "hashes_match": true,
+    "processing_npz_hash": true,
+    "point_count": 3,
+    "unit": "m",
+    "frame": "camera",
+    "valid_ratio": 0.75,
+    "volume_m3": null,
+    "png_size": [
+      1680,
+      980
+    ],
+    "local_copy_identical": true,
+    "zip_copy_identical": true
+  },
+  {
+    "bundle": "C:\\study\\injidong_contract_v1\\outputs\\demo_gui\\frame_000003_1791460742554215400",
+    "files": [
+      "points.npz",
+      "preview.png",
+      "processing.json",
+      "viewer_export.json"
+    ],
+    "frame_id": "ade95_synthetic_000003",
+    "dtype": "float32",
+    "shape": [
+      3,
+      3
+    ],
+    "keys": [
+      "points_m"
+    ],
+    "points_m": [
+      [
+        0.0,
+        0.0,
+        2.0
+      ],
+      [
+        0.009999999776482582,
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        0.029999999329447746,
+        3.0
+      ]
+    ],
+    "expected_from_third_input_m": [
+      [
+        0.0,
+        0.0,
+        2.0
+      ],
+      [
+        0.009999999776482582,
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        0.029999999329447746,
+        3.0
+      ]
+    ],
+    "array_equal_input": true,
+    "metadata_equal_input": true,
+    "hashes_match": true,
+    "processing_npz_hash": true,
+    "point_count": 3,
+    "unit": "m",
+    "frame": "camera",
+    "valid_ratio": 0.75,
+    "volume_m3": null,
+    "png_size": [
+      1680,
+      980
+    ],
+    "local_copy_identical": true,
+    "zip_copy_identical": true
+  }
+]

@@ -1,0 +1,183 @@
+{
+  "recorded_at": "2026-10-07T18:18:27.567310+09:00",
+  "timezone": "Asia/Seoul",
+  "files": {
+    "README.md": "abc34deb221c2b655401e62f2ce95e8f765eca4d56b80c82dec4bc296ccb9b8a",
+    "requirements.txt": "7bd6b8946940b79948c548c8048e545684b91c8edc9444d8dfc0c8f76a97c0a7",
+    "SHA256SUMS.txt": "35da2416430fa73ca558f308de7ba9633ec0da46b047940d77520acabe220075",
+    "VALIDATION.md": "44b8470393c3bd753eb3cc8030da0a74fcfb693f23c99015a0c594c48723c29c",
+    "examples/results/expected_points.json": "73c0d6b57d159791836b3a1716fc0f64d34e12e5f5c32db7965f91011b3be00e",
+    "examples/results/features_synthetic.json": "b24a65096c099c4d68769a20446ffdeb5fde2e41d65a16b94e9847f4cb9b9173",
+    "examples/results/label_synthetic.json": "f69e32c47f1f43b2f5423acb1f158b4bc20a400583c45eb98e37a24bd7e6871e",
+    "examples/results/point_cloud.npz": "30fcc0a2f30f52cae5c02fca8173a3f4efbbcc83d1b1d3f9f3465d36427e8b7e",
+    "examples/results/point_cloud_success.json": "fc9ce5395a46afb8312ed4523f8f72a13f0e95ba24f68bb3dc92513dae35f8fa",
+    "examples/results/prediction_not_ready.json": "313494331d3054f35a2d5174a54bdf56f0cc77a565d1dea70b0928c58e6f3c95",
+    "examples/results/prediction_success_synthetic.json": "0e2bb2ed91a07b25a8ad8026846dcdd674a4b82cfe2ec8651f2b19085b4e2b85",
+    "examples/results/volume_unavailable.json": "747e11d7cb527b760ba0c0d551b37e88fab84ce4dfc730d6317772abf4689531",
+    "examples/synthetic/frames.jsonl": "5b136436864860b3fa660ef3c71b93fa418c90d41913639f74bc40ace7376afa",
+    "examples/synthetic/frame_000001/arrays.npz": "fd1e1a0d2db6be06efaae3986fc3db18039f3daeb861ff7bfab1a8fd78c412fd",
+    "examples/synthetic/frame_000001/metadata.json": "806e0df67e2489612be6aabe9af80b3dc84ad08ff62b6804ec59d2ead0ee0bf7",
+    "schemas/features.schema.json": "8346fb2d4c710384bfe26f5f256c8ea89f98122b94f06acfc595e3433a6b6fc6",
+    "schemas/frame.schema.json": "b277100a2d5a8ac6052a3dcbb8e6bcdc56da9e23a656c2aa50e5d91475b190ea",
+    "schemas/label.schema.json": "1be4dd848c37f16a32156a92b51f364fdd80e156baa05b5143d064318f906f2d",
+    "schemas/prediction.schema.json": "dc60997adbf21ad4a33ff873761ef89204ead72dba3c4ff70cf600e9af79152a",
+    "schemas/processing.schema.json": "b5090a9f3a2f294836ca0a318b24fdf4ba2c695045e3f5c531564f5b9bd9e4ae",
+    "src/contract.py": "f69426b2b62310994d835dc5f9a8166d8fc893a42c985bae823609e610aeb5de",
+    "tests/test_contract.py": "d94ca1ab25a49a032f8d7cf334f7db4758a8d15eb2ff25d74105c83fa32e2450"
+  },
+  "distribution_checks": [
+    {
+      "file": "README.md",
+      "expected": "abc34deb221c2b655401e62f2ce95e8f765eca4d56b80c82dec4bc296ccb9b8a",
+      "actual": "abc34deb221c2b655401e62f2ce95e8f765eca4d56b80c82dec4bc296ccb9b8a",
+      "match": true
+    },
+    {
+      "file": "VALIDATION.md",
+      "expected": "44b8470393c3bd753eb3cc8030da0a74fcfb693f23c99015a0c594c48723c29c",
+      "actual": "44b8470393c3bd753eb3cc8030da0a74fcfb693f23c99015a0c594c48723c29c",
+      "match": true
+    },
+    {
+      "file": "examples/results/expected_points.json",
+      "expected": "73c0d6b57d159791836b3a1716fc0f64d34e12e5f5c32db7965f91011b3be00e",
+      "actual": "73c0d6b57d159791836b3a1716fc0f64d34e12e5f5c32db7965f91011b3be00e",
+      "match": true
+    },
+    {
+      "file": "examples/results/features_synthetic.json",
+      "expected": "b24a65096c099c4d68769a20446ffdeb5fde2e41d65a16b94e9847f4cb9b9173",
+      "actual": "b24a65096c099c4d68769a20446ffdeb5fde2e41d65a16b94e9847f4cb9b9173",
+      "match": true
+    },
+    {
+      "file": "examples/results/label_synthetic.json",
+      "expected": "f69e32c47f1f43b2f5423acb1f158b4bc20a400583c45eb98e37a24bd7e6871e",
+      "actual": "f69e32c47f1f43b2f5423acb1f158b4bc20a400583c45eb98e37a24bd7e6871e",
+      "match": true
+    },
+    {
+      "file": "examples/results/point_cloud.npz",
+      "expected": "30fcc0a2f30f52cae5c02fca8173a3f4efbbcc83d1b1d3f9f3465d36427e8b7e",
+      "actual": "30fcc0a2f30f52cae5c02fca8173a3f4efbbcc83d1b1d3f9f3465d36427e8b7e",
+      "match": true
+    },
+    {
+      "file": "examples/results/point_cloud_success.json",
+      "expected": "fc9ce5395a46afb8312ed4523f8f72a13f0e95ba24f68bb3dc92513dae35f8fa",
+      "actual": "fc9ce5395a46afb8312ed4523f8f72a13f0e95ba24f68bb3dc92513dae35f8fa",
+      "match": true
+    },
+    {
+      "file": "examples/results/prediction_not_ready.json",
+      "expected": "313494331d3054f35a2d5174a54bdf56f0cc77a565d1dea70b0928c58e6f3c95",
+      "actual": "313494331d3054f35a2d5174a54bdf56f0cc77a565d1dea70b0928c58e6f3c95",
+      "match": true
+    },
+    {
+      "file": "examples/results/prediction_success_synthetic.json",
+      "expected": "0e2bb2ed91a07b25a8ad8026846dcdd674a4b82cfe2ec8651f2b19085b4e2b85",
+      "actual": "0e2bb2ed91a07b25a8ad8026846dcdd674a4b82cfe2ec8651f2b19085b4e2b85",
+      "match": true
+    },
+    {
+      "file": "examples/results/volume_unavailable.json",
+      "expected": "747e11d7cb527b760ba0c0d551b37e88fab84ce4dfc730d6317772abf4689531",
+      "actual": "747e11d7cb527b760ba0c0d551b37e88fab84ce4dfc730d6317772abf4689531",
+      "match": true
+    },
+    {
+      "file": "examples/synthetic/frame_000001/arrays.npz",
+      "expected": "fd1e1a0d2db6be06efaae3986fc3db18039f3daeb861ff7bfab1a8fd78c412fd",
+      "actual": "fd1e1a0d2db6be06efaae3986fc3db18039f3daeb861ff7bfab1a8fd78c412fd",
+      "match": true
+    },
+    {
+      "file": "examples/synthetic/frame_000001/metadata.json",
+      "expected": "806e0df67e2489612be6aabe9af80b3dc84ad08ff62b6804ec59d2ead0ee0bf7",
+      "actual": "806e0df67e2489612be6aabe9af80b3dc84ad08ff62b6804ec59d2ead0ee0bf7",
+      "match": true
+    },
+    {
+      "file": "examples/synthetic/frames.jsonl",
+      "expected": "5b136436864860b3fa660ef3c71b93fa418c90d41913639f74bc40ace7376afa",
+      "actual": "5b136436864860b3fa660ef3c71b93fa418c90d41913639f74bc40ace7376afa",
+      "match": true
+    },
+    {
+      "file": "requirements.txt",
+      "expected": "7bd6b8946940b79948c548c8048e545684b91c8edc9444d8dfc0c8f76a97c0a7",
+      "actual": "7bd6b8946940b79948c548c8048e545684b91c8edc9444d8dfc0c8f76a97c0a7",
+      "match": true
+    },
+    {
+      "file": "schemas/features.schema.json",
+      "expected": "8346fb2d4c710384bfe26f5f256c8ea89f98122b94f06acfc595e3433a6b6fc6",
+      "actual": "8346fb2d4c710384bfe26f5f256c8ea89f98122b94f06acfc595e3433a6b6fc6",
+      "match": true
+    },
+    {
+      "file": "schemas/frame.schema.json",
+      "expected": "b277100a2d5a8ac6052a3dcbb8e6bcdc56da9e23a656c2aa50e5d91475b190ea",
+      "actual": "b277100a2d5a8ac6052a3dcbb8e6bcdc56da9e23a656c2aa50e5d91475b190ea",
+      "match": true
+    },
+    {
+      "file": "schemas/label.schema.json",
+      "expected": "1be4dd848c37f16a32156a92b51f364fdd80e156baa05b5143d064318f906f2d",
+      "actual": "1be4dd848c37f16a32156a92b51f364fdd80e156baa05b5143d064318f906f2d",
+      "match": true
+    },
+    {
+      "file": "schemas/prediction.schema.json",
+      "expected": "dc60997adbf21ad4a33ff873761ef89204ead72dba3c4ff70cf600e9af79152a",
+      "actual": "dc60997adbf21ad4a33ff873761ef89204ead72dba3c4ff70cf600e9af79152a",
+      "match": true
+    },
+    {
+      "file": "schemas/processing.schema.json",
+      "expected": "b5090a9f3a2f294836ca0a318b24fdf4ba2c695045e3f5c531564f5b9bd9e4ae",
+      "actual": "b5090a9f3a2f294836ca0a318b24fdf4ba2c695045e3f5c531564f5b9bd9e4ae",
+      "match": true
+    },
+    {
+      "file": "src/contract.py",
+      "expected": "f69426b2b62310994d835dc5f9a8166d8fc893a42c985bae823609e610aeb5de",
+      "actual": "f69426b2b62310994d835dc5f9a8166d8fc893a42c985bae823609e610aeb5de",
+      "match": true
+    },
+    {
+      "file": "tests/test_contract.py",
+      "expected": "d94ca1ab25a49a032f8d7cf334f7db4758a8d15eb2ff25d74105c83fa32e2450",
+      "actual": "d94ca1ab25a49a032f8d7cf334f7db4758a8d15eb2ff25d74105c83fa32e2450",
+      "match": true
+    }
+  ],
+  "git_configured": false,
+  "applicable_agents": null,
+  "user_report": {
+    "source": "사용자 제공 기록; 이번 에이전트 실행 결과와 별개",
+    "python": "3.11.9",
+    "numpy": "2.3.5",
+    "provided_tests_passed": 28,
+    "provided_tests_failed": 0,
+    "synthetic_point_count": 3,
+    "points_m": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0.01,
+        0,
+        1
+      ],
+      [
+        0,
+        0.01,
+        1
+      ]
+    ]
+  }
+}

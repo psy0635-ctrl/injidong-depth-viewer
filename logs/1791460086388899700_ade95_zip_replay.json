@@ -1,0 +1,27 @@
+{
+  "source": "이번 에이전트 실행 / 사용자 전달 결과와 별개",
+  "started_at": "2026-10-08T20:47:57.584865+09:00",
+  "finished_at": "2026-10-08T20:48:06.359896+09:00",
+  "timezone": "Asia/Seoul",
+  "os": "Windows-10-10.0.26200-SP0",
+  "windows_version": [
+    "10",
+    "10.0.26200",
+    "SP0",
+    "Multiprocessor Free"
+  ],
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "executable": "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+  "numpy": "2.3.5",
+  "cwd": "C:\\study\\injidong_contract_v1",
+  "command": [
+    "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-c",
+    "from pathlib import Path\nimport hashlib,json,subprocess,sys,tempfile,zipfile\nroot=Path.cwd()\narchive_path=root/'submissions/인지동_ADE-95_독립뷰어_20261008.zip'\nwith tempfile.TemporaryDirectory(prefix='ade95_submission_') as temporary:\n    base=Path(temporary).resolve()\n    assert base.is_relative_to(Path(tempfile.gettempdir()).resolve())\n    with zipfile.ZipFile(archive_path) as archive:\n        for name in archive.namelist():\n            assert (base/name).resolve().is_relative_to(base)\n        archive.extractall(base)\n    package=base/'injidong_ade95'\n    commands=[['src/viewer.py','examples/synthetic','--headless','--output',str(base/'result')],\n              ['scripts/verify_viewer_outputs.py',str(base/'result')],\n              ['-m','unittest','discover','-s','tests','-v']]\n    results=[]\n    for command in commands:\n        process=subprocess.run([sys.executable,'-X','utf8',*command],cwd=package,capture_output=True,text=True,encoding='utf-8')\n        print('command:',json.dumps(command,ensure_ascii=False),'exit:',process.returncode)\n        print(process.stdout)\n        print(process.stderr if process.returncode else '\\n'.join(process.stderr.splitlines()[-4:]))\n        assert process.returncode==0\n        results.append({'command':command,'exit_code':process.returncode})\n    print(json.dumps({'status':'success','zip_sha256':hashlib.sha256(archive_path.read_bytes()).hexdigest(),'extracted_entrypoint_and_all_58_tests_verified':True,'interpreter':'existing project .venv; no new environment created','commands':results},ensure_ascii=False))"
+  ],
+  "exit_code": 0,
+  "stdout": "command: [\"src/viewer.py\", \"examples/synthetic\", \"--headless\", \"--output\", \"C:\\\\Users\\\\user\\\\AppData\\\\Local\\\\Temp\\\\ade95_submission_zv0c22lg\\\\result\"] exit: 0\nframe_id: synthetic_000001   size: 2 x 2   valid: 75.00%\npoints: 3 full / 3 displayed   capture_source: synthetic   provenance_kind: synthetic\nSYNTHETIC DATA - excluded from real-device accuracy\nCamera coordinates, meters. Volume/weight: not computed.\nP0=(0, 0, 1) m   P1=(0.01, 0, 1) m   P2=(0, 0.01, 1) m\nSaved: C:\\Users\\user\\AppData\\Local\\Temp\\ade95_submission_zv0c22lg\\result\n\n\ncommand: [\"scripts/verify_viewer_outputs.py\", \"C:\\\\Users\\\\user\\\\AppData\\\\Local\\\\Temp\\\\ade95_submission_zv0c22lg\\\\result\"] exit: 0\n{\n  \"status\": \"success\",\n  \"bundle\": \"C:\\\\Users\\\\user\\\\AppData\\\\Local\\\\Temp\\\\ade95_submission_zv0c22lg\\\\result\",\n  \"output_hashes_matched\": true,\n  \"expected_coordinates\": \"rtol=0, atol=1e-7 m\",\n  \"deployment_hashes_preserved\": 21,\n  \"initial_files_preserved\": null,\n  \"local_summary_schemas_match\": {\n    \"features.schema.json\": true,\n    \"frame.schema.json\": true,\n    \"label.schema.json\": true,\n    \"prediction.schema.json\": true,\n    \"processing.schema.json\": true\n  }\n}\n\n\ncommand: [\"-m\", \"unittest\", \"discover\", \"-s\", \"tests\", \"-v\"] exit: 0\n\n----------------------------------------------------------------------\nRan 58 tests in 7.355s\n\nOK\n{\"status\": \"success\", \"zip_sha256\": \"2c95cda0ffb753e869486d7d9fbc2372deda2f2d68667f35bbdcfa2cab0d947f\", \"extracted_entrypoint_and_all_58_tests_verified\": true, \"interpreter\": \"existing project .venv; no new environment created\", \"commands\": [{\"command\": [\"src/viewer.py\", \"examples/synthetic\", \"--headless\", \"--output\", \"C:\\\\Users\\\\user\\\\AppData\\\\Local\\\\Temp\\\\ade95_submission_zv0c22lg\\\\result\"], \"exit_code\": 0}, {\"command\": [\"scripts/verify_viewer_outputs.py\", \"C:\\\\Users\\\\user\\\\AppData\\\\Local\\\\Temp\\\\ade95_submission_zv0c22lg\\\\result\"], \"exit_code\": 0}, {\"command\": [\"-m\", \"unittest\", \"discover\", \"-s\", \"tests\", \"-v\"], \"exit_code\": 0}]}\n",
+  "stderr": ""
+}

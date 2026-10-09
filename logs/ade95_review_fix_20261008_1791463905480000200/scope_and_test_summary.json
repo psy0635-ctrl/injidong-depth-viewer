@@ -1,0 +1,30 @@
+{
+  "source": "이번 실제 실행 로그 요약",
+  "regression_tests": 10,
+  "regression_failures": 0,
+  "regression_exit_code": 0,
+  "full_tests": 68,
+  "full_failures": 0,
+  "full_exit_code": 0,
+  "full_suite_runs_after_fix": 1,
+  "user_saved_results_input_match": [
+    {
+      "log": "user_save1.json",
+      "exit_code": 0
+    },
+    {
+      "log": "user_save2.json",
+      "exit_code": 0
+    }
+  ],
+  "old_wrong_cloud_false_success_exit": 0,
+  "fixed_wrong_cloud_exit": 1,
+  "fixed_wrong_cloud_code": "POINT_CLOUD_MISMATCH",
+  "gui_code_changed": false,
+  "gui_check_rerun": false,
+  "replay_100_rerun": false,
+  "manual_interactions_verified": false,
+  "manual_exit_code": null,
+  "actual_device_volume_weight_team_approval_official_integration": "미완료",
+  "package": "C:\\study\\injidong_contract_v1\\submissions\\인지동_ADE-95_독립뷰어_검토보완_20261008.zip"
+}

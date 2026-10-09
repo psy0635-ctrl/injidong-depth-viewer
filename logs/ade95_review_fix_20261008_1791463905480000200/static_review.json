@@ -1,0 +1,7 @@
+{
+  "source": "이번 변경 파일의 내부 읽기 전용 코드 리뷰",
+  "result": "중요한 기능 요구 위반이나 확인 가능한 오류를 발견하지 못함",
+  "scope": ["scripts/verify_viewer_outputs.py", "tests/test_verify_viewer_outputs.py", "scripts/package_ade95.py", "README-viewer.md", "docs/ADE-95-독립뷰어-사용검증.md"],
+  "method": "파일 읽기만 수행. 테스트·GUI·패키징은 실행하지 않음",
+  "tests_evidence": "실제 실행 근거는 regression_green.json 및 full_tests.json이며 리뷰 결과로 대체하지 않음"
+}

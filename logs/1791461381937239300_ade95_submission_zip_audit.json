@@ -1,0 +1,27 @@
+{
+  "source": "이번 에이전트 실행 / 사용자 전달 결과와 별개",
+  "started_at": "2026-10-08T21:09:41.810238+09:00",
+  "finished_at": "2026-10-08T21:09:41.904238+09:00",
+  "timezone": "Asia/Seoul",
+  "os": "Windows-10-10.0.26200-SP0",
+  "windows_version": [
+    "10",
+    "10.0.26200",
+    "SP0",
+    "Multiprocessor Free"
+  ],
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "executable": "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+  "numpy": "2.3.5",
+  "cwd": "C:\\study\\injidong_contract_v1",
+  "command": [
+    "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-c",
+    "from pathlib import Path\nimport hashlib,json,zipfile\nroot=Path.cwd(); path=root/'submissions/인지동_ADE-95_독립뷰어_최종제출_20261008.zip'; digest=hashlib.sha256(path.read_bytes()).hexdigest()\nassert path.with_suffix('.zip.sha256').read_text(encoding='utf-8').split()[0]==digest\nrequired=['docs/ADE-95-독립뷰어-사용검증.md','logs/ade95_user_execution_evidence.json','logs/1791461196407809300_ade95_user_save1_verify.json','logs/1791461196747017600_ade95_user_save2_verify.json','logs/1791461213565276800_ade95_user_third_frame_verify.json','logs/1791461344831362500_ade95_submission_prepackage.json','src/viewer.py','src/viewer_data.py','src/viewer_render.py','scripts/verify_viewer_outputs.py','scripts/package_ade95.py','requirements-viewer.txt','requirements-viewer.lock.txt','SHA256SUMS.txt','ADE95_SHA256SUMS.txt','ADE95_PACKAGE_INFO.json','logs/ade95_numpy_repair.json','outputs/ade95_final_gui_cli/gui_check.json','logs/1791459841998924200_ade95_final_tests.json']\nfor folder in ['frame_000003_1791460557654228600','frame_000003_1791460742554215400']:\n    required.extend(f'outputs/ade95_final_user_saves/{folder}/{name}' for name in ['points.npz','preview.png','processing.json','viewer_export.json'])\nwith zipfile.ZipFile(path) as archive:\n    assert archive.testzip() is None\n    names=set(archive.namelist()); prefix='injidong_ade95/'\n    assert len(names)==len(archive.namelist())\n    for name in required: assert prefix+name in names,name\n    assert all('.venv' not in n.split('/') and '__pycache__' not in n.split('/') and not n.endswith(('.pyc','.tmp','.zip')) for n in names)\n    lines=archive.read(prefix+'ADE95_SHA256SUMS.txt').decode('utf-8').splitlines()\n    entries={}\n    for line in lines:\n        expected,name=line.split('  ',1); entries[name]=expected\n        assert hashlib.sha256(archive.read(prefix+name)).hexdigest()==expected,name\n    assert {prefix+n for n in entries}==names-{prefix+'ADE95_SHA256SUMS.txt'}\n    for name in required:\n        if name not in ['ADE95_SHA256SUMS.txt','ADE95_PACKAGE_INFO.json']:\n            assert archive.read(prefix+name)==(root/name).read_bytes(),name\n    evidence=json.loads(archive.read(prefix+'logs/ade95_user_execution_evidence.json'))\n    for folder in evidence['saved_folders']:\n        for name,expected in folder['files_sha256'].items():\n            assert hashlib.sha256(archive.read(prefix+folder['package_copy']+'/'+name)).hexdigest()==expected\n            assert hashlib.sha256((root/folder['original']/name).read_bytes()).hexdigest()==expected\nold=root/'submissions/인지동_ADE-95_독립뷰어_20261008.zip'\nassert hashlib.sha256(old.read_bytes()).hexdigest()=='2c95cda0ffb753e869486d7d9fbc2372deda2f2d68667f35bbdcfa2cab0d947f'\nprint(json.dumps({'status':'success','new_zip':str(path),'sha256':digest,'zip_file_count':len(names),'content_hashes_checked':len(entries),'required_files_checked':len(required),'user_saved_result_files_included':8,'original_sha256sums_unchanged':True,'old_zip_preserved':True,'excluded_venv_cache_pyc_temporary_priorzip':True,'crc_verified':True},ensure_ascii=False,indent=2))"
+  ],
+  "exit_code": 0,
+  "stdout": "{\n  \"status\": \"success\",\n  \"new_zip\": \"C:\\\\study\\\\injidong_contract_v1\\\\submissions\\\\인지동_ADE-95_독립뷰어_최종제출_20261008.zip\",\n  \"sha256\": \"4bc4b2fd104cd75c80c87d07b4a7957bfaaedc0fa8fda9ecfcaeb034a64a892b\",\n  \"zip_file_count\": 115,\n  \"content_hashes_checked\": 114,\n  \"required_files_checked\": 27,\n  \"user_saved_result_files_included\": 8,\n  \"original_sha256sums_unchanged\": true,\n  \"old_zip_preserved\": true,\n  \"excluded_venv_cache_pyc_temporary_priorzip\": true,\n  \"crc_verified\": true\n}\n",
+  "stderr": ""
+}

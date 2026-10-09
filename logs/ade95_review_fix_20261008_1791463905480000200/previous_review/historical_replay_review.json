@@ -1,0 +1,74 @@
+{
+  "status": "success",
+  "requested": 100,
+  "completed": 100,
+  "iterations": 100,
+  "errors": [],
+  "original_files_unchanged": true,
+  "expected_points": {
+    "method": "numpy.allclose",
+    "rtol": 0,
+    "atol_m": 1e-07,
+    "checked": true,
+    "matched": true,
+    "max_abs_error_m": 2.2351741811588166e-10
+  },
+  "times_decimal_ns": true,
+  "clock_domains": [
+    "pc_unix_utc"
+  ],
+  "origins": [
+    "replay_host"
+  ],
+  "frame": [
+    {
+      "frame_id": "synthetic_000001",
+      "capture_time": {
+        "ns": "1000000000",
+        "clock_domain": "synthetic_reference",
+        "origin": "synthetic"
+      },
+      "capture_source": "synthetic",
+      "provenance": {
+        "kind": "synthetic",
+        "camera": null,
+        "raw_file": null,
+        "raw_sha256": null,
+        "raw_unit": "mm",
+        "raw_scale_to_m": 0.001,
+        "synthetic_seed": 0,
+        "synthetic_config": "raw_mm=[[1000,1000],[1000,0]]; no mask or support plane"
+      },
+      "original_replay_time": {
+        "ns": null,
+        "clock_domain": null,
+        "origin": null
+      },
+      "depth_shape": [
+        2,
+        2
+      ],
+      "depth_dtype": "float32",
+      "valid_mask_dtype": "bool",
+      "has_target_mask": false,
+      "point_count": 3,
+      "points_m": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.009999999776482582,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          0.009999999776482582,
+          1.0
+        ]
+      ]
+    }
+  ]
+}

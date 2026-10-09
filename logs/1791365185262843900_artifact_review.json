@@ -1,0 +1,27 @@
+{
+  "source": "이번 에이전트 실행 / 사용자 전달 결과와 별개",
+  "started_at": "2026-10-07T18:26:25.078843+09:00",
+  "finished_at": "2026-10-07T18:26:25.231845+09:00",
+  "timezone": "Asia/Seoul",
+  "os": "Windows-10-10.0.26200-SP0",
+  "windows_version": [
+    "10",
+    "10.0.26200",
+    "SP0",
+    "Multiprocessor Free"
+  ],
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "executable": "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+  "numpy": "2.3.5",
+  "cwd": "C:\\study\\injidong_contract_v1",
+  "command": [
+    "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-c",
+    "import ast,json,pathlib,re\nroot=pathlib.Path.cwd(); doc=root/'docs/ADE-66-67-Windows-작업기록.md'; text=doc.read_text(encoding='utf-8'); missing=[]\nfor name in re.findall(r'`(logs/[^`]+\\.json)`',text):\n    if not (root/name).is_file(): missing.append(name)\nlogs=list((root/'logs').glob('*.json'))\nfor p in logs: json.loads(p.read_text(encoding='utf-8'))\nfor name in ['src/replay.py','scripts/record_run.py','tests/test_replay.py','tests/test_preprocessing_boundaries.py']:\n    data=(root/name).read_text(encoding='utf-8'); ast.parse(data); assert not any(line.rstrip()!=line for line in data.splitlines()),name\nassert not missing,missing\noriginal=json.loads((root/'logs/original_inventory.json').read_text(encoding='utf-8'))\nnew=sorted(p.relative_to(root).as_posix() for p in root.rglob('*') if p.is_file() and '.venv' not in p.parts and '__pycache__' not in p.parts and p.relative_to(root).as_posix() not in original['files'])\nprint(json.dumps({'utf8_json_logs_read':len(logs),'document_log_links_missing':missing,'python_sources_parse':'pass','new_deliverables_excluding_venv_cache':new},ensure_ascii=False,indent=2))"
+  ],
+  "exit_code": 0,
+  "stdout": "{\n  \"utf8_json_logs_read\": 13,\n  \"document_log_links_missing\": [],\n  \"python_sources_parse\": \"pass\",\n  \"new_deliverables_excluding_venv_cache\": [\n    \"docs/ADE-66-67-Windows-작업기록.md\",\n    \"logs/1791364711363884400_baseline_tests.json\",\n    \"logs/1791364713525193600_baseline_example.json\",\n    \"logs/1791364714113016200_installed_packages.json\",\n    \"logs/1791364812642280400_replay_red.json\",\n    \"logs/1791364812985283600_preprocessing_boundaries.json\",\n    \"logs/1791364905228668800_replay_green.json\",\n    \"logs/1791364945665668600_final_tests.json\",\n    \"logs/1791364948072227200_replay_100.json\",\n    \"logs/1791365008651846000_failure_cli_cases.json\",\n    \"logs/1791365010714202200_preservation.json\",\n    \"logs/final_preservation.json\",\n    \"logs/original_inventory.json\",\n    \"logs/replay_1791364947856535500.json\",\n    \"scripts/record_run.py\",\n    \"src/replay.py\",\n    \"tests/test_preprocessing_boundaries.py\",\n    \"tests/test_replay.py\"\n  ]\n}\n",
+  "stderr": ""
+}

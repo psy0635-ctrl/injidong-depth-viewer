@@ -1,0 +1,16 @@
+{
+  "original_distribution_sha256": "8ce09009db0f52a5fbe9e2bbb0e5db362cd38cabfb7c3778d3a2cf5ea85fa264",
+  "original_crc_bad_member": null,
+  "original_file_count": 22,
+  "original_local_diff": [],
+  "original_final_zip_diff": [],
+  "deployment_entries": 21,
+  "deployment_bad": [],
+  "initial_count": 45,
+  "initial_bad": [],
+  "zip_files_sha256": {
+    "C:\\study\\injidong_contract_v1\\인지동_ADE-66-67_로컬검증_박수용_20261007.zip": "c7dd11309f3db9ff027addeb5fab82c2657272c0a64ddfc9e53b9efcbfb62914",
+    "C:\\study\\injidong_contract_v1\\submissions\\인지동_ADE-95_독립뷰어_20261008.zip": "2c95cda0ffb753e869486d7d9fbc2372deda2f2d68667f35bbdcfa2cab0d947f",
+    "C:\\study\\injidong_contract_v1\\submissions\\인지동_ADE-95_독립뷰어_최종제출_20261008.zip": "4bc4b2fd104cd75c80c87d07b4a7957bfaaedc0fa8fda9ecfcaeb034a64a892b"
+  }
+}

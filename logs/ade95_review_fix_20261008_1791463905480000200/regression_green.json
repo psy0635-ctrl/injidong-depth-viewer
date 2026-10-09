@@ -1,0 +1,28 @@
+{
+  "source": "이번 수정 작업에서 실제 실행",
+  "started_at": "2026-10-08T21:56:35.308465+09:00",
+  "finished_at": "2026-10-08T21:56:36.919465+09:00",
+  "timezone": "Asia/Seoul",
+  "os": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "executable": "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+  "numpy": "2.3.5",
+  "matplotlib": "3.10.8",
+  "command": [
+    "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_verify_viewer_outputs.py",
+    "-v"
+  ],
+  "cwd": "C:\\study\\injidong_contract_v1",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_basic_synthetic_frame_matches_explicit_input (test_verify_viewer_outputs.VerifyViewerOutputsTests.test_basic_synthetic_frame_matches_explicit_input) ... ok\ntest_declared_point_count_mismatch_is_rejected (test_verify_viewer_outputs.VerifyViewerOutputsTests.test_declared_point_count_mismatch_is_rejected) ... ok\ntest_hash_consistent_reordered_points_are_rejected (test_verify_viewer_outputs.VerifyViewerOutputsTests.test_hash_consistent_reordered_points_are_rejected) ... ok\ntest_hash_consistent_wrong_dtype_is_rejected (test_verify_viewer_outputs.VerifyViewerOutputsTests.test_hash_consistent_wrong_dtype_is_rejected) ... ok\ntest_hash_consistent_zero_third_cloud_is_rejected (test_verify_viewer_outputs.VerifyViewerOutputsTests.test_hash_consistent_zero_third_cloud_is_rejected) ... ok\ntest_input_metadata_mismatch_is_rejected (test_verify_viewer_outputs.VerifyViewerOutputsTests.test_input_metadata_mismatch_is_rejected) ... ok\ntest_missing_input_session_is_rejected (test_verify_viewer_outputs.VerifyViewerOutputsTests.test_missing_input_session_is_rejected) ... ok\ntest_no_input_reports_coordinates_not_verified_even_for_basic_id (test_verify_viewer_outputs.VerifyViewerOutputsTests.test_no_input_reports_coordinates_not_verified_even_for_basic_id) ... ok\ntest_result_frame_absent_from_input_is_rejected (test_verify_viewer_outputs.VerifyViewerOutputsTests.test_result_frame_absent_from_input_is_rejected) ... ok\ntest_third_frame_matches_explicit_multiframe_input (test_verify_viewer_outputs.VerifyViewerOutputsTests.test_third_frame_matches_explicit_multiframe_input) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 1.475s\n\nOK\n"
+}

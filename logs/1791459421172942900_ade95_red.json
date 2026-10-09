@@ -1,0 +1,33 @@
+{
+  "source": "이번 에이전트 실행 / 사용자 전달 결과와 별개",
+  "started_at": "2026-10-08T20:37:00.878943+09:00",
+  "finished_at": "2026-10-08T20:37:01.141943+09:00",
+  "timezone": "Asia/Seoul",
+  "os": "Windows-10-10.0.26200-SP0",
+  "windows_version": [
+    "10",
+    "10.0.26200",
+    "SP0",
+    "Multiprocessor Free"
+  ],
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "executable": "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+  "numpy": "2.3.5",
+  "cwd": "C:\\study\\injidong_contract_v1",
+  "command": [
+    "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_viewer.py",
+    "-v"
+  ],
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "test_viewer (unittest.loader._FailedTest.test_viewer) ... ERROR\n\n======================================================================\nERROR: test_viewer (unittest.loader._FailedTest.test_viewer)\n----------------------------------------------------------------------\nImportError: Failed to import test module: test_viewer\nTraceback (most recent call last):\n  File \"C:\\Users\\user\\AppData\\Local\\Python\\pythoncore-3.11-64\\Lib\\unittest\\loader.py\", line 419, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\user\\AppData\\Local\\Python\\pythoncore-3.11-64\\Lib\\unittest\\loader.py\", line 362, in _get_module_from_name\n    __import__(name)\n  File \"C:\\study\\injidong_contract_v1\\tests\\test_viewer.py\", line 21, in <module>\n    from viewer_data import ViewerSession, depth_preview, export_frame\nModuleNotFoundError: No module named 'viewer_data'\n\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (errors=1)\n"
+}

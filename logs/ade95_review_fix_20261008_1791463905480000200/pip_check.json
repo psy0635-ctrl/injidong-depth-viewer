@@ -1,0 +1,23 @@
+{
+  "source": "이번 수정 작업에서 실제 실행",
+  "started_at": "2026-10-08T22:00:07.780316+09:00",
+  "finished_at": "2026-10-08T22:00:08.298443+09:00",
+  "timezone": "Asia/Seoul",
+  "os": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "executable": "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+  "numpy": "2.3.5",
+  "matplotlib": "3.10.8",
+  "command": [
+    "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "pip",
+    "check"
+  ],
+  "cwd": "C:\\study\\injidong_contract_v1",
+  "exit_code": 0,
+  "stdout": "No broken requirements found.\n",
+  "stderr": ""
+}

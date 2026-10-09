@@ -1,0 +1,27 @@
+{
+  "source": "이번 에이전트 실행 / 사용자 전달 결과와 별개",
+  "started_at": "2026-10-07T18:23:30.629202+09:00",
+  "finished_at": "2026-10-07T18:23:30.684200+09:00",
+  "timezone": "Asia/Seoul",
+  "os": "Windows-10-10.0.26200-SP0",
+  "windows_version": [
+    "10",
+    "10.0.26200",
+    "SP0",
+    "Multiprocessor Free"
+  ],
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "executable": "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+  "numpy": "2.3.5",
+  "cwd": "C:\\study\\injidong_contract_v1",
+  "command": [
+    "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-c",
+    "import datetime,hashlib,json,pathlib\nroot=pathlib.Path.cwd(); original=json.loads((root/'logs/original_inventory.json').read_text(encoding='utf-8')); comparisons=[]\nfor name,before in original['files'].items():\n    p=root/name; after=hashlib.sha256(p.read_bytes()).hexdigest() if p.exists() else None\n    comparisons.append({'file':name,'before':before,'after':after,'unchanged':before==after})\nrecord={'source':'이번 에이전트 최종 원본 보존 확인','recorded_at':datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9))).isoformat(),'timezone':'Asia/Seoul','original_file_count':len(comparisons),'all_original_files_unchanged':all(x['unchanged'] for x in comparisons),'comparisons':comparisons,'git_configured':False,'git_diff_check':'해당 없음: Git 미설정'}\nwith (root/'logs/final_preservation.json').open('x',encoding='utf-8') as f: json.dump(record,f,ensure_ascii=False,indent=2)\nprint(json.dumps({'original_file_count':len(comparisons),'all_original_files_unchanged':record['all_original_files_unchanged']},ensure_ascii=False))\nassert record['all_original_files_unchanged']\nreplay=json.loads(next((root/'logs').glob('replay_*.json')).read_text(encoding='utf-8'))\nprint(json.dumps({k:replay[k] for k in ['started_at','finished_at','completed_repeats','frame_count','frame_ids','expected_points_comparison','original_files_unchanged']},ensure_ascii=False))"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"original_file_count\": 22, \"all_original_files_unchanged\": true}\n{\"started_at\": \"2026-10-07T18:22:27.857537+09:00\", \"finished_at\": \"2026-10-07T18:22:28.026225+09:00\", \"completed_repeats\": 100, \"frame_count\": 1, \"frame_ids\": [\"synthetic_000001\"], \"expected_points_comparison\": {\"method\": \"numpy.allclose\", \"rtol\": 0, \"atol_m\": 1e-07, \"checked\": true, \"matched\": true, \"max_abs_error_m\": 2.2351741811588166e-10}, \"original_files_unchanged\": true}\n",
+  "stderr": ""
+}

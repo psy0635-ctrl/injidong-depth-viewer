@@ -1,0 +1,31 @@
+{
+  "source": "이번 에이전트 실행 / 사용자 전달 결과와 별개",
+  "started_at": "2026-10-07T18:22:23.808658+09:00",
+  "finished_at": "2026-10-07T18:22:25.627669+09:00",
+  "timezone": "Asia/Seoul",
+  "os": "Windows-10-10.0.26200-SP0",
+  "windows_version": [
+    "10",
+    "10.0.26200",
+    "SP0",
+    "Multiprocessor Free"
+  ],
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "executable": "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+  "numpy": "2.3.5",
+  "cwd": "C:\\study\\injidong_contract_v1",
+  "command": [
+    "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_all_invalid_rejected (test_contract.ContractTests.test_all_invalid_rejected) ... ok\ntest_checksum_catches_changed_bytes (test_contract.ContractTests.test_checksum_catches_changed_bytes) ... ok\ntest_dtype_does_not_imply_scale (test_contract.ContractTests.test_dtype_does_not_imply_scale) ... ok\ntest_dtype_rejected (test_contract.ContractTests.test_dtype_rejected) ... ok\ntest_intrinsics_matches_depth_not_rgb (test_contract.ContractTests.test_intrinsics_matches_depth_not_rgb) ... ok\ntest_invalid_depth_not_silently_used (test_contract.ContractTests.test_invalid_depth_not_silently_used) ... ok\ntest_invalid_focal_rejected (test_contract.ContractTests.test_invalid_focal_rejected) ... ok\ntest_iter_manifest_roundtrip (test_contract.ContractTests.test_iter_manifest_roundtrip) ... ok\ntest_labels_cannot_leak_into_features (test_contract.ContractTests.test_labels_cannot_leak_into_features) ... ok\ntest_mm_conversion_and_expected_cloud (test_contract.ContractTests.test_mm_conversion_and_expected_cloud) ... ok\ntest_model_missing_is_not_zero_grams (test_contract.ContractTests.test_model_missing_is_not_zero_grams) ... ok\ntest_nan_negative_zero_invalid_canonical (test_contract.ContractTests.test_nan_negative_zero_invalid_canonical) ... ok\ntest_path_escape_rejected (test_contract.ContractTests.test_path_escape_rejected) ... ok\ntest_pose_model_requires_pose_features (test_contract.ContractTests.test_pose_model_requires_pose_features) ... ok\ntest_pose_null_standalone_allowed_world_rejected (test_contract.ContractTests.test_pose_null_standalone_allowed_world_rejected) ... ok\ntest_quaternion_not_normalized_rejected (test_contract.ContractTests.test_quaternion_not_normalized_rejected) ... ok\ntest_ray_distance_not_accepted_as_z (test_contract.ContractTests.test_ray_distance_not_accepted_as_z) ... ok\ntest_real_data_cannot_relabel_synthetic_fixture (test_contract.ContractTests.test_real_data_cannot_relabel_synthetic_fixture) ... ok\ntest_replay_preserves_original_time (test_contract.ContractTests.test_replay_preserves_original_time) ... ok\ntest_result_fixtures (test_contract.ContractTests.test_result_fixtures) ... ok\ntest_shape_rejected (test_contract.ContractTests.test_shape_rejected) ... ok\ntest_success_does_not_imply_quality_pass (test_contract.ContractTests.test_success_does_not_imply_quality_pass) ... ok\ntest_target_shape_rejected (test_contract.ContractTests.test_target_shape_rejected) ... ok\ntest_timestamp_partial_null_rejected (test_contract.ContractTests.test_timestamp_partial_null_rejected) ... ok\ntest_verified_sync_requires_evidence (test_contract.ContractTests.test_verified_sync_requires_evidence) ... ok\ntest_volume_basis_and_coverage (test_contract.ContractTests.test_volume_basis_and_coverage) ... ok\ntest_volume_missing_target_is_failure (test_contract.ContractTests.test_volume_missing_target_is_failure) ... ok\ntest_world_sync_guard (test_contract.ContractTests.test_world_sync_guard) ... ok\ntest_all_invalid_normalization_succeeds_but_frame_fails (test_preprocessing_boundaries.PreprocessingBoundaryTests.test_all_invalid_normalization_succeeds_but_frame_fails) ... ok\ntest_infinity_overflow_and_invalid_sentinel_are_canonical (test_preprocessing_boundaries.PreprocessingBoundaryTests.test_infinity_overflow_and_invalid_sentinel_are_canonical) ... ok\ntest_invalid_scale_values_use_unit_unknown (test_preprocessing_boundaries.PreprocessingBoundaryTests.test_invalid_scale_values_use_unit_unknown) ... ok\ntest_raw_empty_nonnumeric_and_dimensions_are_rejected (test_preprocessing_boundaries.PreprocessingBoundaryTests.test_raw_empty_nonnumeric_and_dimensions_are_rejected) ... ok\ntest_cli_propagates_contract_codes_for_bad_inputs (test_replay.ReplayTests.test_cli_propagates_contract_codes_for_bad_inputs) ... ok\ntest_cli_reopens_session_and_records_original_metadata (test_replay.ReplayTests.test_cli_reopens_session_and_records_original_metadata) ... ok\ntest_count_and_order_changes_fail (test_replay.ReplayTests.test_count_and_order_changes_fail) ... ok\ntest_detects_file_change_even_when_frame_values_are_identical (test_replay.ReplayTests.test_detects_file_change_even_when_frame_values_are_identical) ... ok\ntest_detects_loaded_value_metadata_point_and_order_differences (test_replay.ReplayTests.test_detects_loaded_value_metadata_point_and_order_differences) ... ok\ntest_expected_points_mismatch_is_failure (test_replay.ReplayTests.test_expected_points_mismatch_is_failure) ... ok\ntest_invalid_repeat_is_usage_failure (test_replay.ReplayTests.test_invalid_repeat_is_usage_failure) ... ok\ntest_report_cannot_overwrite_input_or_existing_record (test_replay.ReplayTests.test_report_cannot_overwrite_input_or_existing_record) ... ok\ntest_target_mask_and_multiple_frame_order (test_replay.ReplayTests.test_target_mask_and_multiple_frame_order) ... ok\ntest_unexpected_exception_is_not_hidden (test_replay.ReplayTests.test_unexpected_exception_is_not_hidden) ... ok\n\n----------------------------------------------------------------------\nRan 42 tests in 1.639s\n\nOK\n"
+}

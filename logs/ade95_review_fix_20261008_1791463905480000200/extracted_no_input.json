@@ -1,0 +1,15 @@
+{
+  "source": "이번 새 ZIP 압축 해제본에서 실제 실행",
+  "started_at": "2026-10-08T22:05:05.547293+09:00",
+  "command": [
+    "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "scripts/verify_viewer_outputs.py",
+    "outputs/ade95_final_synthetic"
+  ],
+  "cwd": "C:\\Users\\user\\AppData\\Local\\Temp\\injidong_ade95_fix_bf494e643b38430fb0560d063be2676b\\new_zip_extracted\\injidong_ade95",
+  "exit_code": 0,
+  "stdout": "{\n  \"status\": \"success\",\n  \"bundle\": \"C:\\\\Users\\\\user\\\\AppData\\\\Local\\\\Temp\\\\injidong_ade95_fix_bf494e643b38430fb0560d063be2676b\\\\new_zip_extracted\\\\injidong_ade95\\\\outputs\\\\ade95_final_synthetic\",\n  \"artifact_validation\": {\n    \"status\": \"passed\",\n    \"schema_checked\": true,\n    \"output_hashes_matched\": true,\n    \"dtype\": \"float32\",\n    \"shape\": [\n      3,\n      3\n    ],\n    \"point_count\": 3\n  },\n  \"input_coordinate_validation\": {\n    \"status\": \"not_run\",\n    \"reason\": \"--session 미지정: 입력 좌표 비교를 실행하지 않았습니다.\"\n  },\n  \"coordinates_verified\": false,\n  \"errors\": [],\n  \"output_hashes_matched\": true,\n  \"deployment_hashes_preserved\": 21,\n  \"initial_files_preserved\": null,\n  \"local_summary_schemas_match\": {\n    \"features.schema.json\": true,\n    \"frame.schema.json\": true,\n    \"label.schema.json\": true,\n    \"prediction.schema.json\": true,\n    \"processing.schema.json\": true\n  },\n  \"summary\": \"파일 무결성 검사에 성공했습니다. 입력 좌표 비교는 미실행입니다.\"\n}\n",
+  "stderr": ""
+}

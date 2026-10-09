@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0.0",
+  "session_id": "synthetic_reference",
+  "specimen_id": "synthetic_specimen_001",
+  "ground_truth_weight_g": 100.0,
+  "measurement_time": {
+    "ns": "1000000000",
+    "clock_domain": "synthetic_reference",
+    "origin": "synthetic"
+  },
+  "instrument_id": "synthetic_fixture_not_real_instrument",
+  "instrument_resolution_g": 1.0,
+  "measurement_method": "synthetic interface example",
+  "provenance_kind": "synthetic",
+  "evidence": "Generated fixture; excluded from all accuracy metrics."
+}

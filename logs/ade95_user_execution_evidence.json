@@ -1,0 +1,77 @@
+{
+  "source": "사용자 제공 실행 근거",
+  "reported_in_chat_date": "2026-10-08",
+  "timezone": "Asia/Seoul",
+  "command": "& .\\.venv\\Scripts\\python.exe -X utf8 src/viewer.py examples/viewer_multiframe --output outputs/demo_gui",
+  "reported_observations": {
+    "first_frame_id": "ade95_synthetic_000001",
+    "size": [
+      2,
+      2
+    ],
+    "valid_depth_ratio": 0.75,
+    "full_point_count": 3,
+    "display_point_count": 3,
+    "provenance_kind": "synthetic",
+    "coordinate_frame": "camera",
+    "unit": "m",
+    "first_frame_points_m": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0.01,
+        0,
+        1
+      ],
+      [
+        0,
+        0.01,
+        1
+      ]
+    ],
+    "third_frame_saved_times": 2,
+    "returned_to_powershell_without_error_message": true,
+    "exit_code": null
+  },
+  "unverified_direct_interactions": [
+    "rotation",
+    "zoom",
+    "buttons",
+    "arrow_keys"
+  ],
+  "actual_device_volume_weight_team_approval_official_integration": "미완료",
+  "separation": "사용자 제공 기록이며 기존 자동 GUI 이벤트 검사와 별도. 실제 저장 파일은 에이전트가 읽기 전용 검증함.",
+  "saved_folders": [
+    {
+      "original": "outputs/demo_gui/frame_000003_1791460557654228600",
+      "package_copy": "outputs/ade95_final_user_saves/frame_000003_1791460557654228600",
+      "files_sha256": {
+        "points.npz": "d162008cacd43312470c63c0160ab4fff8a730dc5a755af3787d2bdb5369e4dc",
+        "preview.png": "91857214fb7243e21884960d4b7a4904d0ebc88ee4a2ed0bb9d3a92845f7ae33",
+        "processing.json": "433df17a697cfacf9298ca92a1f25c6cd4604d4ef15e5317498bd2a3d7167919",
+        "viewer_export.json": "6e235511bbf5c0d34cbe1d694039cd4ace514ad32bbb6748e43cf46f805a09d2"
+      },
+      "copy_bytes_identical": true
+    },
+    {
+      "original": "outputs/demo_gui/frame_000003_1791460742554215400",
+      "package_copy": "outputs/ade95_final_user_saves/frame_000003_1791460742554215400",
+      "files_sha256": {
+        "points.npz": "d162008cacd43312470c63c0160ab4fff8a730dc5a755af3787d2bdb5369e4dc",
+        "preview.png": "91857214fb7243e21884960d4b7a4904d0ebc88ee4a2ed0bb9d3a92845f7ae33",
+        "processing.json": "433df17a697cfacf9298ca92a1f25c6cd4604d4ef15e5317498bd2a3d7167919",
+        "viewer_export.json": "6e235511bbf5c0d34cbe1d694039cd4ace514ad32bbb6748e43cf46f805a09d2"
+      },
+      "copy_bytes_identical": true
+    }
+  ],
+  "agent_verification_logs": [
+    "1791461196407809300_ade95_user_save1_verify.json",
+    "1791461196747017600_ade95_user_save2_verify.json",
+    "1791461213565276800_ade95_user_third_frame_verify.json"
+  ],
+  "preview_inspection": "both PNGs visually inspected: ade95_synthetic_000003, depth range 1 to 3 m, third-frame coordinates"
+}

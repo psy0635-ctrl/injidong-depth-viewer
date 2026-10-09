@@ -1,0 +1,28 @@
+{
+  "source": "이번 에이전트 실행 / 사용자 전달 결과와 별개",
+  "started_at": "2026-10-07T18:18:33.645193+09:00",
+  "finished_at": "2026-10-07T18:18:34.082017+09:00",
+  "timezone": "Asia/Seoul",
+  "os": "Windows-10-10.0.26200-SP0",
+  "windows_version": [
+    "10",
+    "10.0.26200",
+    "SP0",
+    "Multiprocessor Free"
+  ],
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "executable": "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+  "numpy": "2.3.5",
+  "cwd": "C:\\study\\injidong_contract_v1",
+  "command": [
+    "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "pip",
+    "list"
+  ],
+  "exit_code": 0,
+  "stdout": "Package    Version\n---------- -------\nnumpy      2.3.5\npip        24.0\nsetuptools 65.5.0\n",
+  "stderr": "\n[notice] A new release of pip is available: 24.0 -> 26.2.1\n[notice] To update, run: C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe -m pip install --upgrade pip\n"
+}

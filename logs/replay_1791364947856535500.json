@@ -1,0 +1,1395 @@
+{
+  "tool_version": "ade-66-replay-v1",
+  "session": "C:\\study\\injidong_contract_v1\\examples\\synthetic",
+  "started_at": "2026-10-07T18:22:27.857537+09:00",
+  "timezone": "Asia/Seoul",
+  "requested_repeats": 100,
+  "completed_repeats": 100,
+  "status": "success",
+  "frame_count": 1,
+  "frame_ids": [
+    "synthetic_000001"
+  ],
+  "frames": [
+    {
+      "frame_id": "synthetic_000001",
+      "capture_time": {
+        "ns": "1000000000",
+        "clock_domain": "synthetic_reference",
+        "origin": "synthetic"
+      },
+      "capture_source": "synthetic",
+      "provenance": {
+        "kind": "synthetic",
+        "camera": null,
+        "raw_file": null,
+        "raw_sha256": null,
+        "raw_unit": "mm",
+        "raw_scale_to_m": 0.001,
+        "synthetic_seed": 0,
+        "synthetic_config": "raw_mm=[[1000,1000],[1000,0]]; no mask or support plane"
+      },
+      "original_replay_time": {
+        "ns": null,
+        "clock_domain": null,
+        "origin": null
+      },
+      "depth_shape": [
+        2,
+        2
+      ],
+      "depth_dtype": "float32",
+      "valid_mask_dtype": "bool",
+      "has_target_mask": false,
+      "point_count": 3,
+      "points_m": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.009999999776482582,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          0.009999999776482582,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "iterations": [
+    {
+      "repeat": 1,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947863535300",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 2,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947865535800",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 3,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947867535700",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 4,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947868535500",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 5,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947870535200",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 6,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947871535000",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 7,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947873535000",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 8,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947874535300",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 9,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947876536200",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 10,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947877536200",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 11,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947879536100",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 12,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947881535800",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 13,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947882536300",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 14,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947884536200",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 15,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947886535600",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 16,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947887534500",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 17,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947889534600",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 18,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947890534700",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 19,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947892534600",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 20,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947893536200",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 21,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947895536100",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 22,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947897536000",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 23,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947898535400",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 24,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947900536100",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 25,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947902222900",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 26,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947903226700",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 27,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947905226600",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 28,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947906225900",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 29,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947908227100",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 30,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947910227500",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 31,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947912227600",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 32,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947913227500",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 33,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947915227400",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 34,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947916227400",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 35,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947918227700",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 36,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947919227200",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 37,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947921227100",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 38,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947923225900",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 39,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947924226000",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 40,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947926225700",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 41,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947927227100",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 42,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947929226400",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 43,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947930226400",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 44,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947932225800",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 45,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947934227600",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 46,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947935227700",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 47,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947937225800",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 48,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947939227100",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 49,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947940226400",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 50,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947942226200",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 51,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947943226100",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 52,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947945227200",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 53,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947947226400",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 54,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947949227500",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 55,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947950227300",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 56,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947952226700",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 57,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947953226700",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 58,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947955227500",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 59,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947956227300",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 60,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947958227300",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 61,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947959227200",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 62,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947961227100",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 63,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947963227000",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 64,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947965226300",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 65,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947966227200",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 66,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947968227500",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 67,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947970225700",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 68,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947971226800",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 69,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947973227400",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 70,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947975227000",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 71,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947976226200",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 72,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947978227000",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 73,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947980229100",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 74,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947981226700",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 75,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947983225800",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 76,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947984225600",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 77,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947986226300",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 78,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947987225900",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 79,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947989225600",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 80,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947991227500",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 81,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947993225900",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 82,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947994226700",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 83,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947996227400",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 84,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947998226200",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 85,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364947999226900",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 86,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364948001227400",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 87,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364948003226600",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 88,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364948004226900",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 89,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364948006227500",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 90,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364948008226500",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 91,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364948010227300",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 92,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364948011227300",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 93,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364948013227400",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 94,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364948014227000",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 95,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364948016227300",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 96,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364948017227300",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 97,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364948019227900",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 98,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364948021227700",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 99,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364948023226000",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 100,
+      "frames": [
+        {
+          "frame_id": "synthetic_000001",
+          "replay_time": {
+            "ns": "1791364948025226300",
+            "clock_domain": "pc_unix_utc",
+            "origin": "replay_host"
+          }
+        }
+      ]
+    }
+  ],
+  "array_comparison": "dtype/shape 일치 및 numpy.array_equal; 허용 오차 0",
+  "point_cloud_replay_comparison": "numpy.array_equal; 허용 오차 0",
+  "metadata_comparison": "원본 metadata 전체 동등 비교; 실행 replay_time은 별도 기록",
+  "expected_points_comparison": {
+    "method": "numpy.allclose",
+    "rtol": 0,
+    "atol_m": 1e-07,
+    "checked": true,
+    "matched": true,
+    "max_abs_error_m": 2.2351741811588166e-10
+  },
+  "hashes_before": {
+    "frame_000001/arrays.npz": "fd1e1a0d2db6be06efaae3986fc3db18039f3daeb861ff7bfab1a8fd78c412fd",
+    "frame_000001/metadata.json": "806e0df67e2489612be6aabe9af80b3dc84ad08ff62b6804ec59d2ead0ee0bf7",
+    "frames.jsonl": "5b136436864860b3fa660ef3c71b93fa418c90d41913639f74bc40ace7376afa"
+  },
+  "hashes_after": {
+    "frame_000001/arrays.npz": "fd1e1a0d2db6be06efaae3986fc3db18039f3daeb861ff7bfab1a8fd78c412fd",
+    "frame_000001/metadata.json": "806e0df67e2489612be6aabe9af80b3dc84ad08ff62b6804ec59d2ead0ee0bf7",
+    "frames.jsonl": "5b136436864860b3fa660ef3c71b93fa418c90d41913639f74bc40ace7376afa"
+  },
+  "original_files_unchanged": true,
+  "errors": [],
+  "provenance_kinds": [
+    "synthetic"
+  ],
+  "synthetic_notice": "합성 데이터 포함; 실측/중량 정확도 결과가 아닙니다.",
+  "finished_at": "2026-10-07T18:22:28.026225+09:00",
+  "expected_points_file": "C:\\study\\injidong_contract_v1\\examples\\results\\expected_points.json"
+}

@@ -1,0 +1,33 @@
+{
+  "source": "이번 에이전트 실행 / 사용자 전달 결과와 별개",
+  "started_at": "2026-10-07T18:20:12.760280+09:00",
+  "finished_at": "2026-10-07T18:20:12.952280+09:00",
+  "timezone": "Asia/Seoul",
+  "os": "Windows-10-10.0.26200-SP0",
+  "windows_version": [
+    "10",
+    "10.0.26200",
+    "SP0",
+    "Multiprocessor Free"
+  ],
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "executable": "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+  "numpy": "2.3.5",
+  "cwd": "C:\\study\\injidong_contract_v1",
+  "command": [
+    "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_preprocessing_boundaries.py",
+    "-v"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_all_invalid_normalization_succeeds_but_frame_fails (test_preprocessing_boundaries.PreprocessingBoundaryTests.test_all_invalid_normalization_succeeds_but_frame_fails) ... ok\ntest_infinity_overflow_and_invalid_sentinel_are_canonical (test_preprocessing_boundaries.PreprocessingBoundaryTests.test_infinity_overflow_and_invalid_sentinel_are_canonical) ... ok\ntest_invalid_scale_values_use_unit_unknown (test_preprocessing_boundaries.PreprocessingBoundaryTests.test_invalid_scale_values_use_unit_unknown) ... ok\ntest_raw_empty_nonnumeric_and_dimensions_are_rejected (test_preprocessing_boundaries.PreprocessingBoundaryTests.test_raw_empty_nonnumeric_and_dimensions_are_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.052s\n\nOK\n"
+}

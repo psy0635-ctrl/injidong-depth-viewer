@@ -1,0 +1,33 @@
+{
+  "source": "이번 에이전트 실행 / 사용자 전달 결과와 별개",
+  "started_at": "2026-10-08T20:39:02.260252+09:00",
+  "finished_at": "2026-10-08T20:39:09.029266+09:00",
+  "timezone": "Asia/Seoul",
+  "os": "Windows-10-10.0.26200-SP0",
+  "windows_version": [
+    "10",
+    "10.0.26200",
+    "SP0",
+    "Multiprocessor Free"
+  ],
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "executable": "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+  "numpy": "2.3.5",
+  "cwd": "C:\\study\\injidong_contract_v1",
+  "command": [
+    "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_viewer.py",
+    "-v"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_cli_all_invalid_depth_rejected (test_viewer.ViewerTests.test_cli_all_invalid_depth_rejected) ... ok\ntest_cli_missing_empty_and_broken_json_fail (test_viewer.ViewerTests.test_cli_missing_empty_and_broken_json_fail) ... ok\ntest_cli_npz_corruption_with_matching_hash_and_schema_failure (test_viewer.ViewerTests.test_cli_npz_corruption_with_matching_hash_and_schema_failure) ... ok\ntest_expected_cloud_ratio_sampling_and_array_preservation (test_viewer.ViewerTests.test_expected_cloud_ratio_sampling_and_array_preservation) ... ok\ntest_export_full_cloud_hash_schema_metadata_and_no_overwrite (test_viewer.ViewerTests.test_export_full_cloud_hash_schema_metadata_and_no_overwrite) ... ok\ntest_headless_cli_exports_and_existing_output_is_failure (test_viewer.ViewerTests.test_headless_cli_exports_and_existing_output_is_failure) ... ok\ntest_input_output_paths_and_partial_save_cleanup (test_viewer.ViewerTests.test_input_output_paths_and_partial_save_cleanup) ... ok\ntest_labels_are_ignored_and_zero_display_limit_is_usage_error (test_viewer.ViewerTests.test_labels_are_ignored_and_zero_display_limit_is_usage_error) ... ok\ntest_manifest_relative_paths_unique_ids_and_nan (test_viewer.ViewerTests.test_manifest_relative_paths_unique_ids_and_nan) ... ok\ntest_move_failure_clears_old_screen_and_can_recover (test_viewer.ViewerTests.test_move_failure_clears_old_screen_and_can_recover) ... ContractError: INPUT_CORRUPT: arrays.npz checksum mismatch\nContractError: RESULT_INVALID: no validated current frame to save\nok\ntest_navigation_boundaries_and_joint_refresh (test_viewer.ViewerTests.test_navigation_boundaries_and_joint_refresh) ... ok\ntest_save_error_keeps_valid_view_but_reports_failure (test_viewer.ViewerTests.test_save_error_keeps_valid_view_but_reports_failure) ... ContractError: RESULT_INVALID: disk full\nok\ntest_unexpected_error_propagates (test_viewer.ViewerTests.test_unexpected_error_propagates) ... ok\n\n----------------------------------------------------------------------\nRan 13 tests in 4.146s\n\nOK\n"
+}

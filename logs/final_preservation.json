@@ -1,0 +1,143 @@
+{
+  "source": "이번 에이전트 최종 원본 보존 확인",
+  "recorded_at": "2026-10-07T18:23:30.679201+09:00",
+  "timezone": "Asia/Seoul",
+  "original_file_count": 22,
+  "all_original_files_unchanged": true,
+  "comparisons": [
+    {
+      "file": "README.md",
+      "before": "abc34deb221c2b655401e62f2ce95e8f765eca4d56b80c82dec4bc296ccb9b8a",
+      "after": "abc34deb221c2b655401e62f2ce95e8f765eca4d56b80c82dec4bc296ccb9b8a",
+      "unchanged": true
+    },
+    {
+      "file": "requirements.txt",
+      "before": "7bd6b8946940b79948c548c8048e545684b91c8edc9444d8dfc0c8f76a97c0a7",
+      "after": "7bd6b8946940b79948c548c8048e545684b91c8edc9444d8dfc0c8f76a97c0a7",
+      "unchanged": true
+    },
+    {
+      "file": "SHA256SUMS.txt",
+      "before": "35da2416430fa73ca558f308de7ba9633ec0da46b047940d77520acabe220075",
+      "after": "35da2416430fa73ca558f308de7ba9633ec0da46b047940d77520acabe220075",
+      "unchanged": true
+    },
+    {
+      "file": "VALIDATION.md",
+      "before": "44b8470393c3bd753eb3cc8030da0a74fcfb693f23c99015a0c594c48723c29c",
+      "after": "44b8470393c3bd753eb3cc8030da0a74fcfb693f23c99015a0c594c48723c29c",
+      "unchanged": true
+    },
+    {
+      "file": "examples/results/expected_points.json",
+      "before": "73c0d6b57d159791836b3a1716fc0f64d34e12e5f5c32db7965f91011b3be00e",
+      "after": "73c0d6b57d159791836b3a1716fc0f64d34e12e5f5c32db7965f91011b3be00e",
+      "unchanged": true
+    },
+    {
+      "file": "examples/results/features_synthetic.json",
+      "before": "b24a65096c099c4d68769a20446ffdeb5fde2e41d65a16b94e9847f4cb9b9173",
+      "after": "b24a65096c099c4d68769a20446ffdeb5fde2e41d65a16b94e9847f4cb9b9173",
+      "unchanged": true
+    },
+    {
+      "file": "examples/results/label_synthetic.json",
+      "before": "f69e32c47f1f43b2f5423acb1f158b4bc20a400583c45eb98e37a24bd7e6871e",
+      "after": "f69e32c47f1f43b2f5423acb1f158b4bc20a400583c45eb98e37a24bd7e6871e",
+      "unchanged": true
+    },
+    {
+      "file": "examples/results/point_cloud.npz",
+      "before": "30fcc0a2f30f52cae5c02fca8173a3f4efbbcc83d1b1d3f9f3465d36427e8b7e",
+      "after": "30fcc0a2f30f52cae5c02fca8173a3f4efbbcc83d1b1d3f9f3465d36427e8b7e",
+      "unchanged": true
+    },
+    {
+      "file": "examples/results/point_cloud_success.json",
+      "before": "fc9ce5395a46afb8312ed4523f8f72a13f0e95ba24f68bb3dc92513dae35f8fa",
+      "after": "fc9ce5395a46afb8312ed4523f8f72a13f0e95ba24f68bb3dc92513dae35f8fa",
+      "unchanged": true
+    },
+    {
+      "file": "examples/results/prediction_not_ready.json",
+      "before": "313494331d3054f35a2d5174a54bdf56f0cc77a565d1dea70b0928c58e6f3c95",
+      "after": "313494331d3054f35a2d5174a54bdf56f0cc77a565d1dea70b0928c58e6f3c95",
+      "unchanged": true
+    },
+    {
+      "file": "examples/results/prediction_success_synthetic.json",
+      "before": "0e2bb2ed91a07b25a8ad8026846dcdd674a4b82cfe2ec8651f2b19085b4e2b85",
+      "after": "0e2bb2ed91a07b25a8ad8026846dcdd674a4b82cfe2ec8651f2b19085b4e2b85",
+      "unchanged": true
+    },
+    {
+      "file": "examples/results/volume_unavailable.json",
+      "before": "747e11d7cb527b760ba0c0d551b37e88fab84ce4dfc730d6317772abf4689531",
+      "after": "747e11d7cb527b760ba0c0d551b37e88fab84ce4dfc730d6317772abf4689531",
+      "unchanged": true
+    },
+    {
+      "file": "examples/synthetic/frames.jsonl",
+      "before": "5b136436864860b3fa660ef3c71b93fa418c90d41913639f74bc40ace7376afa",
+      "after": "5b136436864860b3fa660ef3c71b93fa418c90d41913639f74bc40ace7376afa",
+      "unchanged": true
+    },
+    {
+      "file": "examples/synthetic/frame_000001/arrays.npz",
+      "before": "fd1e1a0d2db6be06efaae3986fc3db18039f3daeb861ff7bfab1a8fd78c412fd",
+      "after": "fd1e1a0d2db6be06efaae3986fc3db18039f3daeb861ff7bfab1a8fd78c412fd",
+      "unchanged": true
+    },
+    {
+      "file": "examples/synthetic/frame_000001/metadata.json",
+      "before": "806e0df67e2489612be6aabe9af80b3dc84ad08ff62b6804ec59d2ead0ee0bf7",
+      "after": "806e0df67e2489612be6aabe9af80b3dc84ad08ff62b6804ec59d2ead0ee0bf7",
+      "unchanged": true
+    },
+    {
+      "file": "schemas/features.schema.json",
+      "before": "8346fb2d4c710384bfe26f5f256c8ea89f98122b94f06acfc595e3433a6b6fc6",
+      "after": "8346fb2d4c710384bfe26f5f256c8ea89f98122b94f06acfc595e3433a6b6fc6",
+      "unchanged": true
+    },
+    {
+      "file": "schemas/frame.schema.json",
+      "before": "b277100a2d5a8ac6052a3dcbb8e6bcdc56da9e23a656c2aa50e5d91475b190ea",
+      "after": "b277100a2d5a8ac6052a3dcbb8e6bcdc56da9e23a656c2aa50e5d91475b190ea",
+      "unchanged": true
+    },
+    {
+      "file": "schemas/label.schema.json",
+      "before": "1be4dd848c37f16a32156a92b51f364fdd80e156baa05b5143d064318f906f2d",
+      "after": "1be4dd848c37f16a32156a92b51f364fdd80e156baa05b5143d064318f906f2d",
+      "unchanged": true
+    },
+    {
+      "file": "schemas/prediction.schema.json",
+      "before": "dc60997adbf21ad4a33ff873761ef89204ead72dba3c4ff70cf600e9af79152a",
+      "after": "dc60997adbf21ad4a33ff873761ef89204ead72dba3c4ff70cf600e9af79152a",
+      "unchanged": true
+    },
+    {
+      "file": "schemas/processing.schema.json",
+      "before": "b5090a9f3a2f294836ca0a318b24fdf4ba2c695045e3f5c531564f5b9bd9e4ae",
+      "after": "b5090a9f3a2f294836ca0a318b24fdf4ba2c695045e3f5c531564f5b9bd9e4ae",
+      "unchanged": true
+    },
+    {
+      "file": "src/contract.py",
+      "before": "f69426b2b62310994d835dc5f9a8166d8fc893a42c985bae823609e610aeb5de",
+      "after": "f69426b2b62310994d835dc5f9a8166d8fc893a42c985bae823609e610aeb5de",
+      "unchanged": true
+    },
+    {
+      "file": "tests/test_contract.py",
+      "before": "d94ca1ab25a49a032f8d7cf334f7db4758a8d15eb2ff25d74105c83fa32e2450",
+      "after": "d94ca1ab25a49a032f8d7cf334f7db4758a8d15eb2ff25d74105c83fa32e2450",
+      "unchanged": true
+    }
+  ],
+  "git_configured": false,
+  "git_diff_check": "해당 없음: Git 미설정"
+}

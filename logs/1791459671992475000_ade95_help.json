@@ -1,0 +1,27 @@
+{
+  "source": "이번 에이전트 실행 / 사용자 전달 결과와 별개",
+  "started_at": "2026-10-08T20:41:11.598474+09:00",
+  "finished_at": "2026-10-08T20:41:11.961473+09:00",
+  "timezone": "Asia/Seoul",
+  "os": "Windows-10-10.0.26200-SP0",
+  "windows_version": [
+    "10",
+    "10.0.26200",
+    "SP0",
+    "Multiprocessor Free"
+  ],
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "executable": "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+  "numpy": "2.3.5",
+  "cwd": "C:\\study\\injidong_contract_v1",
+  "command": [
+    "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "src/viewer.py",
+    "--help"
+  ],
+  "exit_code": 0,
+  "stdout": "usage: viewer.py [-h] [--output OUTPUT] [--headless] [--frame FRAME]\n                 [--max-display-points MAX_DISPLAY_POINTS]\n                 session\n\nADE-95: 저장 Depth·카메라 좌표 Point Cloud 독립 PC 뷰어.\n\npositional arguments:\n  session               v1.0.0 세션 폴더 (frames.jsonl 포함); 예: examples/synthetic\n\noptions:\n  -h, --help            show this help message and exit\n  --output OUTPUT       입력 밖 출력 경로: GUI는 결과 부모 폴더, --headless는 새 결과 폴더 자체\n  --headless            창 없이 지정 프레임 PNG와 전체 points_m NPZ 저장 후 종료\n  --frame FRAME         처음 표시/저장할 프레임 번호 (1부터)\n  --max-display-points MAX_DISPLAY_POINTS\n                        표시 점 개수 상한; 저장 NPZ는 항상 전체 점군\n\nGUI: Previous/Next 또는 ←/→, 저장 S. Headless: PNG/NPZ/JSON 새 결과 폴더 생성.\n",
+  "stderr": ""
+}

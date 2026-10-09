@@ -1,0 +1,24 @@
+{
+  "source": "이번 수정 작업에서 실제 실행",
+  "started_at": "2026-10-08T22:00:07.568318+09:00",
+  "finished_at": "2026-10-08T22:00:07.719317+09:00",
+  "timezone": "Asia/Seoul",
+  "os": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "executable": "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+  "numpy": "2.3.5",
+  "matplotlib": "3.10.8",
+  "command": [
+    "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "scripts/verify_viewer_outputs.py",
+    "C:\\Users\\user\\AppData\\Local\\Temp\\injidong_ade95_fix_bf494e643b38430fb0560d063be2676b\\before_wrong_bundle",
+    "--session",
+    "examples/viewer_multiframe"
+  ],
+  "cwd": "C:\\study\\injidong_contract_v1",
+  "exit_code": 1,
+  "stdout": "{\n  \"status\": \"failure\",\n  \"bundle\": \"C:\\\\Users\\\\user\\\\AppData\\\\Local\\\\Temp\\\\injidong_ade95_fix_bf494e643b38430fb0560d063be2676b\\\\before_wrong_bundle\",\n  \"artifact_validation\": {\n    \"status\": \"passed\",\n    \"schema_checked\": true,\n    \"output_hashes_matched\": true,\n    \"dtype\": \"float32\",\n    \"shape\": [\n      3,\n      3\n    ],\n    \"point_count\": 3\n  },\n  \"input_coordinate_validation\": {\n    \"status\": \"failed\",\n    \"code\": \"POINT_CLOUD_MISMATCH\",\n    \"message\": \"POINT_CLOUD_MISMATCH: 입력 전체 점군과 저장 좌표 또는 행 순서가 다릅니다.\"\n  },\n  \"coordinates_verified\": false,\n  \"errors\": [\n    {\n      \"code\": \"POINT_CLOUD_MISMATCH\",\n      \"message\": \"POINT_CLOUD_MISMATCH: 입력 전체 점군과 저장 좌표 또는 행 순서가 다릅니다.\"\n    }\n  ],\n  \"output_hashes_matched\": true\n}\n",
+  "stderr": "검증 실패: POINT_CLOUD_MISMATCH: POINT_CLOUD_MISMATCH: 입력 전체 점군과 저장 좌표 또는 행 순서가 다릅니다.\n"
+}

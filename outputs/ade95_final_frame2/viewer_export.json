@@ -1,0 +1,92 @@
+{
+  "tool_version": "ade95-viewer-v1",
+  "input_session": "C:\\study\\injidong_contract_v1\\examples\\viewer_multiframe",
+  "input_metadata": {
+    "schema_version": "1.0.0",
+    "frame_id": "ade95_synthetic_000002",
+    "session_id": "ade95_synthetic_multiframe",
+    "specimen_id": null,
+    "source_path": "mobile_pc_replay",
+    "capture_source": "synthetic",
+    "provenance": {
+      "kind": "synthetic",
+      "camera": null,
+      "raw_file": null,
+      "raw_sha256": null,
+      "raw_unit": "mm",
+      "raw_scale_to_m": 0.001,
+      "synthetic_seed": 95,
+      "synthetic_config": "ADE-95 deterministic frame 2; raw_mm=[[1500, 2000], [2500, 0]]; scale_to_m=0.001; no target or support plane"
+    },
+    "storage": {
+      "file": "arrays.npz",
+      "sha256": "81b941bd3dc878f53bc2a1484fab0a28b3d286b00a5ed02efc71447db0c00bed",
+      "depth_key": "depth_m",
+      "valid_mask_key": "valid_mask",
+      "target_mask_key": null
+    },
+    "depth": {
+      "unit": "m",
+      "semantics": "optical_axis_z",
+      "dtype": "float32",
+      "height": 2,
+      "width": 2
+    },
+    "intrinsics": {
+      "width": 2,
+      "height": 2,
+      "fx": 100.0,
+      "fy": 100.0,
+      "cx": 0.0,
+      "cy": 0.0,
+      "model": "rectified_pinhole",
+      "calibration_id": "synthetic-pinhole-v1"
+    },
+    "capture_time": {
+      "ns": "2000000000",
+      "clock_domain": "synthetic_reference",
+      "origin": "synthetic"
+    },
+    "host_receive_time": {
+      "ns": null,
+      "clock_domain": null,
+      "origin": null
+    },
+    "replay_time": {
+      "ns": null,
+      "clock_domain": null,
+      "origin": null
+    },
+    "pose": null,
+    "imu": null,
+    "sync": {
+      "status": "missing",
+      "offset_ns": null,
+      "uncertainty_ns": null,
+      "tolerance_ns": null,
+      "evidence": null
+    },
+    "capture_conditions": {
+      "camera_distance_m": null,
+      "lighting": null,
+      "material": null,
+      "notes": "Synthetic interface test; excluded from accuracy metrics."
+    },
+    "target_mask_info": null,
+    "support_plane": null,
+    "volume_request": null
+  },
+  "display_point_count": 3,
+  "full_point_count": 3,
+  "display_sampling": "evenly spaced row-order indices; export is full cloud",
+  "depth_range_m": [
+    1.5,
+    2.5
+  ],
+  "preview": "preview.png",
+  "output_sha256": {
+    "points.npz": "8d23b43f196e3c67124a90fd2487fb239d99554d0e6aa0b3e185b4ce57f08ad0",
+    "preview.png": "14de455ecfc1a32a5f31fdc65658c44ac5c06e30205e0f198a63fc57e896a535",
+    "processing.json": "62331b25649d33555cdcc9a1c5549d44c9fe64e9c9e9b70fe84538a47a6c1e0b"
+  }
+}

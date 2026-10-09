@@ -1,0 +1,13 @@
+{
+  "command": [
+    "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "C:\\study\\injidong_contract_v1\\scripts\\verify_viewer_outputs.py",
+    "C:\\Users\\user\\AppData\\Local\\Temp\\injidong_final_review_2fd505ce683d4c9d986f0a1200545062\\verifier_wrong_cloud"
+  ],
+  "cwd": "C:\\study\\injidong_contract_v1",
+  "exit_code": 0,
+  "stdout": "{\n  \"status\": \"success\",\n  \"bundle\": \"C:\\\\Users\\\\user\\\\AppData\\\\Local\\\\Temp\\\\injidong_final_review_2fd505ce683d4c9d986f0a1200545062\\\\verifier_wrong_cloud\",\n  \"output_hashes_matched\": true,\n  \"expected_coordinates\": \"rtol=0, atol=1e-7 m\",\n  \"deployment_hashes_preserved\": 21,\n  \"initial_files_preserved\": null,\n  \"local_summary_schemas_match\": {\n    \"features.schema.json\": true,\n    \"frame.schema.json\": true,\n    \"label.schema.json\": true,\n    \"prediction.schema.json\": true,\n    \"processing.schema.json\": true\n  }\n}\n",
+  "stderr": ""
+}

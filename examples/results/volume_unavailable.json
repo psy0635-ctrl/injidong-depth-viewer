@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "frame_id": "synthetic_000001",
+  "status": "failure",
+  "stage": "volume",
+  "point_cloud": null,
+  "volume_m3": null,
+  "volume_method": null,
+  "assumptions": [],
+  "valid_depth_ratio": 0.75,
+  "provenance_kind": "synthetic",
+  "config_version": "1.0.0",
+  "errors": [
+    {
+      "code": "TARGET_UNAVAILABLE",
+      "message": "No target mask: volume cannot be inferred from all valid pixels."
+    }
+  ],
+  "warnings": []
+}

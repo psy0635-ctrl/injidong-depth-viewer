@@ -1,0 +1,59 @@
+{
+  "source": "이번 수정 후 패키징 전 확인",
+  "changed_existing_files": [
+    "docs/ADE-95-독립뷰어-사용검증.md",
+    "scripts/package_ade95.py",
+    "scripts/verify_viewer_outputs.py"
+  ],
+  "protected_mismatches": [],
+  "protected_existing_files_checked": 163,
+  "distribution_files_byte_equal": 22,
+  "original_inventory_preserved": 22,
+  "old_output_old_logs_old_zip_unchanged": true,
+  "old_zip_checksums": {
+    "인지동_ADE-66-67_로컬검증_박수용_20261007.zip": "c7dd11309f3db9ff027addeb5fab82c2657272c0a64ddfc9e53b9efcbfb62914",
+    "submissions/인지동_ADE-95_독립뷰어_20261008.zip": "2c95cda0ffb753e869486d7d9fbc2372deda2f2d68667f35bbdcfa2cab0d947f",
+    "submissions/인지동_ADE-95_독립뷰어_20261008.zip.sha256": "b7bea2f110e1f3d4aa951503df7604bfee7aca780bdb76e71da141be8432f16a",
+    "submissions/인지동_ADE-95_독립뷰어_최종제출_20261008.zip": "4bc4b2fd104cd75c80c87d07b4a7957bfaaedc0fa8fda9ecfcaeb034a64a892b",
+    "submissions/인지동_ADE-95_독립뷰어_최종제출_20261008.zip.sha256": "90f6c021b6fca6fd11124c7f24962a50ec1a9217ce05e76219f6bf4bf184bceb"
+  },
+  "relative_links": [
+    {
+      "document": "README-viewer.md",
+      "target": "outputs/ade95_final_user_saves/frame_000003_1791460557654228600/preview.png",
+      "exists": true
+    },
+    {
+      "document": "README-viewer.md",
+      "target": "docs/ADE-95-독립뷰어-사용검증.md",
+      "exists": true
+    },
+    {
+      "document": "docs/ADE-95-독립뷰어-사용검증.md",
+      "target": "../README-viewer.md",
+      "exists": true
+    },
+    {
+      "document": "docs/ADE-95-독립뷰어-사용검증.md",
+      "target": "../logs/ade95_review_fix_20261008_1791463905480000200",
+      "exists": true
+    },
+    {
+      "document": "docs/ADE-95-독립뷰어-사용검증.md",
+      "target": "../outputs/ade95_final_synthetic/preview.png",
+      "exists": true
+    },
+    {
+      "document": "docs/ADE-95-독립뷰어-사용검증.md",
+      "target": "../outputs/ade95_final_gui_cli/tk_canvas.png",
+      "exists": true
+    },
+    {
+      "document": "docs/ADE-95-독립뷰어-사용검증.md",
+      "target": "../outputs/ade95_final_user_saves/frame_000003_1791460557654228600/preview.png",
+      "exists": true
+    }
+  ],
+  "historical_logs_existing": 16,
+  "historical_logs_missing": []
+}

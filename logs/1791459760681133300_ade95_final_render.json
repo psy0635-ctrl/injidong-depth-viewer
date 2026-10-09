@@ -1,0 +1,30 @@
+{
+  "source": "이번 에이전트 실행 / 사용자 전달 결과와 별개",
+  "started_at": "2026-10-08T20:42:40.120133+09:00",
+  "finished_at": "2026-10-08T20:42:40.650132+09:00",
+  "timezone": "Asia/Seoul",
+  "os": "Windows-10-10.0.26200-SP0",
+  "windows_version": [
+    "10",
+    "10.0.26200",
+    "SP0",
+    "Multiprocessor Free"
+  ],
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "executable": "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+  "numpy": "2.3.5",
+  "cwd": "C:\\study\\injidong_contract_v1",
+  "command": [
+    "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "src/viewer.py",
+    "examples/synthetic",
+    "--headless",
+    "--output",
+    "outputs/ade95_final_synthetic"
+  ],
+  "exit_code": 0,
+  "stdout": "frame_id: synthetic_000001   size: 2 x 2   valid: 75.00%\npoints: 3 full / 3 displayed   capture_source: synthetic   provenance_kind: synthetic\nSYNTHETIC DATA - excluded from real-device accuracy\nCamera coordinates, meters. Volume/weight: not computed.\nP0=(0, 0, 1) m   P1=(0.01, 0, 1) m   P2=(0, 0.01, 1) m\nSaved: C:\\study\\injidong_contract_v1\\outputs\\ade95_final_synthetic\n",
+  "stderr": ""
+}

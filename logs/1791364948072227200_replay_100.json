@@ -1,0 +1,31 @@
+{
+  "source": "이번 에이전트 실행 / 사용자 전달 결과와 별개",
+  "started_at": "2026-10-07T18:22:27.744535+09:00",
+  "finished_at": "2026-10-07T18:22:28.040225+09:00",
+  "timezone": "Asia/Seoul",
+  "os": "Windows-10-10.0.26200-SP0",
+  "windows_version": [
+    "10",
+    "10.0.26200",
+    "SP0",
+    "Multiprocessor Free"
+  ],
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "executable": "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+  "numpy": "2.3.5",
+  "cwd": "C:\\study\\injidong_contract_v1",
+  "command": [
+    "C:\\study\\injidong_contract_v1\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "src/replay.py",
+    "examples/synthetic",
+    "--repeat",
+    "100",
+    "--expected-points",
+    "examples/results/expected_points.json"
+  ],
+  "exit_code": 0,
+  "stdout": "성공: 100회 / 매회 1 frame / ['synthetic_000001']\n합성 데이터 포함; 실측/중량 정확도 결과가 아닙니다.\nsynthetic_000001: point_count=3, points_m=[[0.0, 0.0, 1.0], [0.009999999776482582, 0.0, 1.0], [0.0, 0.009999999776482582, 1.0]]\n배열·메타데이터·Point Cloud 동일, 원본 시각·출처 보존, 전후 SHA-256 동일\n기대 좌표 일치: numpy.allclose(rtol=0, atol=1e-7 m)\n실행 기록: C:\\study\\injidong_contract_v1\\logs\\replay_1791364947856535500.json\n",
+  "stderr": ""
+}

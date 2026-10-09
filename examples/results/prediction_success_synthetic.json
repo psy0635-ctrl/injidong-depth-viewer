@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "frame_id": "synthetic_000001",
+  "status": "success",
+  "predicted_weight_g": 100.0,
+  "model_id": "synthetic_ui_fixture_v1",
+  "feature_version": "volume_only_v1",
+  "provenance_kind": "synthetic",
+  "quality": "unknown",
+  "quality_policy_id": null,
+  "errors": [],
+  "warnings": [
+    "UI fixture only; no trained model or actual measurement."
+  ]
+}
