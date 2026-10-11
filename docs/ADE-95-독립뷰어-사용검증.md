@@ -1,5 +1,32 @@
 # ADE-95 저장 Depth·Point Cloud 독립 뷰어
 
+## 설치 안내 보완 · 2026-10-11
+
+사용자가 전달한 팀장 검토 상태에 따라 ADE-95 저장 입력 기반 구현은 검토 통과로 반영한다. 남은 설치 안내를 [README-viewer.md](../README-viewer.md)에 보완했다. 아래 2026-10-08의 Git 미설정·승인 대기·새 환경 미검증 표현과 실행 결과는 당시 기록이며 현재 상태를 뜻하지 않는다. 현재 작업은 문서 보완과 최소 실행 검증에 한정하고 데이터 계약 v1.0.0·스키마·함수·기능·의존성을 유지한다.
+
+### 이번 최소 검증 결과
+
+아래 결과는 2026-10-11 설치 안내 보완 단계에서 실행한 기록이다. 이후 문서 최종 검토·commit/push 단계에서 이 실행들을 반복했다는 뜻은 아니다.
+
+실제 작업 폴더는 `C:\study\injidong_contract_v1`, remote는 `https://github.com/psy0635-ctrl/injidong-depth-viewer`, 브랜치는 `main`, HEAD는 `f9384e3e19e2dd87d6c5767ddd4ee4acd7cf216b`였다. 착수 시 Git 변경 파일은 없었고 적용되는 AGENTS.md도 없었다. 기본 런처 목록은 Python 3.14를 선택하므로 새 환경은 확인된 `py -3.11`로 생성했다.
+
+| 검사 | 기존 .venv 재사용 | 같은 PC의 분리된 임시 새 환경 |
+|---|---|---|
+| Python·의존성 import | Python 3.11.9, NumPy 2.3.5, Matplotlib 3.10.8 | `py -3.11 -m venv` 생성 후 `requirements-viewer.txt` 설치 종료 0, 동일 버전 import 성공 |
+| 의존성 충돌·CLI | pip check, CLI help 각각 종료 0 | pip check, CLI help 각각 종료 0 |
+| Tk | tkinter import 성공, Tk/Tcl 8.6 | tkinter import 성공, Tk 8.6.12 테스트 창 생성·viewable=true·자동 닫기 종료 0 |
+| 다중 프레임 예제 최소 저장 | `--frame 2 --max-display-points 2 --headless` 종료 0 | 동일 옵션 종료 0 |
+| 저장 결과 입력 대조 | float32 3×3, 전체 3점·행 순서·metadata 일치, 종료 0 | 동일 결과, 종료 0 |
+| GUI 자동 검사 | 기존 `scripts/check_viewer_gui.py` 1회: Tk viewable, 버튼/키 프레임 이동·저장·회전/확대 이벤트, GUI 및 CLI 자동 닫기 종료 0 | 뷰어 GUI 이벤트 검사는 반복하지 않음; Tk 테스트 창과 headless만 실행 |
+
+수정한 두 문서의 상대 링크 21개가 모두 존재하며, PowerShell 코드 블록 16개의 구문 오류는 0개였다. 설치 입력 파일·실행 스크립트·3프레임 manifest/metadata/NPZ 존재와 명령 옵션을 실제 CLI 정의와 대조했고 `git diff --check`도 통과했다.
+
+임시 경로는 `C:\Users\user\AppData\Local\Temp\ade95 install check 051aa8c29d6c46dc98075c5d6ccac7af`다. 공백 경로의 Python 실행은 PowerShell `&`와 따옴표로 수행했다. 새 venv·설치 로그(`fresh_install.log`)·명령별 JSON·결과·`validation_summary.json`은 이 폴더에 보존했다. 기존 `.venv`의 설치·업데이트·삭제·재생성은 수행하지 않았으며, 새 결과도 모두 임시 폴더에 저장했다. `src`·스키마·입력 예제·기존 출력·requirements 총 89개 파일의 실행 전후 SHA-256이 동일했다.
+
+첫 결과 검증에서는 원본 규격 `README.md`에 추가한 링크 한 줄이 배포 `SHA256SUMS.txt` 보호 검사에 걸려 `PRESERVATION_MISMATCH`/종료 1이었다. 해당 추가만 되돌린 뒤 **같은 저장 결과**를 재검사하여 배포 21개 해시·스키마 5개 검사까지 종료 0으로 통과했다. 실패 로그도 `existing_verify.json`에 보존했다. 원본 README에는 독립 뷰어 안내 중복이 없으므로 그대로 유지하고, 상세 문서의 중복 설치·실행 절차를 README-viewer 링크로 연결했다. 체크섬·검증기 수정이나 코드 결함 수정은 없었다.
+
+별도 물리 PC/깨끗한 Windows 설치, Python 3.12, 사람이 보는 테스트 창 및 직접 뷰어 조작·닫기는 이번에 검증하지 않았다. 임시 설치는 같은 PC의 기존 Python 3.11.9·Tcl/Tk 및 pip 다운로드 캐시를 사용한 새 venv 검증이며 다른 PC 성공을 뜻하지 않는다. Tk의 viewable 값과 자동 이벤트 결과는 사람의 실제 화면 확인·조작 성공과 구분한다. 전체 68개 테스트·합성 100회 재생·모바일 조사·기능 개발은 실행하지 않았다. commit/push/PR 및 Linear 업데이트도 수행하지 않았다.
+
 ## 최종 검토 보완 · 2026-10-08
 
 뷰어 시작 안내는 [README-viewer.md](../README-viewer.md)에 추가했다. 원본 README·VALIDATION·공통 contract·스키마·배포 체크섬은 유지한다. 이번 변경은 저장 결과 검증기·회귀 테스트·문서·패키징이며 GUI·부피·중량·USB·Android 기능은 변경하지 않는다.
@@ -64,55 +91,11 @@ ADE-66·67 문서가 참조하는 존재하는 과거 JSON 로그를 새 패키�
 
 최소 설치 목록은 `requirements-viewer.txt`, 실제 설치 버전 전체는 `requirements-viewer.lock.txt`다. 추가된 전이 의존성은 contourpy 1.3.3, cycler 0.12.1, fonttools 4.66.1, kiwisolver 1.5.1, packaging 26.3, pillow 12.3.0, pyparsing 3.3.3, python-dateutil 2.9.0.post0, six 1.17.0이다. 원본 `requirements.txt`는 유지했다.
 
-## PowerShell 실행
+## PowerShell 설치·실행 안내
 
-작업 폴더에서 실행한다. ZIP을 다른 곳에 풀었다면 `Set-Location`을 압축 해제된 `injidong_ade95` 폴더로 바꾼다. `.venv`는 ZIP에 없으므로 다른 PC에서는 Python 3.11/3.12 가상환경을 따로 준비해야 한다. 다른 PC 환경 구축은 이번 실행 범위가 아니다.
+현재 PC의 기존 `.venv` 재사용, 새 PC의 Python 3.11/3.12 선택·가상환경 생성·의존성 설치, Tk import/테스트 창 확인, 제공 다중 프레임 GUI·headless 실행은 [README-viewer.md](../README-viewer.md)를 따른다. 실행 안내는 해당 문서를 중심으로 유지하며 여기에는 중복 설치 명령을 두지 않는다.
 
-```powershell
-Set-Location C:\study\injidong_contract_v1
-.\.venv\Scripts\python.exe -m pip install -r requirements-viewer.txt
-.\.venv\Scripts\python.exe -m pip check
-.\.venv\Scripts\python.exe -X utf8 src/viewer.py --help
-
-# 기본 예제: 1 frame, 3 points, valid 75%
-.\.venv\Scripts\python.exe -X utf8 src/viewer.py examples/synthetic --output outputs/demo_gui
-
-# 이전/다음 시연용 3프레임
-.\.venv\Scripts\python.exe -X utf8 src/viewer.py examples/viewer_multiframe --output outputs/demo_gui
-```
-
-GUI 코드의 CLI `main` 진입 경로와 정상 종료는 기존 실제 Tk 창 자동 검증에서 실행했다. 다중 프레임 GUI 명령의 직접 실행·세 번째 프레임 저장 2회·오류 메시지 없이 PowerShell 프롬프트로 복귀는 **사용자 제공 실행 근거가 있다**. 직접 회전·확대·버튼·방향키 조작 성공은 미확인이다. 프롬프트 복귀 기록에는 `$LASTEXITCODE` 값이 없으므로 직접 실행의 종료 코드 0을 확인했다고 기록하지 않는다.
-
-### 창 없이 저장 및 결과 재검증
-
-새 결과 폴더를 만들기 위해 매번 다른 이름을 쓴다. 기존 폴더가 있으면 오류로 종료한다.
-
-```powershell
-$ade95Run = Get-Date -Format yyyyMMdd_HHmmss_fff
-$ade95Result = "outputs/demo_$ade95Run"
-.\.venv\Scripts\python.exe -X utf8 src/viewer.py examples/synthetic --headless --output $ade95Result
-.\.venv\Scripts\python.exe -X utf8 scripts/verify_viewer_outputs.py $ade95Result --session examples/synthetic
-
-# 2번째 프레임, 표시만 최대 2점; 저장은 전체 3점
-.\.venv\Scripts\python.exe -X utf8 src/viewer.py examples/viewer_multiframe --frame 2 --max-display-points 2 --headless --output "outputs/frame2_$ade95Run"
-
-# UTF-8 실행 근거 포함 전체 회귀
-.\.venv\Scripts\python.exe -X utf8 scripts/record_run.py --label ade95_review_tests -- -m unittest discover -s tests -v
-
-# 실제 Tk 창 자동 이벤트 검사: 새 경로 필수
-.\.venv\Scripts\python.exe -X utf8 scripts/record_run.py --label ade95_review_gui -- scripts/check_viewer_gui.py --output "outputs/gui_$ade95Run"
-
-# 로컬 착수 파일 45개 및 기존 배포 해시까지 검사
-.\.venv\Scripts\python.exe -X utf8 scripts/verify_viewer_outputs.py outputs/ade95_final_synthetic --session examples/synthetic --original-inventory logs/ade95_initial_inventory.json
-```
-
-마지막 `--original-inventory`는 원래 작업 폴더 전용이다. 기존 제출 ZIP 등 제출물 밖 파일까지 검사하므로 새 제출 ZIP만 풀었을 때는 이 옵션을 생략한다. 예제 생성기를 다시 확인하려면 새 경로를 사용한다:
-
-```powershell
-.\.venv\Scripts\python.exe -X utf8 scripts/make_viewer_example.py --output "outputs/session_$ade95Run"
-```
-
-설치·help·비대화형 저장·프레임 선택·표시 샘플링·생성기·테스트·결과/원본 검사·Tk 검사 명령의 실행 근거를 로그로 남겼다. 시간 문자열과 리뷰용 새 폴더 이름은 재실행 예시이며 그 이름 그대로 과거 실행했다고 주장하지 않는다.
+아래 검증 결과와 위의 환경 구축 기록은 2026-10-08의 과거 근거다. 전체 68개 테스트·100회 재생·과거 사용자 조작 결과를 새 PC 설치 검증으로 해석하지 않는다. 이번 설치 안내 보완 결과는 문서 앞의 2026-10-11 절에 별도로 기록했다.
 
 ## 입력 구조와 표시
 
