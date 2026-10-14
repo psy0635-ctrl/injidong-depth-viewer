@@ -1,0 +1,218 @@
+{
+  "status": "passed_packaging_validation",
+  "checked_at": "2026-10-14T10:40:03.441763+09:00",
+  "archive": "C:\\study\\injidong-ade71-stage1-20261013\\submissions\\ade71_session_fixed_20261014_6fe5b71e259e\\ADE-71_session_fixed_20261014_6fe5b71e259e.zip",
+  "size_bytes": 2528277,
+  "sha256": "31547e5128b78d0becce9c3414fff9f3e27211dac72d318badaf0a3686a3dddd",
+  "file_count": 154,
+  "directory_count": 0,
+  "crc": "passed",
+  "hashed_count": 153,
+  "hash_list_excludes": [
+    "FILE_SHA256SUMS.txt"
+  ],
+  "duplicate_unsafe_paths": [],
+  "required_files": [
+    "src/contract.py",
+    "src/session_boundary.py",
+    "src/session_pipeline.py",
+    "src/session_auxiliary.py",
+    "src/depth_preflight.py",
+    "src/replay.py",
+    "src/viewer_data.py",
+    "scripts/validate_ade71_zip_fixes.py",
+    "scripts/prepare_d405_intake.py",
+    "scripts/make_ade71_session_intake.py",
+    "tests/test_session_zip_fixes.py",
+    "tests/test_session_pipeline.py",
+    "raw/depth_original.zip",
+    "README.md",
+    "REQUESTS.md",
+    "PROTECTED_FILE_MAP.json",
+    "schemas/frame.schema.json",
+    "schemas/processing.schema.json",
+    "schemas/features.schema.json",
+    "schemas/prediction.schema.json",
+    "schemas/label.schema.json"
+  ],
+  "protected_original_checks": {
+    "README.md": {
+      "reference_path": "protected_contract/README.md",
+      "original_sha256": "abc34deb221c2b655401e62f2ce95e8f765eca4d56b80c82dec4bc296ccb9b8a",
+      "active_changed": false
+    },
+    "VALIDATION.md": {
+      "reference_path": "VALIDATION.md",
+      "original_sha256": "44b8470393c3bd753eb3cc8030da0a74fcfb693f23c99015a0c594c48723c29c",
+      "active_changed": false
+    },
+    "examples/results/expected_points.json": {
+      "reference_path": "examples/results/expected_points.json",
+      "original_sha256": "73c0d6b57d159791836b3a1716fc0f64d34e12e5f5c32db7965f91011b3be00e",
+      "active_changed": false
+    },
+    "examples/results/features_synthetic.json": {
+      "reference_path": "examples/results/features_synthetic.json",
+      "original_sha256": "b24a65096c099c4d68769a20446ffdeb5fde2e41d65a16b94e9847f4cb9b9173",
+      "active_changed": false
+    },
+    "examples/results/label_synthetic.json": {
+      "reference_path": "examples/results/label_synthetic.json",
+      "original_sha256": "f69e32c47f1f43b2f5423acb1f158b4bc20a400583c45eb98e37a24bd7e6871e",
+      "active_changed": false
+    },
+    "examples/results/point_cloud.npz": {
+      "reference_path": "examples/results/point_cloud.npz",
+      "original_sha256": "30fcc0a2f30f52cae5c02fca8173a3f4efbbcc83d1b1d3f9f3465d36427e8b7e",
+      "active_changed": false
+    },
+    "examples/results/point_cloud_success.json": {
+      "reference_path": "examples/results/point_cloud_success.json",
+      "original_sha256": "fc9ce5395a46afb8312ed4523f8f72a13f0e95ba24f68bb3dc92513dae35f8fa",
+      "active_changed": false
+    },
+    "examples/results/prediction_not_ready.json": {
+      "reference_path": "examples/results/prediction_not_ready.json",
+      "original_sha256": "313494331d3054f35a2d5174a54bdf56f0cc77a565d1dea70b0928c58e6f3c95",
+      "active_changed": false
+    },
+    "examples/results/prediction_success_synthetic.json": {
+      "reference_path": "examples/results/prediction_success_synthetic.json",
+      "original_sha256": "0e2bb2ed91a07b25a8ad8026846dcdd674a4b82cfe2ec8651f2b19085b4e2b85",
+      "active_changed": false
+    },
+    "examples/results/volume_unavailable.json": {
+      "reference_path": "examples/results/volume_unavailable.json",
+      "original_sha256": "747e11d7cb527b760ba0c0d551b37e88fab84ce4dfc730d6317772abf4689531",
+      "active_changed": false
+    },
+    "examples/synthetic/frame_000001/arrays.npz": {
+      "reference_path": "examples/synthetic/frame_000001/arrays.npz",
+      "original_sha256": "fd1e1a0d2db6be06efaae3986fc3db18039f3daeb861ff7bfab1a8fd78c412fd",
+      "active_changed": false
+    },
+    "examples/synthetic/frame_000001/metadata.json": {
+      "reference_path": "examples/synthetic/frame_000001/metadata.json",
+      "original_sha256": "806e0df67e2489612be6aabe9af80b3dc84ad08ff62b6804ec59d2ead0ee0bf7",
+      "active_changed": false
+    },
+    "examples/synthetic/frames.jsonl": {
+      "reference_path": "examples/synthetic/frames.jsonl",
+      "original_sha256": "5b136436864860b3fa660ef3c71b93fa418c90d41913639f74bc40ace7376afa",
+      "active_changed": false
+    },
+    "requirements.txt": {
+      "reference_path": "requirements.txt",
+      "original_sha256": "7bd6b8946940b79948c548c8048e545684b91c8edc9444d8dfc0c8f76a97c0a7",
+      "active_changed": false
+    },
+    "schemas/features.schema.json": {
+      "reference_path": "schemas/features.schema.json",
+      "original_sha256": "8346fb2d4c710384bfe26f5f256c8ea89f98122b94f06acfc595e3433a6b6fc6",
+      "active_changed": false
+    },
+    "schemas/frame.schema.json": {
+      "reference_path": "schemas/frame.schema.json",
+      "original_sha256": "b277100a2d5a8ac6052a3dcbb8e6bcdc56da9e23a656c2aa50e5d91475b190ea",
+      "active_changed": false
+    },
+    "schemas/label.schema.json": {
+      "reference_path": "schemas/label.schema.json",
+      "original_sha256": "1be4dd848c37f16a32156a92b51f364fdd80e156baa05b5143d064318f906f2d",
+      "active_changed": false
+    },
+    "schemas/prediction.schema.json": {
+      "reference_path": "schemas/prediction.schema.json",
+      "original_sha256": "dc60997adbf21ad4a33ff873761ef89204ead72dba3c4ff70cf600e9af79152a",
+      "active_changed": false
+    },
+    "schemas/processing.schema.json": {
+      "reference_path": "schemas/processing.schema.json",
+      "original_sha256": "b5090a9f3a2f294836ca0a318b24fdf4ba2c695045e3f5c531564f5b9bd9e4ae",
+      "active_changed": false
+    },
+    "src/contract.py": {
+      "reference_path": "protected_reference/src/contract.py",
+      "original_sha256": "f69426b2b62310994d835dc5f9a8166d8fc893a42c985bae823609e610aeb5de",
+      "active_changed": true
+    },
+    "tests/test_contract.py": {
+      "reference_path": "tests/test_contract.py",
+      "original_sha256": "d94ca1ab25a49a032f8d7cf334f7db4758a8d15eb2ff25d74105c83fa32e2450",
+      "active_changed": false
+    }
+  },
+  "active_contract_changed": true,
+  "original_zip_count": 1,
+  "original_zip_sha256": "c7db1884aa5a78fd4fd634153e9575912d762000a7aa0aa1ad7acee66889e6e2",
+  "original_member_hashes": {
+    "capture10.py": "486517dcd7a07cc97cf8491a6578e5193c48871f6f3b1800c865c679552644c5",
+    "depth10.npz": "61de8af2f76ff04e4bac639b7f1fe4f4a07b638534dec2ac8866deb657ad29f0",
+    "metadata.txt": "dea53c88c99d733e66d22e609ef74886d327e009cba07187c494a280c0febd4f"
+  },
+  "duplicate_original_members": [],
+  "forbidden_files": [],
+  "sensitive_patterns": "No findings in builder filename/representative private-key/token pattern scan; not an exhaustive secret audit",
+  "strict_json": "UTF-8 and no NaN/Infinity tokens, passed",
+  "extracted": "C:\\Users\\AISW-510-131\\AppData\\Local\\Temp\\ade71_fixed_zip_validation__asult6t\\extracted",
+  "extracted_files_unchanged": true,
+  "imports": {
+    "contract": "C:\\Users\\AISW-510-131\\AppData\\Local\\Temp\\ade71_fixed_zip_validation__asult6t\\extracted\\src\\contract.py",
+    "session_boundary": "C:\\Users\\AISW-510-131\\AppData\\Local\\Temp\\ade71_fixed_zip_validation__asult6t\\extracted\\src\\session_boundary.py",
+    "session_pipeline": "C:\\Users\\AISW-510-131\\AppData\\Local\\Temp\\ade71_fixed_zip_validation__asult6t\\extracted\\src\\session_pipeline.py",
+    "session_auxiliary": "C:\\Users\\AISW-510-131\\AppData\\Local\\Temp\\ade71_fixed_zip_validation__asult6t\\extracted\\src\\session_auxiliary.py",
+    "depth_preflight": "C:\\Users\\AISW-510-131\\AppData\\Local\\Temp\\ade71_fixed_zip_validation__asult6t\\extracted\\src\\depth_preflight.py",
+    "replay": "C:\\Users\\AISW-510-131\\AppData\\Local\\Temp\\ade71_fixed_zip_validation__asult6t\\extracted\\src\\replay.py",
+    "viewer_data": "C:\\Users\\AISW-510-131\\AppData\\Local\\Temp\\ade71_fixed_zip_validation__asult6t\\extracted\\src\\viewer_data.py"
+  },
+  "extracted_execution_exit": 0,
+  "extracted_execution_report": "C:\\Users\\AISW-510-131\\AppData\\Local\\Temp\\ade71_fixed_zip_validation__asult6t\\minimum_runs\\run_24259c7d9e164b31bef1ef8011a0f236\\validation.json",
+  "existing_venv_reused": true,
+  "new_environment_installed": false,
+  "synthetic": {
+    "status": "passed_file_boundary_validation",
+    "exit_code": 0,
+    "repeat": 10,
+    "validation": "C:\\Users\\AISW-510-131\\AppData\\Local\\Temp\\ade71_fixed_zip_validation__asult6t\\minimum_runs\\run_24259c7d9e164b31bef1ef8011a0f236\\synthetic\\run_4acec17c956844ac9b6ac06b995eeb1d\\validation.json",
+    "completion": "C:\\Users\\AISW-510-131\\AppData\\Local\\Temp\\ade71_fixed_zip_validation__asult6t\\minimum_runs\\run_24259c7d9e164b31bef1ef8011a0f236\\synthetic\\run_4acec17c956844ac9b6ac06b995eeb1d\\.ade71-complete.json",
+    "points_m": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        0.009999999776482582,
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        0.009999999776482582,
+        1.0
+      ]
+    ],
+    "point_count": 3,
+    "points_sha256": "ac26008fba6d8b9accc1afed052f82e47d7355babfacff44a6b6557e326c3cc6",
+    "whole_values_matched": true
+  },
+  "d405": {
+    "status": "INTAKE_BLOCKED",
+    "exit_code": 1,
+    "normal_session": false,
+    "point_cloud": false,
+    "validation": "C:\\Users\\AISW-510-131\\AppData\\Local\\Temp\\ade71_fixed_zip_validation__asult6t\\minimum_runs\\run_24259c7d9e164b31bef1ef8011a0f236\\blocked\\run_62cea9ab798e46e7a2a2456fab92afc2\\validation.json"
+  },
+  "regression": {
+    "tests_run": 16,
+    "passed": 15,
+    "skipped": 1,
+    "failures": 0,
+    "log": "C:\\Users\\AISW-510-131\\AppData\\Local\\Temp\\ade71_fixed_zip_validation__asult6t\\minimum_runs\\run_24259c7d9e164b31bef1ef8011a0f236\\four_finding_regressions.json"
+  },
+  "old_zip_unchanged": true,
+  "verification_harness_corrections": [
+    "First assembly stopped before ZIP creation: excluded raw-member copies from blocked evidence and mapped to single original ZIP.",
+    "Actual extracted-code CLI/regressions passed; verifier initially compared Windows short/long paths textually. Resolved both paths, confirmed containment; no application code change or redundant test rerun."
+  ]
+}
