@@ -1,0 +1,5 @@
+{
+  "src/contract.py": "c013de55d34120076fd899c8797ffaa38675201c011e16ab2c39dfd0f6c6897e",
+  "src/session_boundary.py": "b52fed283cf78f33f0e8192ff270dcd90050083a1fc83dc99bfd3e7b9f4662d4",
+  "schemas/frame.schema.json": "b277100a2d5a8ac6052a3dcbb8e6bcdc56da9e23a656c2aa50e5d91475b190ea"
+}
