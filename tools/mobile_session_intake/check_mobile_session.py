@@ -7,6 +7,7 @@ import math
 from pathlib import Path
 import platform
 import re
+import stat
 import sys
 import uuid
 import zipfile
@@ -17,6 +18,11 @@ import numpy as np
 from PIL import Image
 
 MOBILE_COMMIT = 'b9f370ac94901b1dfce2c4c64018380d5036e967'
+RGB_INDEX_POLICY = 'mobile-rgb-index-compat-review-v1'
+RGB_INDEX_NAMES = {'phone_rgb_index': 'rgb_index.jsonl', 'images_index': 'images.jsonl'}
+COMMON_FILES = {'depth_index': 'frames.jsonl', 'phone_rgb_images': 'rgb/',
+                'imu_samples': 'imu.jsonl', 'depth_arrays': '<frame_id>/arrays.npz',
+                'raw_depth': 'raw/'}
 
 
 class IntakeError(ValueError):
@@ -60,10 +66,21 @@ def rows(path):
                 yield parse(line)
 
 
+def require_unlinked(path):
+    # lstat before resolve/exists: dangling links and Windows junctions count.
+    for component in (Path(path).absolute(), *Path(path).absolute().parents):
+        info = component.lstat()
+        require(not stat.S_ISLNK(info.st_mode) and
+                not (getattr(info, 'st_file_attributes', 0) & stat.FILE_ATTRIBUTE_REPARSE_POINT),
+                f'linked input not supported: {component.name}')
+
+
 def inventory(root):
+    require_unlinked(root)
+    root = Path(root).resolve()
     result = {}
     for path in sorted(root.rglob('*')):
-        require(not path.is_symlink(), f'symlink input not supported: {path.name}')
+        require_unlinked(path)
         require(path.resolve().is_relative_to(root), 'input alias escapes session')
         if path.is_file():
             result[path.relative_to(root).as_posix()] = digest(path)
@@ -100,12 +117,12 @@ def vector(value, size):
     require(all(type(v) in (int, float) and math.isfinite(v) for v in value), 'nonfinite/missing sensor value')
 
 
-def collection_kind(name, session, frame_directories):
+def collection_kind(name, session, frame_directories, rgb_index_name):
     """Recognize the pinned writer's collection files, not arbitrary sidecars."""
     path = Path(name)
     parts = tuple(part.lower() for part in path.parts)
     if parts[0] == 'rgb' and path.suffix.lower() in ('.png', '.jpg', '.jpeg', '.bmp', '.webp', '.tif', '.tiff'):
-        return 'RGB image not referenced by rgb_index.jsonl'
+        return f'RGB image not referenced by {rgb_index_name}'
     if parts[0] == 'raw' and path.suffix.lower() == '.bin':
         return 'raw Depth buffer not referenced by any FramePacket'
     if parts[-1] in ('metadata.json', 'arrays.npz'):
@@ -124,15 +141,63 @@ def collection_kind(name, session, frame_directories):
     return None
 
 
+def select_rgb_index(session, files, selection):
+    require(type(files) is dict, 'session.json.files must be an object')
+    keys = selection['candidate_keys']
+    require(len(keys) == 1, 'exactly one RGB index key required')
+    key = keys[0]
+    declared = files[key]
+    selection.update(selected_key=key, declared_path=declared if type(declared) is str else None,
+                     declared_path_type=type(declared).__name__, status='declared')
+    name = RGB_INDEX_NAMES[key]
+    require(type(declared) is str and declared == name, 'RGB index key/path combination mismatch')
+    require(files == {**COMMON_FILES, key: name}, 'unexpected mobile file layout')
+    entries = selection['candidate_entries']
+    require(len(entries) == 1 and entries[0]['name'] == name,
+            'declared RGB index must be the only candidate entry')
+    path = session / name
+    require_unlinked(path)
+    require(stat.S_ISREG(path.lstat().st_mode), 'RGB index must be a regular file')
+    require(path.resolve().is_relative_to(session), 'RGB index path escapes session')
+    selection.update(status='selected', used_relative_path=name)
+    selection['sha256'] = digest(path)
+    return path
+
+
 def inspect_session(session, contract_root):
+    selection = {'policy_id': RGB_INDEX_POLICY, 'status': 'not_selected',
+                 'candidate_keys': [], 'candidate_entries': [], 'selected_key': None,
+                 'declared_path': None, 'used_relative_path': None, 'sha256': None}
+    try:
+        session = Path(session)
+        require_unlinked(session)
+        for path in sorted(session.iterdir()):
+            if path.name.casefold() in RGB_INDEX_NAMES.values():
+                info = path.lstat()
+                linked = stat.S_ISLNK(info.st_mode) or bool(
+                    getattr(info, 'st_file_attributes', 0) & stat.FILE_ATTRIBUTE_REPARSE_POINT)
+                kind = 'link_or_reparse' if linked else 'file' if stat.S_ISREG(info.st_mode) else 'directory' if stat.S_ISDIR(info.st_mode) else 'special'
+                selection['candidate_entries'].append({'name': path.name, 'kind': kind})
+        return _inspect_session(session, contract_root, selection)
+    except (ValueError, OSError, KeyError, TypeError, UnicodeError, EOFError, zipfile.BadZipFile) as error:
+        selection['error'] = str(error)
+        details = dict(error.details) if isinstance(error, IntakeError) else {}
+        details['rgb_index'] = selection
+        raise IntakeError(str(error), details) from error
+
+
+def _inspect_session(session, contract_root, selection):
     contract, boundary = load_contract(contract_root)
     session = Path(session).resolve()
     require(session.is_dir(), 'session directory missing')
-    before = inventory(session)
+    before = None
     try:
         boundary.guard_read(session)
         summary = read_json(session / 'session.json')
         require(isinstance(summary, dict), 'session.json top-level must be a JSON object')
+        files = summary.get('files', {})
+        if type(files) is dict:
+            selection['candidate_keys'] = [key for key in RGB_INDEX_NAMES if key in files]
         require(summary.get('manifest_version') == '1.0.0', 'unsupported mobile manifest')
         require(summary.get('status') == 'complete', 'session must be complete; failed/collecting not accepted')
         sid = summary.get('session_id')
@@ -142,9 +207,9 @@ def inspect_session(session, contract_root):
         transmission = summary.get('transmission', {})
         require(isinstance(transmission, dict), 'session.json.transmission must be a JSON object')
         require(transmission.get('status') == 'not_configured' and transmission.get('sent') is False, 'transport contract changed; review required')
-        files = summary.get('files', {})
-        expected_files = {'depth_index': 'frames.jsonl', 'phone_rgb_index': 'rgb_index.jsonl', 'phone_rgb_images': 'rgb/', 'imu_samples': 'imu.jsonl', 'depth_arrays': '<frame_id>/arrays.npz', 'raw_depth': 'raw/'}
-        require(files == expected_files, 'unexpected mobile file layout')
+        rgb_index = select_rgb_index(session, files, selection)
+        before = inventory(session)
+        require(before[rgb_index.name] == selection['sha256'], 'RGB index changed during selection')
         referenced = {}
         frame_directories = set()
         warnings = []
@@ -155,6 +220,8 @@ def inspect_session(session, contract_root):
                     f'duplicate collection path: {path.relative_to(session).as_posix()} '
                     f'({referenced.get(path)}; {owner})')
             referenced[path] = owner
+
+        reference(rgb_index, 'RGB index')
 
         entries = list(rows(session / 'frames.jsonl'))
         require(bool(entries), 'no Depth frames')
@@ -211,7 +278,7 @@ def inspect_session(session, contract_root):
         rgb_count = 0
         seen_images = set()
         rgb_fields = set('frame_id session_id file sha256 width height encoding image_kind time pair_status pair_evidence aligned_to_depth alignment_method calibration_id provenance_kind'.split())
-        for row in rows(session / 'rgb_index.jsonl'):
+        for row in rows(rgb_index):
             require(isinstance(row, dict) and set(row) == rgb_fields, 'RGB fields mismatch')
             require(row['session_id'] == sid and row['frame_id'] in mapping, 'RGB references unknown frame')
             require(row['provenance_kind'] in kinds, 'RGB provenance mismatch')
@@ -284,9 +351,9 @@ def inspect_session(session, contract_root):
         unreferenced = []
         additional = []
         for name in before:
-            if (session / name).resolve() in referenced or name in ('session.json', 'frames.jsonl', 'rgb_index.jsonl', 'imu.jsonl'):
+            if (session / name).resolve() in referenced or name in ('session.json', 'frames.jsonl', 'imu.jsonl'):
                 continue
-            reason = collection_kind(name, session, frame_directories)
+            reason = collection_kind(name, session, frame_directories, rgb_index.name)
             if reason:
                 unreferenced.append({'path': name, 'reason': reason})
             else:
@@ -296,6 +363,8 @@ def inspect_session(session, contract_root):
                               {'unreferenced_collection_files': unreferenced, 'additional_files': additional,
                                'input_sha256': before})
         return {'status': 'passed_mobile_file_checks', 'data_kind': next(iter(kinds)),
+                'rgb_index': selection, 'viewer_launched': False,
+                'sdk_values_independently_verified': False, 'common_framepacket_fully_validated': False,
                 'counts': actual, 'imu_sensor_types': sorted(sensors), 'depth_frames': depth_details,
                 'warnings': warnings, 'additional_files': additional, 'unreferenced_collection_files': [],
                 'core_loader_compatible': True, 'geometry_verified': False,
@@ -307,7 +376,8 @@ def inspect_session(session, contract_root):
                               'raw_65535_meaning_policy', 'team_review_of_sidecar_and_loader_integration'],
                 'input_sha256': before}
     finally:
-        require(inventory(session) == before, 'input changed during check')
+        if before is not None:
+            require(inventory(session) == before, 'input changed during check')
 
 
 def main(argv=None):
@@ -317,9 +387,9 @@ def main(argv=None):
     parser.add_argument('--report-dir', required=True, type=Path)
     args = parser.parse_args(argv)
     # Check output relation without loading or changing the contract.
-    source, output = args.session.resolve(), args.report_dir.resolve()
+    source, output = args.session.absolute(), args.report_dir.resolve()
     baseline = args.contract_root.resolve()
-    for directory in (source, baseline):
+    for directory in (source.resolve(), baseline):
         require(not output.is_relative_to(directory) and not directory.is_relative_to(output), 'report directory must be disjoint from input and baseline')
     output.mkdir(parents=True, exist_ok=True)
     report_path = output / ('mobile_check_' + uuid.uuid4().hex + '.json')
@@ -328,7 +398,9 @@ def main(argv=None):
         exit_code = 0
     except (ValueError, OSError, KeyError, TypeError, UnicodeError, EOFError, zipfile.BadZipFile) as error:
         report = {'status': 'failed_mobile_file_checks', 'error': str(error), 'processing_ready': False,
-                  'geometry_verified': False, 'rgb_depth_alignment_verified': False, 'world_pose_verified': False}
+                  'geometry_verified': False, 'rgb_depth_alignment_verified': False, 'world_pose_verified': False,
+                  'viewer_launched': False, 'sdk_values_independently_verified': False,
+                  'common_framepacket_fully_validated': False}
         if isinstance(error, IntakeError):
             report.update(error.details)
         exit_code = 1

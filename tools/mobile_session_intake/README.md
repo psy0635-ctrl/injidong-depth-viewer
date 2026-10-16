@@ -1,5 +1,26 @@
 # 모바일 세션 파일 사전 검사
 
+## 2026-10-16 RGB 인덱스 호환 개인 검토본
+
+정책 식별자는 `mobile-rgb-index-compat-review-v1`이다. 이 변경은 개인 검토 브랜치의 모바일 인수 검사기 정책이며 **팀 공식 승인·공용 통합은 미완료**다. 공통 FramePacket v1.0.0 스키마를 변경하지 않는다. 이번 구현·검증 결과는 [별도 후속 문서](../../docs/mobile-rgb-index-compat-review-20261016.md)에 기록하며 과거 실패·검증 기록은 보존한다.
+
+허용 조합은 아래 둘 중 정확히 하나다. 나머지 `files` 항목의 엄격한 검증과 RGB 행 검증은 두 형식에 동일하게 적용한다.
+
+| session.json 키 | 정확한 세션 상대 파일명 |
+|---|---|
+| `files.phone_rgb_index` | `rgb_index.jsonl` |
+| `files.images_index` | `images.jsonl` |
+
+두 키가 함께 있거나 두 파일명에 해당하는 루트 엔트리가 함께 있으면 내용이 같아도 거부한다. 선언하지 않은 다른 인덱스 엔트리도 거부한다. 디렉터리·끊어진 링크·symlink·Windows junction/reparse point를 엔트리 부재로 취급하지 않는다. 선택 파일은 링크 없는 일반 파일이어야 한다. 선언 파일 누락·읽기 실패·손상 시 **자동 fallback을 하지 않으며 입력의 이름이나 내용을 변경하지 않는다**.
+
+보고서의 추가 `rgb_index` 객체는 정책 ID, 관찰 후보 키/엔트리, 선택 키, 선언 경로, 사용한 세션 상대 경로, 실제 SHA-256을 기록한다. 선택 전 실패는 후보와 이유를, 선택 후 실패는 확보한 선택 정보와 이유를 보존한다. 확보하지 못한 경로/해시는 null이며 해시를 추정하지 않는다. 이 객체는 검사 보고서 필드이며 FramePacket 필드가 아니다. 기존 보고 필드와 종료 코드(파일 검사 0/1, 연결 CLI 통과·처리 보류 10/검사 실패 20)를 유지한다.
+
+파일 검사 성공은 RGB·Depth 짝맞춤·정렬·시간 동기화, 물리적 거리 정확도, SDK 값의 독립 검증이나 처리 허용을 뜻하지 않는다. geometry_verified, processing_ready, viewer_launched, sdk_values_independently_verified, common_framepacket_fully_validated는 false를 유지한다.
+
+아래의 ‘실제 모바일 자료 미수신’, ‘최신 49개와 동일’ 설명은 **2026-10-14 보관 당시 이력**이다. 새 검토본 결과와 합산하거나 현재 코드가 과거 코드와 같다는 의미로 사용하지 않는다.
+
+## 2026-10-14 보관 이력과 기본 실행 안내
+
 이가영 앱이 저장한 RGB·Depth·IMU 세션의 파일 무결성·형식을 확인하는 추가 도구다. 기준 앱 커밋은 `b9f370ac94901b1dfce2c4c64018380d5036e967`이다. 실제 모바일 자료는 아직 받지 못했다. 통과 상태는 `passed_mobile_file_checks`이며 `geometry_verified=false`, `processing_ready=false`, RGB–Depth 정렬·world pose 미검증을 유지한다.
 
 이 폴더의 실행 코드·테스트·baseline_hashes.json은 최신 49개 검증본과 바이트가 같다. 기능·검사 조건·import 경로는 변경하지 않았다. 검증 결과와 근거의 범위는 [검증 요약](../../docs/mobile-session-intake-validation-20261014.md)에 있다.
@@ -29,7 +50,7 @@ $mobileTools = (Resolve-Path '.\tools\mobile_session_intake').Path
 $LASTEXITCODE
 ```
 
-세션 루트에는 session.json과 frames.jsonl이 바로 있어야 한다. 상위 sessions/ 폴더나 개별 파일을 지정하지 않는다. rgb_index.jsonl, imu.jsonl, rgb/, raw/와 프레임별 metadata.json·arrays.npz도 필요하다. 보고서 폴더는 입력 세션·baseline과 겹치거나 이들을 포함하는 상위 폴더여서는 안 된다. 입력 원본을 덮어쓰지 않는다.
+세션 루트에는 session.json과 frames.jsonl이 바로 있어야 한다. 상위 sessions/ 폴더나 개별 파일을 지정하지 않는다. 위 정책으로 선택한 RGB 인덱스, imu.jsonl, rgb/, raw/와 프레임별 metadata.json·arrays.npz도 필요하다. 보고서 폴더는 입력 세션·baseline과 겹치거나 이들을 포함하는 상위 폴더여서는 안 된다. 입력 원본을 덮어쓰지 않는다.
 
 정상 입력은 종료 0과 `passed_mobile_file_checks`를 남긴다. 지원하는 입력 검사 오류는 종료 1과 stdout의 실패 JSON 보고서 경로로 확인한다. session.json 최상위 또는 transmission이 []/null인 경우도 해당 파일/필드를 밝힌 `failed_mobile_file_checks` 보고서를 남긴 것이 기존 검증에서 확인됐다. CLI 인자·출력 경로 오류처럼 검사 시작 전 오류는 보고서 생성 전에 종료할 수 있다.
 
@@ -55,6 +76,6 @@ raw stride·왜곡 계수·65535의 의미·정밀 보정·scale·RGB–Depth �
 
 ## 파일 해시와 보관 범위
 
-`FILE_SHA256SUMS.json`은 이 폴더의 README.md, check_mobile_session.py, baseline_hashes.json, tests/test_mobile_session.py 네 파일의 상대 경로→SHA-256이다. 목록 자신은 제외한다. 원본 실행 코드·테스트·기준 해시를 유지하고 Git용 README로 정리했으므로 목록은 이 반영본에 맞춰 생성했다.
+새 검토본의 `FILE_SHA256SUMS.json`은 이 폴더의 README.md, check_mobile_session.py, baseline_hashes.json, tests/test_mobile_session.py, tests/test_rgb_index_compat.py 다섯 파일의 상대 경로→실제 바이트 SHA-256이다. 목록 자신은 제외한다. 기존 ZIP과 Windows 실행 복사본의 목록은 변경하지 않는다. 저장소 루트 `.gitattributes`는 이 다섯 파일과 목록 자체에만 `text eol=lf`를 명시해 작업 파일과 Git blob의 바이트를 맞춘다. 실제 작업 파일과 staged blob을 각각 해시하여 대조하며 저장소 전체를 정규화하지 않는다. 연결 CLI 파일은 이전과 같이 이 목록 범위 밖이다.
 
 대량 검증 로그·과거 TEST_LOG.txt·ZIP·환경·캐시·개인 설정·실제 수집 입력은 넣지 않았다. 최초 17개, 이전 45개, 최신 49개 검증 결과는 포함 관계이므로 합산하지 않는다. 필요 시 원본 검토 ZIP과 별도 감사 기록에서 상세 로그를 확인한다.

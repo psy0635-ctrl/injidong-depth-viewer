@@ -165,7 +165,7 @@ class MobileIntakeTests(unittest.TestCase):
         self.assertEqual(len(generated), 1)
         self.assertEqual(len(process.stdout.strip().splitlines()), 1)
         report_path = Path(process.stdout.strip())
-        self.assertIn(report_path, generated)
+        self.assertIn(report_path.resolve(), {path.resolve() for path in generated})
 
         def reject_nonfinite(value):
             raise AssertionError('nonfinite JSON token in CLI report: ' + value)
@@ -190,7 +190,8 @@ class MobileIntakeTests(unittest.TestCase):
         self.assertFalse(report['geometry_verified'])
         self.assertEqual(inventory(self.session), before)
         f = next(CONTRACT.iter_frames(self.session))
-        np.testing.assert_array_equal(CONTRACT.point_cloud_camera(f), np.array([[0, 0, 1], [.01, 0, 1], [0, .01, 1]], dtype=np.float32))
+        # File intake regression only: do not generate a point cloud here.
+        np.testing.assert_array_equal(f.depth_m, np.array([[1, 1], [1, 0]], dtype=np.float32))
 
     def test_collecting_session_rejected(self):
         self.summary['status'] = 'collecting'
