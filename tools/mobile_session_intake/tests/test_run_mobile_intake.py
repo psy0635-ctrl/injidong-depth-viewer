@@ -6,9 +6,11 @@ import io
 import json
 import os
 from pathlib import Path
+import stat
 import subprocess
 import sys
 import tempfile
+from types import SimpleNamespace
 import unittest
 from unittest import mock
 
@@ -353,6 +355,95 @@ class RunnerTests(unittest.TestCase):
         code, result = self.invoke(output=alias / 'new_output')
         self.assertEqual(code, 24)
         self.assertFalse((self.session / 'new_output').exists())
+
+    def assert_input_preflight_rejected(self):
+        code, result = self.invoke()
+        self.assertEqual(code, 24)
+        self.assertEqual(result['final_status'], 'preflight_error')
+        self.assertIsNone(result['checker_exit_code'])
+        self.assertIsNone(result['checker_report'])
+        self.assertIsNone(result['summary_path'])
+        self.assertNotIn('checker_command', result)
+        self.assertFalse(self.output.exists())
+        return result
+
+    def make_input_junction(self, alias, target):
+        if os.name != 'nt':
+            self.skipTest('Windows Junction test requires Windows')
+        process = subprocess.run(['cmd', '/d', '/c', 'mklink', '/J', str(alias), str(target)],
+                                 capture_output=True)
+        if process.returncode:
+            self.skipTest('Junction creation unavailable: ' + process.stderr.decode(errors='replace'))
+        self.addCleanup(lambda: os.rmdir(alias))
+
+    def make_input_symlink(self, alias, target):
+        try:
+            alias.symlink_to(target, target_is_directory=True)
+        except (OSError, NotImplementedError) as error:
+            self.skipTest('Actual input symlink creation unavailable: ' + repr(error))
+        self.addCleanup(alias.unlink)
+
+    def test_input_root_junction_is_rejected_before_checker(self):
+        alias = self.root / 'input_alias'
+        self.make_input_junction(alias, self.session)
+        self.session = alias
+        self.assert_input_preflight_rejected()
+
+    def test_input_parent_junction_is_rejected_before_checker(self):
+        parent = self.root / 'real_parent'
+        parent.mkdir()
+        self.session = self.session.rename(parent / 'input')
+        alias = self.root / 'parent_alias'
+        self.make_input_junction(alias, parent)
+        self.session = alias / 'input'
+        self.assert_input_preflight_rejected()
+
+    def test_input_root_symlink_is_rejected_before_checker(self):
+        alias = self.root / 'input_alias'
+        self.make_input_symlink(alias, self.session)
+        self.session = alias
+        self.assert_input_preflight_rejected()
+
+    def test_input_parent_symlink_is_rejected_before_checker(self):
+        parent = self.root / 'real_parent'
+        parent.mkdir()
+        self.session = self.session.rename(parent / 'input')
+        alias = self.root / 'parent_alias'
+        self.make_input_symlink(alias, parent)
+        self.session = alias / 'input'
+        self.assert_input_preflight_rejected()
+
+    def test_dangling_input_symlink_is_rejected_before_checker(self):
+        alias = self.root / 'dangling_input'
+        self.make_input_symlink(alias, self.root / 'missing_target')
+        self.session = alias
+        self.assert_input_preflight_rejected()
+
+    def test_relative_input_path_remains_held(self):
+        canonical = self.session
+        self.session = Path(os.path.relpath(canonical, Path.cwd()))
+        code, result = self.invoke()
+        self.assertEqual(code, 10)
+        self.assertEqual(result['final_status'], 'processing_held')
+        self.assertEqual(Path(result['paths']['session']), canonical)
+
+    def test_missing_input_is_rejected_before_checker(self):
+        self.session = self.root / 'missing_input'
+        self.assert_input_preflight_rejected()
+
+    def test_mocked_original_parent_link_types_are_rejected(self):
+        # Only lstat facts are injected: this cannot establish actual symlink support.
+        original_lstat = Path.lstat
+        parent = self.session.parent
+        for mode, attributes in ((stat.S_IFLNK, 0), (stat.S_IFDIR, stat.FILE_ATTRIBUTE_REPARSE_POINT)):
+            with self.subTest(mode=mode, attributes=attributes):
+                def injected_lstat(path, *args, **kwargs):
+                    if path == parent:
+                        return SimpleNamespace(st_mode=mode, st_file_attributes=attributes)
+                    return original_lstat(path, *args, **kwargs)
+                with mock.patch.object(Path, 'lstat', new=injected_lstat):
+                    result = self.assert_input_preflight_rejected()
+                self.assertIn('linked input', result['reason'])
 
 
 if __name__ == '__main__':

@@ -17,7 +17,9 @@
 | `--result-root` | 예 | 실행마다 `run_<uuid>`를 새로 만드는 결과 부모 디렉터리 |
 | `--timeout-seconds` | 아니요 | 검사기 제한 시간, 양의 정수 초. 기본 300초 |
 
-학교 절대 경로를 코드 기본값으로 사용하지 않는다. 인자 경로는 resolve한 절대 경로로 실행·기록한다. 입력·baseline·검사기 코드 디렉터리·연결 CLI 코드 디렉터리와 결과 루트가 같거나 어느 방향으로든 중첩되면 거부한다. 기존 Windows Junction도 resolve하여 검사한다.
+학교 절대 경로를 코드 기본값으로 사용하지 않는다. session은 resolve 전에 원래 입력 루트와 모든 상위 경로를 lstat하여 symlink·Windows junction/reparse point를 거부한다. 상대 경로도 같은 검사를 받고, 없는 경로·끊어진 링크·링크 판정/읽기 실패는 preflight_error(24)로 중단한다. 이때 checker를 실행하거나 결과 폴더를 만들지 않는다. checker 모듈을 import하지 않고 표준 라이브러리로 입력 경로 거부 정책을 맞춘다.
+
+이 검사 뒤 인자 경로는 resolve한 절대 경로로 실행·기록한다. 입력·baseline·검사기 코드 디렉터리·연결 CLI 코드 디렉터리와 결과 루트가 같거나 어느 방향으로든 중첩되면 거부한다. 출력의 기존 Windows junction 별칭도 resolve하여 검사하며 baseline guard와 입력 해시 재대조는 유지한다.
 
 필수 실행 파일·baseline 3개 파일과 기준 해시를 확인하고 **선택한 Python에서 baseline의 `guard_read()`를 그대로 호출**한 뒤에만 결과 폴더를 만든다. 상위 ADE-71 관리 marker가 미완료/분리/pending 입력을 차단하면 `preflight_error`다. marker를 생성·삭제하거나 staging 우회 문맥을 사용하지 않는다. marker 없는 외부 세션은 기존 정책대로 읽을 수 있다. 입력 내부 파일 누락/손상은 검사기의 실패 보고서로 전달한다.
 
@@ -83,7 +85,9 @@ JSON 최상위 객체·필수 필드·bool/int/목록/문자열·해시 목록·
 
 ## 입력 변경 검사 범위
 
-기준 검사기의 `inventory()`를 읽고 같은 규칙을 독립 구현했다. `input_sha256`은 참조된 수집 파일만이 아니라 **`session.rglob('*')`가 열거하는 모든 일반 파일**의 세션 상대 POSIX 경로 → 내용 바이트 SHA-256이다. 부가 메모·숨김 파일도 범위에 포함된다. symlink와 resolve 후 세션 밖으로 나가는 경로는 거부한다. 빈 디렉터리·mtime·권한 등 파일 메타데이터는 범위 밖이다.
+runner의 `input_sha256`은 참조된 수집 파일만이 아니라 **`session.rglob('*')`가 열거하는 모든 일반 파일**의 세션 상대 POSIX 경로 → 내용 바이트 SHA-256이다. 부가 메모·숨김 파일도 범위에 포함된다. inventory는 내부 symlink와 resolve 후 세션 밖으로 나가는 경로를 거부한다. 빈 디렉터리·mtime·권한 등 파일 메타데이터는 범위 밖이다.
+
+이번 수정은 입력 루트/상위의 resolve 전 거부를 checker와 통일하며, 전체 내부 inventory 정책을 교체하지 않는다. 내부의 모든 junction/reparse point는 실제 checker가 추가로 거부한다. 내부를 가리키는 junction은 checker 실패 후 runner20, 외부로 나가는 junction은 runner 사전 검사24가 될 수 있다. 검사기와 runner의 내부 링크 검사 시점·범위가 완전히 같다고 해석하지 않는다. 이 경로 검사는 시점별 확인이며 검사 뒤 경로 교체를 막는 파일 잠금이 아니다.
 
 연결부 목록은 `input_before.json`/`input_after.json`이라는 별도 기록이며 검사 보고서의 `input_sha256`을 수정하거나 다른 규칙으로 재사용하지 않는다. 파일 추가는 added, 삭제는 removed, 같은 경로의 내용 변경은 modified로 기록한다. 통과 보고서는 input_sha256을 필수로 확인하고 검사 후 목록과도 비교한다. 검사기 목록이 잘못되거나 낡았을 때도 불일치가 날 수 있으므로 전후 비교와 보고서 비교를 따로 남긴다.
 

@@ -6,6 +6,7 @@ import json
 import math
 from pathlib import Path, PureWindowsPath
 import re
+import stat
 import subprocess
 import sys
 import uuid
@@ -17,7 +18,7 @@ CODES = {'processing_held': 10, 'checker_failed': 20, 'input_changed': 21,
 BASELINE_FILES = {'src/contract.py', 'src/session_boundary.py', 'schemas/frame.schema.json'}
 FLAGS = ('geometry_verified', 'processing_ready', 'rgb_depth_alignment_verified',
          'world_pose_verified')
-SCOPE = ('Same rules as pinned checker inventory(): all recursively enumerated regular '
+SCOPE = ('Runner inventory: all recursively enumerated regular '
          'files, including auxiliary/hidden files; session-relative POSIX paths and '
          'SHA-256 of bytes. Reject symlinks and resolved escapes. Empty directories '
          'and file metadata are excluded. Point-in-time comparisons, not a lock.')
@@ -64,7 +65,7 @@ def write_new(path, value):
 
 
 def inventory(root):
-    """Keep the pinned checker's file/path/content scope, without importing it."""
+    """Hash regular files; reject symlinks/escapes; checker also checks internal reparse points."""
     result = {}
     require(root.is_dir(), 'input directory no longer exists')
     for path in sorted(root.rglob('*')):
@@ -114,7 +115,18 @@ print(json.dumps({'python': sys.version, 'executable': sys.executable}))
 '''
 
 
+def require_unlinked_session(path):
+    """Check the original input root and ancestors before resolve loses aliases."""
+    absolute = Path(path).absolute()
+    for component in (absolute, *absolute.parents):
+        info = component.lstat()
+        require(not stat.S_ISLNK(info.st_mode) and
+                not (getattr(info, 'st_file_attributes', 0) & stat.FILE_ATTRIBUTE_REPARSE_POINT),
+                f'linked input not supported: {component.name}')
+
+
 def preflight(args, summary):
+    require_unlinked_session(args.session)
     paths = {name: getattr(args, name).resolve() for name in
              ('python', 'checker', 'contract_root', 'session', 'result_root')}
     summary['paths'] = {k: str(v) for k, v in paths.items()}

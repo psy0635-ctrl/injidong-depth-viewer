@@ -43,4 +43,6 @@ README/requirements는 새 공개용 문서다. 합성 테스트는 알려진 �
 
 geometry_verified / processing_ready / viewer_launched / sdk_values_independently_verified / common_framepacket_fully_validated는 모두 false다. 계산 일치는 SDK/왜곡 보정/65535의 물리 의미/거리 정확도/팀 정책 승인과 다르다. 정적 PNG는 GUI 뷰어 실행이 아니다.
 
-이번 변경은 commit/push/PR/merge 전 로컬 검토 상태다. 실제 데이터 공개에 대한 판단이나 원격 CI 성공은 주장하지 않는다.
+이 문서는 코드 이동 검증 완료 당시(commit/push/PR/merge 전)의 로컬 검토 이력이다. 위 수치·초기 실패·실행 횟수는 당시 기록이며 후속 작업의 재실행 결과가 아니다. 실제 데이터 공개에 대한 판단이나 원격 CI 성공은 주장하지 않는다.
+
+후속 보관·검토 상태: 점군 도구는 [bf204354 커밋](https://github.com/psy0635-ctrl/injidong-depth-viewer/commit/bf204354a6eccf515e1ee25bcadd00cdf680358c)에 보관됐고, 현재 [6908d763 head](https://github.com/psy0635-ctrl/injidong-depth-viewer/commit/6908d7636a6c95501a9bd0dd130e2a81b5c91bea)를 대상으로 하는 [Draft PR #3](https://github.com/psy0635-ctrl/injidong-depth-viewer/pull/3)에 선행 변경과 함께 포함된다. 개인 원격 보관·Draft 검토는 main 병합·팀 승인·공용 통합·실제 정확도 검증 완료를 뜻하지 않는다.

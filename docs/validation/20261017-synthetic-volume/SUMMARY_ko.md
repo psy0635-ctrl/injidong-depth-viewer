@@ -1,6 +1,8 @@
 # 합성 높이 적분 실험 이동 검증
 
-기준 커밋은 bf204354a6eccf515e1ee25bcadd00cdf680358c다. 기존 점군 분석/RGB 호환/공통 src·스키마·사전조건·결과 계약은 변경하지 않았다. 별도 폴더에서 작성한 synthetic 전용 적분기·fixture·테스트·저장형 검증을 [실험 도구](../../../experiments/synthetic_volume/README.md)로 정리했다. 이 변경은 로컬 공개 후보이며 stage/commit/push/PR/병합은 수행하지 않았다.
+기준 커밋은 bf204354a6eccf515e1ee25bcadd00cdf680358c다. 기존 점군 분석/RGB 호환/공통 src·스키마·사전조건·결과 계약은 변경하지 않았다. 별도 폴더에서 작성한 synthetic 전용 적분기·fixture·테스트·저장형 검증을 [실험 도구](../../../experiments/synthetic_volume/README.md)로 정리했다. 이 문서는 공개 후보 정리 당시의 검증 이력이며, 그 단계에서는 stage/commit/push/PR/병합을 수행하지 않았다. 아래 수치·실행 횟수는 당시 기록이며 후속 작업의 재실행 결과가 아니다.
+
+후속 보관·검토 상태: 합성 실험은 [6908d763 커밋](https://github.com/psy0635-ctrl/injidong-depth-viewer/commit/6908d7636a6c95501a9bd0dd130e2a81b5c91bea)에 보관됐고 [Draft PR #3](https://github.com/psy0635-ctrl/injidong-depth-viewer/pull/3)에 runner·RGB 호환·점군 도구와 함께 포함된다. 개인 원격 보관·Draft 검토는 main 병합·팀 승인·공용 통합·실제 정확도 검증 완료를 뜻하지 않는다.
 
 ## 코드 출처와 변경
 
