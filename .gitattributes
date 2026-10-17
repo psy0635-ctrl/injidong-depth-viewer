@@ -1,0 +1,7 @@
+# Keep the mobile review manifest and its five members byte-identical in Git.
+tools/mobile_session_intake/FILE_SHA256SUMS.json text eol=lf
+tools/mobile_session_intake/README.md text eol=lf
+tools/mobile_session_intake/check_mobile_session.py text eol=lf
+tools/mobile_session_intake/baseline_hashes.json text eol=lf
+tools/mobile_session_intake/tests/test_mobile_session.py text eol=lf
+tools/mobile_session_intake/tests/test_rgb_index_compat.py text eol=lf
