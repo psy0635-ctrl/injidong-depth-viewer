@@ -1,4 +1,36 @@
 # Keep the mobile review manifest and its five members byte-identical in Git.
+# Scope new portable text and hash-pinned members; leave historical files alone.
+README.md text eol=lf
+README-viewer.md text eol=lf
+VALIDATION.md text eol=lf
+SHA256SUMS.txt text eol=lf
+requirements.txt text eol=lf
+schemas/*.schema.json text eol=lf
+examples/results/*.json text eol=lf
+examples/synthetic/**/*.json text eol=lf
+examples/synthetic/frames.jsonl text eol=lf
+src/contract.py text eol=lf
+src/viewer_data.py text eol=lf
+src/session_*.py text eol=lf
+src/depth_preflight.py text eol=lf
+tests/test_contract.py text eol=lf
+tests/test_session_*.py text eol=lf
+tests/test_depth_preflight.py text eol=lf
+scripts/*ade71*.py text eol=lf
+scripts/prepare_d405_intake.py text eol=lf
+scripts/run_checks.py text eol=lf
+apps/local_review/** text eol=lf
+docs/*20261024*.md text eol=lf
+docs/PC_HTTP_PROFILE_ko.md text eol=lf
+docs/EXPERIMENT_HISTORY_ko.md text eol=lf
+docs/TRANSFER_RESTORE_ko.md text eol=lf
+docs/inputs/ade71-d405-20261013.json text eol=lf
+docs/validation/20261024-publish/** text eol=lf
+experiments/two_view/** text eol=lf
+examples/ade71_*/**/*.json text eol=lf
+examples/ade71_*/*.json text eol=lf
+examples/ade71_*/*.jsonl text eol=lf
+.github/workflows/validation.yml text eol=lf
 tools/mobile_session_intake/FILE_SHA256SUMS.json text eol=lf
 tools/mobile_session_intake/README.md text eol=lf
 tools/mobile_session_intake/check_mobile_session.py text eol=lf

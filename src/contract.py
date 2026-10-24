@@ -6,6 +6,7 @@ import json
 import math
 import re
 import numpy as np
+from session_boundary import guard_read, guard_packet, remember_origin, relative_path
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -124,6 +125,7 @@ def _pose(p):
     if p['from_frame']==p['to_frame']: fail('POSE_INVALID','distinct coordinate frames required')
 
 def validate_frame(frame, *, require_world_pose=False):
+    guard_packet(frame)
     m=frame.metadata
     validate_json(m,'frame')
     d,mask=frame.depth_m,frame.valid_mask
@@ -181,12 +183,11 @@ def validate_frame(frame, *, require_world_pose=False):
     return frame
 
 def _inside(base,path):
-    candidate=(base/path).resolve()
-    if not candidate.is_relative_to(base.resolve()): fail('PATH_INVALID','path escapes session directory')
-    return candidate
+    return relative_path(base,path)
 
 def load_frame(metadata_path):
     path=Path(metadata_path)
+    guard_read(path)
     m=json.loads(path.read_text(encoding='utf-8'))
     validate_json(m,'frame')
     arrays_path=_inside(path.parent,m['storage']['file'])
@@ -200,10 +201,11 @@ def load_frame(metadata_path):
     except (ValueError,KeyError,OSError) as e:
         if isinstance(e,ContractError): raise
         fail('INPUT_CORRUPT',str(e))
-    return validate_frame(frame)
+    return validate_frame(remember_origin(frame,path))
 
 def iter_frames(session_dir):
     base=Path(session_dir)
+    guard_read(base)
     seen=set()
     for line in (base/'frames.jsonl').read_text(encoding='utf-8').splitlines():
         if not line.strip(): continue

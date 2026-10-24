@@ -1,0 +1,13 @@
+{
+  "delivery_id": "ade71-d405-20261013",
+  "notice": "이번 전달본 식별값. 다른 세션의 공통 상수가 아님.",
+  "zip_sha256": "c7db1884aa5a78fd4fd634153e9575912d762000a7aa0aa1ad7acee66889e6e2",
+  "members": {
+    "capture10.py": "486517dcd7a07cc97cf8491a6578e5193c48871f6f3b1800c865c679552644c5",
+    "depth10.npz": "61de8af2f76ff04e4bac639b7f1fe4f4a07b638534dec2ac8866deb657ad29f0",
+    "metadata.txt": "dea53c88c99d733e66d22e609ef74886d327e009cba07187c494a280c0febd4f"
+  },
+  "raw_array": {"file": "depth10.npz", "key": "depth_raw", "dtype": "uint16", "shape": [10, 480, 640]},
+  "metadata_file": "metadata.txt",
+  "capture_code_file": "capture10.py"
+}

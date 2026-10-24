@@ -8,6 +8,7 @@ import zipfile
 import numpy as np
 
 from contract import ContractError, FramePacket, fail, iter_frames, point_cloud_camera, validate_frame, validate_json
+from session_boundary import guard_read
 
 
 @dataclass
@@ -24,6 +25,7 @@ class FrameView:
 def read_session(session):
     """Supplement missing manifest type/relative-path guards, then use the original iterator."""
     try:
+        guard_read(session)
         manifest = (session / 'frames.jsonl').read_text(encoding='utf-8')
         for line in manifest.splitlines():
             if not line.strip():

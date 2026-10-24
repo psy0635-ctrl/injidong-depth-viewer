@@ -1,0 +1,2 @@
+-r ../../requirements-viewer.txt
+pillow==12.3.0
