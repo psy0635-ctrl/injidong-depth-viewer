@@ -2,7 +2,7 @@
 
 작업 통합 전에 작성한 로컬 대조표를 바탕으로 검증한 결과다. main 기준은 작업 시작 시 재조회한 `73a5ca5f60b4ec9a2f0ad2f9de82a89e4406b42d`다. 브랜치명/커밋 메시지만 보지 않고 실제 소스·시험·문서 내용을 비교했다.
 
-전체 **28개 작업 단위**: **main 반영 완료8 / 원격 브랜치에만 게시0 / 이번 PR 반영18 / 로컬 보존 제외1 / 자료 부족1**. 작업 단위는 아래의 기능·근거 묶음이며 시험 개수나 공식 진척률이 아니다. ‘이번 PR 반영’에는 코드 통합 또는 명시한 후속 검증/재현 문서 요약이 포함된다. 모든 원본과 일회성 스크립트가 업로드됐다는 뜻이 아니다.
+전체 **28개 작업 단위**: **main 반영 완료7 / 원격 브랜치에만 게시0 / 이번 PR 반영19 / 로컬 보존 제외1 / 자료 부족1**. 작업 단위는 아래의 기능·근거 묶음이며 시험 개수나 공식 진척률이 아니다. ‘이번 PR 반영’에는 코드 통합 또는 명시한 후속 검증/재현 문서 요약이 포함된다. 최초 통합 전8/18 분류에서 원격 CI의 정적 PNG 글꼴 시험 후속 수정으로 해당 항목을 이번 PR로 옮겼다. 모든 원본과 일회성 스크립트가 업로드됐다는 뜻이 아니다.
 
 | 작업명 | 로컬 근거 | GitHub main 반영 여부 | 다른 원격 브랜치 게시 여부 | 로컬 후속 변경 | 이번 조치 | 제외 또는 보류 이유 |
 |---|---|---|---|---|---|---|
@@ -13,7 +13,7 @@
 | 모바일 접수·JSON 방어 검사 | 모바일세션 사전검사·tools/mobile_session_intake | 검사기 실제 내용 main 존재 | 591ca53→main 조상 | 후속 index변경 이미main | 1 main 반영 완료 | 개인 입력 제외 |
 | RGB 인덱스 호환 | mobile-rgb-index-compat-review 및 test_rgb_index_compat.py | e5f7bf9와 main 검사기 내용 일치 | compat 브랜치 main 조상 | 새 앱은 같은 검사기 재사용 | 1 main 반영 완료 | 중복 구현 없음 |
 | 원본 출처·해시·경로·scale·저장 완료 보호 | home-restore baseline/src/session_boundary.py 및 최신앱 vendor/baseline | 현재 main에 session_boundary 없음 | 관련 신규 후속 원격 미게시 | guard 및 pipeline/테스트 | 3 이번 PR에 반영 | schema 변경 없이 보조 완료 프로토콜 |
-| 저장 Depth 점군 독립 대조·분석 | stored-depth-review/tools/stored_depth_analysis | main 실제 코드·테스트 존재 | bf20435→main 조상 | 해시/좌표 근거는 원본 필요 | 1 main 반영 완료 | 실측 정확도 아님 |
+| 저장 Depth 점군 독립 대조·분석 | stored-depth-review/tools/stored_depth_analysis | main 실제 코드·테스트 존재 | bf20435→main 조상 | 기존 알고리즘 유지; Ubuntu 합성PNG 시험의 글꼴을 명시 | 3 이번 PR에 반영 | 기존 코드 중복 없음; CI 이식성 시험 최소 수정, 한글 가독성 검증 아님 |
 | 정적 Depth 분석 시각화 | stored_depth_analysis/make_static_figures.py | main 실제 코드 존재 | stored-depth 브랜치 포함 | 실제 출력은 로컬 | 1 main 반영 완료 | 생성 PNG는 제외 |
 | 합성 부피 실험 | experiments/synthetic_volume | main 코드/합성fixture/테스트 동일 | 5edb794→main 조상 | 실제부피 정확도로 확대금지 | 1 main 반영 완료 | 기존 합성 기능 중복 없음 |
 | 실제 4프레임 대조와 0042 GUI 후속 | depth-session4·ade71-step1 REPORT | 후속 실행 기록 없음 | 미게시 | 선택 근거·재현·제약 요약 | 3 이번 PR에 반영 | 원본 세션·정적 출력 제외 |

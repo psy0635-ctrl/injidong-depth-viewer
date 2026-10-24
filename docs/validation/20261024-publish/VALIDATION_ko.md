@@ -42,6 +42,8 @@ skip은 장비/외부 원본·GUI opt-in 또는 현재 OS에서 지원되지 않
 
 ## 원격 CI와 남은 제약
 
-기존 main에는 CI workflow가 없었다. 이번 PR은 Linux Python3.11의 portable-checks workflow를 추가한다. 위 결과는 **로컬 Windows 실행**이며 원격 Linux CI 결과는 PR의 해당 HEAD Checks에서 별도로 확인한다. workflow 추가·대기·미실행을 성공으로 간주하지 않는다. 병합은 이번 범위가 아니다.
+기존 main에는 CI workflow가 없었다. 이번 PR은 Linux Python3.11의 portable-checks workflow를 추가한다. 최초 HEAD c3682f8의 원격 CI는 기존 정적 PNG 시험이 Windows의 Malgun Gothic 글꼴을 요구해 실패했다. 같은 합성 PNG 시험에서 Matplotlib에 포함된 DejaVu Sans를 명시하도록 수정했다. 제품 기본 글꼴·엄격한 font lookup·배열/점군/PNG 검사 자체는 유지한다. 이 시험은 파일/PNG 생성 프로토콜 검증이며 한글 glyph 가독성 승인이 아니다. 해당10개 관련 검사를 수정 후 다시 실행하고 새 PR HEAD의 CI를 확인한다.
+
+위 표는 **로컬 Windows 실행**이며 원격 Linux CI 결과는 PR의 해당 HEAD Checks에서 별도로 확인한다. workflow 추가·대기·미실행을 성공으로 간주하지 않는다. 병합은 이번 범위가 아니다.
 
 실제 서버/Android 공동 연결·모바일 RGB 픽셀정렬/실제컬러·물리바닥/중력·실제 다중시점/부피/중량 정확도·학습팀최종인수는 미검증이다. [현재 상태](../../STATUS_20261024_ko.md)와 [전체28작업 대조](../../WORK_PUBLICATION_20261024_ko.md)를 따른다.
