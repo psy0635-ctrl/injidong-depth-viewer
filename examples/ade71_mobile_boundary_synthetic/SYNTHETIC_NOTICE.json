@@ -1,0 +1,9 @@
+{
+  "kind": "synthetic",
+  "android_executed": false,
+  "real_rgb_collected": false,
+  "rgb_depth_alignment": "unverified; same size does not prove alignment",
+  "mask_source": "separately constructed depth-coordinate interface fixture, not derived from RGB",
+  "specimen_id": null,
+  "model_trained": false
+}

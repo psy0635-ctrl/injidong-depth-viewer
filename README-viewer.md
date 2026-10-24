@@ -1,10 +1,12 @@
 # ADE-95 저장 Depth·Point Cloud 독립 뷰어
 
+> **2026-10-24 후속:** 이 문서의 `src/viewer.py`는 기존 ADE95 저장 세션 뷰어다. 새 모바일 ZIP·HTTP·ROI는 [apps/local_review](apps/local_review/README.md)의 별도 `run_review_viewer.py --mobile`로 실행한다. [최신 상태](docs/STATUS_20261024_ko.md)와 [전체 게시 대조표](docs/WORK_PUBLICATION_20261024_ko.md)를 함께 읽는다.
+
 카메라 없이 v1.0.0 저장 세션을 읽어 Depth와 카메라 좌표 3D 점군을 확인하는 PC 뷰어다. ADE-95 저장 입력 기반 구현은 사용자 전달 기준으로 팀장 검토 통과 상태이며, 이 문서는 다른 PC 설치 안내를 제공한다. 데이터 계약은 **v1.0.0 유지**다. 모바일 연결 가능성 조사와 다음 최소 실험은 문서 끝의 ADE-54 링크에 정리했다. 실제 연결 시험·기능 개발·부피/중량 검증과 공식 통합은 후속 범위다.
 
 ## 현재 상태와 남은 문제
 
-2026-10-11 기준 개인 저장소 원격 `main`과 로컬 HEAD는 일치한다. 직접 실행·저장·종료 0은 사용자 보고 근거가 있으나 버튼·방향키·회전·확대와 1분 시연 완료는 미확인이다. 같은 PC의 새 venv 검증과 학교 PC 검증, 구현 검토 통과와 공식 통합 승인을 구분한다. 월요일 제출 확인·남은 문제·개선 후보·팀장 확인 사항은 [상세 문서의 최신 요약](docs/ADE-95-독립뷰어-사용검증.md#ade95-current-status-20261011)에 정리했다.
+다음은 **2026-10-11 당시 기록**이다: 당시 개인 저장소 main과 로컬 HEAD 일치, 직접 실행·저장·종료0은 사용자 보고이며 버튼·회전·확대/1분 시연은 당시 미확인이었다. 이후10/20 저장 Depth GUI와10/23·24 모바일 ROI 회전/표시변경·저장/재열기 확인은 별도 [후속 상태](docs/STATUS_20261024_ko.md)에 기록한다. 환경검사·학교 PC·팀 통합 승인은 구분한다. [당시 상세 기록](docs/ADE-95-독립뷰어-사용검증.md#ade95-current-status-20261011)은 보존한다.
 
 ## Windows PowerShell: 공통 안내
 
@@ -19,7 +21,7 @@
 현재 작업 폴더에서는 설치를 반복하지 않고 다음 명령으로 확인·실행한다. `.venv`가 없거나 정상 환경이 아닌 새 복사본이면 다음의 새 PC 절차를 따른다.
 
 ```powershell
-Set-Location -LiteralPath 'C:\study\injidong_contract_v1'
+# README-viewer.md가 있는 현재 저장소 루트에서 실행한다.
 & '.\.venv\Scripts\python.exe' --version
 & '.\.venv\Scripts\python.exe' -c "import tkinter; print('Tk', tkinter.TkVersion, 'Tcl', tkinter.TclVersion)"
 & '.\.venv\Scripts\python.exe' -X utf8 'src/viewer.py' --help

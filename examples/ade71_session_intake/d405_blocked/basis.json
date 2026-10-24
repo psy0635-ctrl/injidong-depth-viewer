@@ -1,0 +1,72 @@
+{
+  "basis_format": "ade71-local-intake-v1",
+  "notice": "REAL D405 delivery; NOT a complete conversion basis",
+  "source": {
+    "file": "depth10.npz",
+    "key": "depth_raw",
+    "dtype": "uint16",
+    "shape": [
+      10,
+      480,
+      640
+    ],
+    "sha256": "61de8af2f76ff04e4bac639b7f1fe4f4a07b638534dec2ac8866deb657ad29f0"
+  },
+  "evidence_files": {
+    "capture10": {
+      "file": "capture10.py",
+      "sha256": "486517dcd7a07cc97cf8491a6578e5193c48871f6f3b1800c865c679552644c5"
+    },
+    "depth10": {
+      "file": "depth10.npz",
+      "sha256": "61de8af2f76ff04e4bac639b7f1fe4f4a07b638534dec2ac8866deb657ad29f0"
+    },
+    "metadata": {
+      "file": "metadata.txt",
+      "sha256": "dea53c88c99d733e66d22e609ef74886d327e009cba07187c494a280c0febd4f"
+    }
+  },
+  "blocked_requirements": [
+    {
+      "item": "full_precision_depth_intrinsics_fx_fy_cx_cy",
+      "owner": "도형준 제공 / 강석현 검토",
+      "blocks_core_session": true
+    },
+    {
+      "item": "Brown_Conrady_to_rectified_pinhole_evidence",
+      "owner": "강석현 SDK·보정 검토 / 도형준 원본 제공",
+      "blocks_core_session": true
+    },
+    {
+      "item": "device_profile_calibration_identity_evidence",
+      "owner": "도형준 제공 / 강석현 검토",
+      "blocks_core_session": true
+    },
+    {
+      "item": "per_frame_capture_and_host_receive_timestamps",
+      "owner": "강석현 SDK backend / 도형준 수집",
+      "blocks_core_session": false
+    },
+    {
+      "item": "specimen_id_capture_conditions_three_conditions",
+      "owner": "도형준 제공 / 강석현 기준 확인",
+      "blocks_core_session": false
+    },
+    {
+      "item": "raw_65535_semantics",
+      "owner": "강석현 SDK backend / 도형준 장비 근거 제공",
+      "blocks_core_session": true
+    }
+  ],
+  "frames": [],
+  "conversion": {
+    "scale_to_m": 9.999999747378752e-05,
+    "semantics": null,
+    "invalid_values": [
+      0
+    ],
+    "raw_65535_policy": "unconfirmed",
+    "raw_65535_evidence": null
+  },
+  "real_geometry": null
+}

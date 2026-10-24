@@ -1,5 +1,7 @@
 # 검증 기록 — 2026-10-07
 
+> 이 문서는10/07 당시 결과를 보존한다. Windows3.11 및10/24 게시 작업본 검증은 [후속 기록](docs/STATUS_20261024_ko.md)에 구분한다. 아래의 ‘Windows 미검증’은 당시 범위다.
+
 - 실행 환경: Python 3.12.14 / NumPy 2.3.5 / Linux PC.
 - `python -m unittest discover -s tests -v`: **28개 통과**, 실패 0.
 - `python src/contract.py examples/synthetic`: frame 1개, 유효 point 3개. `(0,0,1)`, `(.01,0,1)`, `(0,.01,1)` m와 float32 허용 오차 내 일치.

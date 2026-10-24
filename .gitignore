@@ -12,3 +12,8 @@ __pycache__/
 .idea/
 Thumbs.db
 .DS_Store
+
+# Local review runtime only; existing tracked examples/evidence are retained.
+/apps/runtime/
+/apps/mobile_roi_outputs/
+/apps/roi_review_outputs/

@@ -1,3 +1,5 @@
+> 2026-10-24 후속: 날짜별 기록을 보존합니다. 현재 모바일 ZIP·HTTP·ROI와 게시 검증은 [최신 상태](STATUS_20261024_ko.md), 새 실행은 [앱 안내](../apps/local_review/README.md)를 따릅니다.
+
 # ADE-95 저장 Depth·Point Cloud 독립 뷰어
 
 <a id="ade95-current-status-20261011"></a>

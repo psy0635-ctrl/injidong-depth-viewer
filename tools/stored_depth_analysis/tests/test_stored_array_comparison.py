@@ -122,7 +122,9 @@ class MovedBoundaryTests(unittest.TestCase):
         self.assertEqual(report['raw_65535_preservation']['included_result_count'],1)
         self.assertTrue(report['read_files_preserved'])
         png=self.root/'pngs'
-        p=self.cli('make_static_figures.py',['--session',str(session),'--frame-id','synthetic_review','--pointcloud',str(out/'analysis_points.npz'),'--comparison-report',str(out/'stored_array_comparison.json'),'--output',str(png)])
+        # A protocol/PNG fixture test must not depend on a Windows-only font.
+        # Korean glyph legibility remains a separate real presentation check.
+        p=self.cli('make_static_figures.py',['--session',str(session),'--frame-id','synthetic_review','--pointcloud',str(out/'analysis_points.npz'),'--comparison-report',str(out/'stored_array_comparison.json'),'--font-family','DejaVu Sans','--output',str(png)])
         self.assertEqual(p.returncode,0,p.stdout+p.stderr)
         view=json.loads((png/'visualization_results.json').read_text(encoding='utf-8'))
         self.assertFalse(view['pointcloud_recomputed'])
